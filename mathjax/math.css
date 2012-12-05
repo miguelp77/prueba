@@ -1,0 +1,12 @@
+.MathJax{
+float:left;
+text-align:left;
+display:inline;
+border:solid 1px black;
+}
+.MathJax_Display{
+float:left;
+text-align:left;
+display:inline;
+border:solid 1px black;
+}

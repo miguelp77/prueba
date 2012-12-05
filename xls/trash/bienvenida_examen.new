@@ -1,0 +1,191 @@
+<?php
+
+	session_start();
+	header ('Content-type: text/html; charset=utf-8');
+	SESION_VALIDA();
+
+	function SESION_VALIDA()
+	{
+		//Comprobamos que quien se haya conectado puede seguir adelante
+		global $HTTP_SESSION_VARS;
+		header ('Content-type: text/html; charset=utf-8');
+		if ($HTTP_SESSION_VARS['ventanas'])
+		{	
+				NO_PUEDE_PASAR("NO PUEDE TENER DOS VENTANAS ABIERTAS", "bienvenida_examen.tfc", "INICIO");
+				exit();
+		}
+
+		else if (isset ($HTTP_SESSION_VARS['examinado']))
+		{	
+				NO_PUEDE_PASAR("YA HA HECHO EL EXAMEN", "bienvenida_examen.tfc", "INICIO");
+				exit();			
+		}
+		else if (isset ($HTTP_SESSION_VARS['valid_user']))
+		{	
+				NO_PUEDE_PASAR("DEJE DE DAR VUELTAS, HAGA EL EXAMEN", "instrucciones_asignatura.tfc", "IR A LAS INSTRUCCIONES");
+				exit();			
+		}
+
+		else
+		{
+			IMPRIMIR_PAGINA_INICIO();
+			exit();
+		}
+	}
+
+
+	function IMPRIMIR_PAGINA_INICIO()
+	{
+
+		echo "
+		<HTML>
+			<HEAD>
+				<TITLE>Acceso al servidor web del Departamento de Teoría de la Señal y Comunicaciones</TITLE>
+
+					<SCRIPT language=\"JavaScript\"> 
+
+						opener.top.close();
+					
+					</SCRIPT>
+
+			</HEAD>
+
+			<BODY onContextMenu =\"return false\">
+
+
+					<BR><BR>
+
+					<TABLE cellSpacing=0 cellPadding=0 border=0  align=center>
+
+				 	 	<TR>
+  							  <TD align=middle width=493 background=\"imagenes/logo_uah.gif\" height=100></TD>
+						</TR>
+
+					</TABLE>
+
+
+
+					<P align=center>
+						<IMG height=4 src=\"imagenes/linea_azul.gif\" width=500>
+					</P>
+
+					<FORM method=post action=autentica_alumno.tfc>
+					<TABLE width=493 align=center>
+						<TR><TD bgcolor=#BDBDBD height=35 colspan=2 align=right  valign=bottom>
+							    <FONT color=black face=Utopia size=5>acceso de alumnos</FONT></TD>
+						</TR>
+						<TR>
+						<TR><TD><BR></TD><TD><BR></TD>
+						</TR>
+
+						<TR bgcolor=#DEDEDE>
+							<TD  height=25  align=right><FONT color=black face=Helvetica size=3><B>Usuario: &nbsp&nbsp</B></FONT></TD>
+							<TD align=center><INPUT type=text name=usuario></TD>
+						</TR>
+						<TR bgcolor=#DEDEDE>
+							<TD align=right height=25><FONT color=black face=Helvetica size=3><B>Password: &nbsp&nbsp</B></TD>
+							<TD align=center><INPUT type=password name=passwd></TD>
+						</TR>
+					</TABLE>
+
+					<TABLE  width=493 align=center>
+						<TR><TD align=center  heigth=50><BR><INPUT type='submit' value=ACCEDE><BR><BR></TD></TR>
+					</TABLE>
+					
+					</FORM>
+
+					<TABLE width=493 align=center>
+						<TD heigth=35 bgcolor=#BDBDBD><BR><BR></TD>
+					</TABLE>
+
+
+
+					<P align=center>
+						<IMG height=4 src=\"imagenes/linea_azul.gif\" width=500>
+					</P>
+
+					<P align=center>
+						<FONT color=#46ADB1 face=Helvetica size=3>
+								Departamento de Teoría de la señal y Comunicaciones<BR><BR>
+										TFC Javier Almena García
+						</FONT>
+					</P>
+
+
+				</BODY>
+			</HTML>";
+	}
+
+
+	function NO_PUEDE_PASAR($motivo, $direccion, $enunciado)
+	{
+
+		echo"
+		<HTML>
+		<HEAD>
+		<TITLE>Existen problemas con su acceso</TITLE>
+				
+		</HEAD>
+
+		<BODY onContextMenu =return false>
+	
+		<CENTER>
+		
+			<BR><BR>
+
+			<TABLE cellSpacing=0 cellPadding=0 border=0>
+
+ 	 		<TR>
+  				  <TD align=middle width=493 background=\"imagenes/logo_uah.gif\" height=100></TD>
+			</TR>
+
+			</TABLE>
+
+	
+
+			<P align=center>
+				<IMG height=4 src=\"imagenes/linea_azul.gif\" width=500>
+			</P>
+
+			<BR><BR>
+
+			<FONT color=black face=Helvetica size=6>
+				
+				<B>$motivo</B>
+
+			</FONT>
+
+			<BR><BR>
+
+			<FONT color=black face=Helvetica size=3>
+				
+				Si cree que hay algún error consulte a su profesor
+
+			</FONT>
+
+			<BR><BR>
+
+			<A href=$direccion>$enunciado</A>
+
+	
+			<P align=center>
+				<IMG height=4 src=\"imagenes/linea_azul.gif\" width=500>
+			</P>
+
+			<P align=center>
+
+				<FONT color=#46ADB1 face=Helvetica size=3>
+						Departamento de Teoría de la señal y Comunicaciones<BR><BR>
+							TFC Javier Almena García
+				</FONT>
+			</P>
+	
+		</CENTER>
+
+
+		</BODY>
+		</HTML>";
+
+	}
+
+?>

@@ -1,0 +1,377 @@
+<?php
+
+require_once('../includes/db_config.php');
+include('../includes/GoogChart.class.php');
+require_once('reports.inc');
+//require_once('../includes/db_tools.php');
+$chart = new GoogChart();
+
+$data = array( 
+		'February 2008' => array (
+			'a' => 1,
+			'b' => 2,
+			'c' => 3,
+			'd' => 10,
+			'e' => 9,
+			'f' => 4,
+			'g' => 2,
+		),
+		'January 2008' => array (
+			'a' => 10,
+			'b' => 3,
+			'c' => 5,
+			'd' => 10,
+			'e' => 0,
+			'f' => 5,
+			'g' => 8,
+		),
+	);
+
+$color = array(
+			'#99C754',
+			'#54C7C5',
+			'#999999',
+		);
+/*
+$chart->setChartAttrs( array(
+			'type' => 'line',
+			'title' => 'Browser market 2008',
+			'data' => $data,
+			'size' => array( 400, 300 ),
+			'color' => $color
+	));
+*/	
+$fill=array('tMin','#0000FF','0','1','10|fMax','#FF0000','0','3','15');
+//$fill=array('N*p0*','000000','0','-1','11');
+	
+$chart->setChartAttrs( array(
+			'type' => 'line',
+			'title' => 'ejemplo',
+			'data' => $data,
+			'size' => array( 400, 300 ),
+			'color' => $color,
+			'labelsXY' => true,
+	));
+
+$Array= array(0,10,5,4,8,10,5,0,0,8,3);
+$Array_normal = array(0,10,5,4,8,10,5,0,0,8,3);
+
+$count = count($Array)-1;
+$arraySum = array_sum($Array);
+
+$imgWidth=250;
+$imgHeight=250;
+
+    for ($i=0; $i<=$count; $i++)
+    {
+        $Array[$i] = $Array[$i]*6 / $arraySum * $imgHeight;        
+    }
+
+header("Content-type: image/png");
+
+$image=imagecreate($imgWidth, $imgHeight);
+$colorWhite=imagecolorallocate($image, 255, 255, 255);
+$colorGrey=imagecolorallocate($image, 192, 192, 192);
+$colorBlue=imagecolorallocate($image, 0, 0, 255);
+$colorBlack=imagecolorallocate($image, 0, 0, 0);
+
+    imagerectangle($image,0,1,$imgWidth-2,$imgHeight-2,$colorBlue);  
+
+    for ($i=1; $i<$count+1; $i++)
+    {
+        imageline($image, $i*25, 0, $i*25, $imgWidth, $colorGrey);
+        imageline($image, 0, $i*25, $imgHeight, $i*25, $colorGrey);
+    }
+
+    for ($i=0; $i<$count; $i++)
+    {
+        imageline($image, $i*25, ($imgWidth - $Array[$i]), ($i+1)*25, ($imgHeight - $Array[$i+1]), $colorBlue);
+        imagestring($image, 4, $i*25 - 20,($imgWidth - $Array[$i] - 25), "($Array_normal[$i])" ,$colorBlack);
+    }
+    
+imagepng($image); 
+
+
+
+function get_notas($idA){
+	$sql="SELECT notas FROM Expedientes WHERE idAlumno='$idA' ";
+	$query=mysql_query($sql) or die (mysql_error());
+	$row=mysql_fetch_row($query);
+	$datas=explode(",",$row[0]);
+	//	$a = array('green', 'red', 'yellow');
+$b = array('avocado', 'apple', 'banana');
+	return $datas;
+}
+function get_pruebas($idA){
+	$sql="SELECT pruebas FROM Expedientes WHERE idAlumno='$idA' ";
+	$query=mysql_query($sql) or die (mysql_error());
+	$row=mysql_fetch_row($query);
+	$datas=explode(",",$row[0]);
+	return $datas;
+	
+}
+function get_dates($idA){
+	$sql="SELECT Fechas FROM Expedientes WHERE idAlumno='$idA' ";
+	$query=mysql_query($sql) or die (mysql_error());
+	$row=mysql_fetch_row($query);
+	$datas=explode(",",$row[0]);
+
+//	foreach($datas as $key=>$value){
+//		echo 'dato: '.$key.'>>>>>'.$value.'<br />';
+//	}	
+	$a = array('green', 'red', 'yellow');
+//$b = array('avocado', 'apple', 'banana');
+	return $datas;
+}
+
+function get_data($idA){
+//	$fechas=array();
+//	$notas=array();
+//	var_dump(get_dates($idA));
+//	echo get_dates($idA);
+	$fechas=get_pruebas($idA);
+	$notas=get_notas($idA);
+	array_shift($fechas);
+	array_shift($notas);
+	$comb=array_combine($fechas,$notas);
+	print_r ($comb);
+	echo '<br />';
+	print_r ($fechas);
+	echo '<br />';
+	print_r ($notas);
+	echo '<br />';
+	foreach($comb as $key=>$value){
+		echo 'dato: '.$key.'>>>>>'.$value.'<br />';
+	}
+}
+
+/*
+// Set graph data
+$data = array(
+			'IE7' => 22,
+			'IE6' => 30.7,
+			'IE5' => 1.7,
+			'Firefox' => 36.5,
+			'Mozilla' => 1.1,
+			'Safari' => 2,
+			'Opera' => 1.4,
+		);
+
+// Set graph colors
+$color = array(
+			'#99C754',
+			'#54C7C5',
+			'#999999',
+		);
+
+*/
+/* # Chart 1 # */
+/*echo '<h2>Pie chart</h2>';
+$chart->setChartAttrs( array(
+	'type' => 'pie',
+	'title' => 'Browser market 2008',
+	'data' => $data,
+	'size' => array( 400, 300 ),
+	'color' => $color
+	));
+// Print chart
+echo $chart;
+*/
+
+/*
+
+		Example 2
+		Bar graph
+		Multiple data
+
+*/
+
+// Set multiple graph data
+/*
+	$dataMultiple = array( 
+		'February 2008' => array(
+			'IE7' => 22,
+			'IE6' => 30.7,
+			'IE5' => 1.7,
+			'Firefox' => 36.5,
+			'Mozilla' => 1.1,
+			'Safari' => 2,
+			'Opera' => 1.4,
+		),
+		'January 2008' => array(
+			'IE7' => 22,
+			'IE6' => 30.7,
+			'IE5' => 1.7,
+			'Firefox' => 36.5,
+			'Mozilla' => 1.1,
+			'Safari' => 2,
+			'Opera' => 1.4,
+		),
+	);
+*/
+/* # Chart 2 # */
+/*
+echo '<h2>Vertical Bar</h2>';
+$chart->setChartAttrs( array(
+	'type' => 'bar-vertical',
+	'title' => 'Browser market 2008',
+	'data' => $dataMultiple,
+	'size' => array( 550, 200 ),
+	'color' => $color,
+	'labelsXY' => true,
+	));
+// Print chart
+echo $chart;
+*/
+/*
+
+		Example 3
+		Timeline
+		Multiple data
+
+*/
+/*
+// Set timeline graph data
+$dataTimeline = array( 
+		'2007' => array(
+			'January' => 31.0,
+			'February' => 31.2,
+			'March' => 31.8,
+			'April' => 32.9,
+			'May' => 33.7,
+			'June' => 34.0,
+			'July' => 34.5,
+			'August' => 34.9,
+			'September' => 35.4,
+			'Oktober' => 36.0,
+			'November' => 36.3,
+			'December' => 36.3,
+			),
+		'2006' => array(
+			'January' => 25.0,
+			'February' => 24.5,
+			'March' => 24.5,
+			'April' => 22.9,
+			'May' => 22.9,
+			'June' => 25.5,
+			'July' => 25.5,
+			'August' => 24.9,
+			'September' => 27.3,
+			'Oktober' => 27.3,
+			'November' => 29.9,
+			'December' => 29.9,
+			),
+		'2005' => array(
+			'January' => 15.0,
+			'February' => 14.5,
+			'March' => 14.5,
+			'April' => 12.9,
+			'May' => 12.9,
+			'June' => 15.5,
+			'July' => 15.5,
+			'August' => 14.9,
+			'September' => 17.3,
+			'Oktober' => 17.3,
+			'November' => 19.9,
+			'December' => 19.9,
+			),
+	);
+*/
+/* # Chart 3 # */
+/*
+echo '<h2>Timeline</h2>';
+$chart->setChartAttrs( array(
+	'type' => 'sparkline',
+	'title' => 'Firefox market share (%) 2006-07',
+	'data' => $dataTimeline,
+	'size' => array( 600, 200 ),
+	'color' => $color,
+	'labelsXY' => true,
+	'fill' => array( '#eeeeee', '#aaaaaa' ),
+	));
+// Print chart
+echo $chart;
+*/
+?>
+
+<!DOCTYPE HTML>
+<html lang="es-ES">
+<head>
+	<meta charset="UTF-8">
+	<title>Resumen: Asignatura</title>
+	<script src="jquery/jquery-1.4.2.js"></script>
+<style>
+
+.izq{
+	float:left;
+}
+.dcha{
+	float:right;
+}
+.nobreak {
+    page-break-inside: avoid;
+}
+.clear {
+	clear: both;
+}
+/*body{
+	font-family:"Lucida Console";
+	font-size:small;
+	background:#eeeeee;
+
+}*/
+p{
+/*	font-family:"Lucida Console"; */
+	font-size:small;
+	clear:both;	
+} 
+.fld{
+	display:none;
+	margin-left:1em; 
+	width:6em;
+	float:left;
+}
+.fecha{
+	display:block;
+}
+.line{
+border-bottom:0.1em solid;
+}
+.big{
+	margin-top:2em;
+	font-size:medium;
+	color:#444444;
+	background:#ffffff;
+	
+}
+</style> 
+
+
+</head>
+s
+<body>
+<div class="rojo"></div>
+
+<?php 
+	$asg='asg_mike_10';
+	echo "Informes";
+	$con=conectar($asg);
+//	$a = array('green', 'red', 'yellow');
+//$b = array('avocado', 'apple', 'banana');
+//$c = array_combine($a, $b);
+//print_r($c);
+	cabeza();
+//	expediente();
+	$idA=5;
+	get_data($idA);
+echo $chart;
+echo '<span title="111">clase</span>';
+?>	
+
+<!-- <iframe src='test_pdf.pdf'></iframe> -->
+<!--<embed src='test_pdf.pdf' width='800' height='375'></embed> -->
+</body>
+	
+	<script src="js/final.js"></script>
+
+</html>

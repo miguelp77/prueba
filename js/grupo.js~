@@ -1,0 +1,41 @@
+$(document).ready(function() {
+
+var ajax_load = "<img src='img/ajax-loader.gif' alt='loading...' />";  
+var id=0;
+	$('.css_btt_r[title=Cambiar]').click(function(){
+		id=$(this).attr('name');
+		console.log(id);
+		$(this).html(id);
+	});//Fin Grupos
+//Mover a los alumnos
+		$('.css_btt[name=mover]').click(function(){
+//		id=$(this).attr('name');
+			var grupo=$('option:selected').val();
+			console.log(grupo);
+			$.ajax({
+				type:"POST",
+				url: "set_grupos.php",
+				data: "packet="+packet+"&grupo="+grupo,
+				success: function (){
+					$('#contenido').html(ajax_load).load('alumnos_crud.php');
+				}
+			});	
+	});
+//Fin de mover a los alumnos
+
+//Checkboxes
+	var packet=new Array();
+	
+	function updateChecks() {         
+		var allVals = [];  
+		$('input[type=checkbox]:checked').each(function() {
+			allVals.push($(this).val());
+		});
+		console.log(allVals);
+		packet=allVals;
+	}
+	 $(':checkbox').click(updateChecks);
+	//Fin checkboxes
+
+
+});

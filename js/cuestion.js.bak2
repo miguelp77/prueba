@@ -1,0 +1,327 @@
+$(document).ready(function(){
+////cuestion_create.php
+
+
+//Opciones de EDICION
+//Enunciado****Work!s!!
+$('.css_btt_l[name=edit]').click(function(){
+	var idQ=$('.redondear').text();
+	$.ajax({
+//		type: "POST",
+		url: "enunciado_get.php",
+	//	data: "enun= "+ enun1,
+		success: function(data){
+			var enunciado = data;
+			$('#enun').val(enunciado);
+			$('#enun1').toggle();
+		}
+	});
+});
+
+$('#enum1_form').submit(function(){
+// ACTUALIZAR ENUNCIADO en DDBB
+//cuestion_create.php 
+/////////////////////*******Works!!!
+//Pulsando el boton Enviar del formulario 
+//	var Cuestion_id =  $('.Numero').attr('id');
+	var enun1 = $('#enun').attr('value');
+//	var tabla=
+	console.log(enun1);
+	$.ajax({
+		type: "POST",
+		url: "enunciado1.php",
+//
+		data: "enun= "+ enun1,
+		success: function(){
+				$('#ula_main').load('cuestion_create.php');
+//			$('#contenido').load('cuestion_create.php');
+//			$('#enum1_form').hide(function(){$('div.success').fadeIn();});
+		}
+	});
+	return false;
+});
+
+//IMAGEN 1
+/////////////////////*******Works!!!
+$('.css_btt_l[name=img1]').click(function(){
+	$('#f_imagen1').toggle();
+});	
+
+$('#img1_form').submit(function(){
+	var Cuestion_id =  $('.Numero').attr('id');
+	var imagen = 'img/' + $('#img1').attr('value');
+	$.ajax({
+		type: "POST",
+		url: "insert_imagen1.php",
+		data: "imagen="+ imagen ,
+		success: function(data){
+			if(data !='NOk'){ 
+//				$('#f_imagen1').hide(500);
+				$('#imagen1').empty()
+					.append('<img src='+imagen+' />').slideDown('slow');
+				$('#f_imagen1').toggle();
+//				$('#ula_main').load('cuestion_create.php');
+			}
+			else{ 
+				alert('Imagen demasiado grande. Dimension maxima 800x500.');
+			}
+		}
+	});
+	return false;
+});    
+// IMAGEN 2
+/////////////////////*******Works!!!
+$('.css_btt_l[name=img2]').click(function(){
+	$('#f_imagen2').toggle();
+});	
+
+$('#img2_form').submit(function(){
+	var Cuestion_id =  $('.Numero').attr('id');
+	var imagen = 'img/' + $('#img2').attr('value');
+	$.ajax({
+		type: "POST",
+		url: "insert_imagen2.php",
+		data: "imagen="+ imagen ,
+		success: function(data){
+			if(data !='NOk'){ 
+//				$('#f_imagen1').hide(500);
+				$('#imagen2').empty()
+					.append('<img src='+imagen+' />').slideDown('slow');
+			$('#f_imagen2').toggle();
+//				$('#ula_main').load('cuestion_create.php');
+			}
+			else{ 
+				alert('Imagen demasiado grande. Dimension maxima 290x300.');
+			}
+		}
+	});
+	return false;
+});    
+
+//Botones de RESPUESTAS (CrUD)
+//    CREAR RESPUESTA
+// Formulario que introduce las posibles respuestas a una cuestion
+//MENU:: INSERTAR RESPUESTA	---------Crud
+$('a[title=Answer]').click(function(){
+	$('#f_respuestas').toggle('slow');
+});	
+$('#respuestas_form').submit(function(){
+	var Cuestion_id  =  $('.numero').attr('id');
+	var answer = $('#answer').attr('value');
+	var its = $('#its:checked').attr('value');
+	var last = $('#last:checked').attr('value');
+	$.ajax({
+		type: "POST",
+		url: "respuesta.php",
+		data: "Cuestion_id="+ Cuestion_id +"& answer="+ answer + "& correcta="+ its+ "& ultima="+ last,
+		success: function(data){
+	//		$('#f_respuestas').hide(1000);
+	//		$('.new_respuestas').wrap('<div id="respuestas" />').remove();
+	//		$('#respuestas').load('mostrar_respuestas_editable.php');
+				$('#ula_main').empty().load('cuestion_create.php');	
+		}
+	});
+	return false;
+});    
+//ELIMINAR RESPUESTA-----cruD
+$('a[title=borrame]').click(function(){
+	var answer_id = $(this).attr('value'); 
+	$('.'+answer_id).empty();
+	var borrar= confirm('Eliminar permanentemente?');
+	console.log(borrar);
+//	$('#accion').text("Borrado "+idTh);
+	console.log(answer_id);	
+	if(borrar)
+	$.ajax({
+		type: "POST",
+		url: "respuesta_borrar.php",
+		data: "Cuestion_id="+ answer_id ,
+		success: function(data){
+			$('.'+answer_id).text('--');
+		//	$('.'+answer_id).append(data);
+		}
+	});
+	return false;
+});    
+//EDITAR RESPUESTA Ok------crUd
+$('a[title=editar]').click(function(){
+	var answer_id = $(this).attr('value'); 
+/*
+var enunciado=$('#enunciado').text();
+	console.log(enunciado);
+	var noblanks=$.trim(enunciado);
+	var nobars=noblanks.split("\\");
+	enunciado=nobars.join("\\\\");
+ 
+*/
+
+	var miglobal = 'global';
+	$('.editando').hide();
+	$('.botones'+answer_id).hide();
+	var texto= $(this).parent().text();
+	var noblanks=$.trim(texto);
+	var nobars=noblanks.split("\\");
+	texto=nobars.join("\\\\");
+
+	$(this).parent().append('<div class="editando"><input type="text" title="editando" value="'+texto+'" /><div class="editando'+answer_id+'" /><a class="css_button" href="#" title="AnswerUpdate">Guardar</a><div class="clear"></div></div>').show();
+	$('.editando').show();	
+//Y el manejo del boton
+	$('a[title=AnswerUpdate]').click(function(){
+		var edi=$('input[title=editando]').val();
+//		console.log(edi);	
+		$('.botones'+answer_id).show();
+		$.ajax({
+			type: "POST",
+			url: "respuesta_editar.php",
+			data: "Resp_id="+ answer_id + "& Respuesta="+ edi , 
+			success: function(data){
+				$('#ula_main').empty();
+				$('#ula_main').load('cuestion_create.php');
+				//$('.'+answer_id).text(data);
+			}
+		});
+	});
+	return false;
+});
+
+$('a[title=nueva]').click(function(){
+	console.log('click');
+	$('#ula_main').toggle('slow');			
+	$.ajax({
+		url:"cuestion_nueva.php",
+		success: function(){ 
+			$('#ula_main').empty();		
+			$('#ula_main').load('cuestion_create.php');
+			$('#ula_main').toggle('slow');			
+		}
+	});				
+});
+//Eliminar CUESTION
+$('a[title=borrar]').click(function(){
+//	console.log('click');
+//	$('#ula_main').toggle('slow');			
+	var borrar= confirm('Eliminar permanentemente?');
+//	console.log(borrar);
+//	$('#accion').text("Borrado "+idTh);
+	if(borrar)
+	$.ajax({
+		url:"cuestion_borrar.php",
+		success: function(){ 
+			$('#ula_main').empty();		
+			$('#ula_main').load('cuestion_create.php');
+//			$('#ula_main').toggle();			
+		}
+	});				
+});
+$('a[title=anterior]').click(function(){
+	var Cuestion_id  =  numero();
+	console.log('click'+Cuestion_id);
+//	$('#ula_main').toggle('slow');			
+	$.ajax({
+		url:"cuestion_anterior.php",
+		success: function(){ 
+			$('#ula_main').empty();		
+			$('#ula_main').load('cuestion_create.php');
+//			$('#ula_main').toggle();			
+		}
+	});				
+});
+$('a[title=siguiente]').click(function(){
+	var Cuestion_id  =  numero();
+	console.log('click'+Cuestion_id);
+//	$('#ula_main').toggle('slow');			
+	$.ajax({
+		url:"cuestion_siguiente.php",
+		success: function(){ 
+			$('#ula_main').empty();		
+			$('#ula_main').load('cuestion_create.php');
+//			$('#ula_main').toggle();			
+		}
+	});				
+});
+$('a[title=compactar]').click(function(){
+//	var Cuestion_id  =  numero();
+	console.log('compactando');
+//	$('#ula_main').toggle('slow');			
+	$.ajax({
+		url:"cuestion_compactar.php",
+		success: function(){ 
+			$('#ula_main').empty();		
+			$('#ula_main').load('cuestion_create.php');
+//			$('#ula_main').toggle();			
+		}
+	});				
+});
+$("a[title^='cuestion']").click(function(){
+	var otra = $(this).attr('name');
+	console.log('otra '+otra);
+//	$('#ula_main').toggle('slow');			
+	$.ajax({
+//		type: "POST",
+		type: "GET",		
+		url:"cuestion_otra.php",
+		data: "id_otra="+ otra,
+//		data: "idQ="+ otra, 
+		success: function(){ 
+			$('#ula_main').empty();		
+			$('#ula_main').load('cuestion_create.php');
+//			$('#ula_main').toggle();			
+		}
+	});				
+});
+
+/////MODIFICACION each()
+
+
+
+//////////////////
+//Miscelanea
+/////////////Miscelanea
+//Checkboxes
+/*function countChecked() {
+	var n = $("input[type=checkbox]:checked").length;
+//	$("#pie").text(n +(n <= 1 ? " concepto" : " conceptos") + (n <= 1 ? " es" : " son") + (n <= 1 ? " seleccionado" : " seleccionados"));
+	$('#pie').html($("input[type=checkbox]:checked").val());
+}
+//countChecked();
+$(":checkbox").click(countChecked);
+*/
+//////////////////////////////////Works!!!!
+//Añade CONCEPTOS a cada CUESTION
+var packet=new Array();
+
+function updateTextArea() {         
+	var allVals = [];  
+  $('input[type=checkbox]:checked').each(function() {
+		allVals.push($(this).val());
+	});
+//     $('#pie').add(allVals);
+//	console.log(allVals);
+   packet=allVals;
+  }
+ //  updateTextArea();
+   $(':checkbox').click(updateTextArea);
+   
+$('button.setConcept').click(function(){
+//	var Cuestion_id  =  $('.Numero').attr('id');
+//	Cuestion_id=jQuery.trim(Cuestion_id);
+	$.ajax({
+		traditional: true,
+		type: "POST",
+		url: "Qset_Concepts.php",
+		data: "Ccs="+packet,
+//		success: function(data){
+//			$('#pie').html(data)
+//		}
+	});
+	return false;
+});
+
+function numero(){
+	var idQ =  $('.numero').text();
+	idQ = idQ.replace(/^\s*|\s*$/g,"");
+	return idQ;
+}
+
+//Fin de READY
+});

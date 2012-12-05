@@ -1,0 +1,58 @@
+.izq{
+	float:left;
+}
+.dcha{
+	float:right;
+}
+.nobreak {
+    page-break-inside: avoid;
+}
+.clear {
+	clear: both;
+}
+/*body{
+	font-family:"Lucida Console";
+	font-size:small;
+	background:#eeeeee;
+
+}*/
+p{
+/*	font-family:"Lucida Console"; */
+	font-size:small;
+	clear:both;	
+} 
+.fld{
+	display:none;
+	margin-left:1em; 
+	width:6em;
+	float:left;
+}
+.fecha{
+	display:block;
+	cursor:pointer;
+}
+.line{
+	display:block;
+	border-bottom:0.1em solid;
+	font-size:small;
+}
+.big{
+	margin-top:2em;
+	font-size:medium;
+	color:#444444;
+	background:#ffffff;
+}
+
+.underl{
+	text-decoration:underline;
+	margin: 0.2em;
+	cursor:pointer;
+}
+
+.lista{
+	padding:2px;
+	height:100px;
+	width: 95%;
+	color:gray;
+
+}

@@ -1,0 +1,35 @@
+BREVE GUIA DE USO DE git
+
+Crear un repositorio nuevo
+
+	Se crea un directorio nuevo donde se albergara el proyecto.
+	Dentro de éste, se inicializa
+	>	git init
+
+	Se crea un repositorio nuevo de git
+
+
+Flujo de trabajo
+	
+	El repositorio local está compuesto por tres "árboles":
+		- Directorio de trabajo: Contiene los archivos.
+		- Index: Área intermedia.
+		- Head: Apunta al último commit realizado.
+
+	Working directory
+	(add)
+	Index (stage)
+	(commit)
+	Head
+
+
+Crear una copia local (checkout) del repositorio
+
+	Repositorio local
+	>	git clone /ruta/al/repositorio
+
+	Repositorio remoto
+	>	git clone username@host:/ruta/al/repositorio
+
+
+

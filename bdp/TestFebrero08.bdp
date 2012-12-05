@@ -1,0 +1,229 @@
+1.-Entre los puntos A y B de un circuito constituido únicamente por generadores independientes y resistencias, se han realizado las siguientes medidas con un amperímetro y un voltímetro ideales, siendo las lecturas de 2 A y 8 V respectivamente:
+
+
+	
+Entonces, su equivalente Norton  
+
+será:
+
+a)IN = 0 Aef  y ZN = 0.25 ?.
+b)IN = 2 Aef  y ZN = 4j ?.
+c)IN = 2 Aef  y ZN = 4 ? .
+d)IN = 2 Aef  y ZN = 0.25j ?.
+
+
+2.-Suponiendo que tanto el amperímetro como el voltímetro de la siguiente figura son ideales, indique cuales serían las lecturas de ambos aparatos de medida:
+
+a)Voltímetro: 5 V, amperímetro: + 0.5 A.
+b)Voltímetro: -5 V, amperímetro: + 0.5 A.
+c)Voltímetro: -5 V, amperímetro: - 0.5 A.
+d)Voltímetro: 5 V, amperímetro: - 0.5 A.
+
+
+
+
+
+3.-Con ayuda del osciloscopio se desea obtener el valor de la intensidad que circula a través de la bobina (IL) en el siguiente circuito. El módulo y la fase de IL serán:
+
+a)	              ?IL= ?VZ
+b)			?IL= ?VR
+c)			?IL= ?VL
+d)			?IL= ?VL
+
+
+
+
+
+
+
+4.-En el laboratorio se ha comprobado que el desfase entre la tensión en bornas de una bobina real, cuya resistencia interna es de 25.12 ?, y la corriente que circula por ella es de ?/4 radianes cuando la frecuencia de trabajo es de 20 Hz. De ello se deduce que:
+
+a)La bobina tiene un coeficiente de autoinducción de 200 mH.
+b)La bobina presenta un coeficiente de autoinducción igual a 100 mH.
+c)La medida de desfase es incorrecta, porque el desfase entre la tensión y la corriente en una bobina es siempre igual a ?/2 radianes.
+d)El coeficiente de autoinducción de la bobina es igual a 1.25 H.
+
+
+5.-El voltímetro de la figura tiene una resistencia interna de 9 M?. Indicar el error cometido respecto de la situación ideal. Expresar la solución en %:
+
+a)? = 10.34 %.
+b)? = 0 %.
+c)? = 5.26 %.
+d)? = 100 %.
+
+
+6.-Queremos ver el desfase que existe entre la corriente y la tensión de la impedancia formada por el condensador C y la resistencia R2. Para ello utilizamos los dos canales del osciloscopio, midiendo la corriente en el canal 1 a través de la resistencia R1. Con el montaje representado podemos afirmar que:
+
+
+a)La señal del canal 2 estará adelantada a la del canal 1.
+b)La señal del canal 2 será cero mientras no pulsemos la tecla de inversión.
+c)La señal del canal 2 será cero.
+d)La señal del canal 1 estará en fase con la señal del canal 2 y se desfasará cuando invirtamos el canal 2.
+
+ 
+7.-La señal proporcionada por un generador de funciones es eg(t)=2+2?sen(1000·t) [V]. Si se mide la tensión en vacío en bornas del generador con un voltímetro en DC la lectura será:
+
+a)2/?2 V.
+b)2?2 V.
+c)4 V.
+d)2 V.
+
+		
+8.-Dos señales sinusoidales de 1 kHz están retrasadas entre sí 0.4 ms. ¿Cuál es el desfase entre ambas señales expresado en radianes?
+
+a)0.8 ? ? radianes
+b)0.4 ? ? radianes.
+c)0.2 ? ? radianes
+d)? radianes 
+
+9.-Al realizar una medida con un voltímetro interesa que:
+
+a)La impedancia interna del voltímetro sea mucho menor que la resistencia equivalente de los puntos entre los que se conecta el voltímetro.
+b)Un voltímetro no tiene resistencia interna.
+c)No es necesario alimentar el circuito, ya que el voltímetro aporta alimentación interna.
+d)La impedancia interna del voltímetro sea mucho mayor que la resistencia equivalente de los puntos entre los que se conecta.
+
+
+10.-En el circuito propuesto, al conectar un canal del osciloscopio entre los puntos A-B con el conmutador en la posición DC, la señal visualizada en la pantalla será:
+
+
+
+a)Un nivel de continua igual a E voltios.
+b)Con el pulsador en posición DC se elimina la componente continua y por tanto, se verá un nivel igual a 0 V.
+c)Una señal alterna superpuesta a un nivel de continua, al existir generadores de distinta frecuencia.
+d)No se pueden conectar en un mismo circuito generadores de diferentes frecuencias.
+
+
+
+11.-¿Qué valor puede medir el amperímetro ideal si la resistencia tiene una tolerancia del 10%? .
+
+
+
+
+a)Entre 10/9 y 10/11 A.
+b)Entre 10/8 y 10/12 A.
+c)Entre 10 y 10/11 A.
+d)Entre 1 y 2 A.
+
+
+
+
+
+
+
+
+
+
+
+12.-En el circuito de la figura medimos, usando el polímetro, la resistencia entre los puntos A y B. ¿Cuál será la medida leída?. 
+
+
+a)50 ?
+b)25 ?
+c)20 ?
+d)40 ?
+
+
+
+13.-¿Qué mando del osciloscopio se ha variado si la figura observada pasa de la posición A a la posición B, considerando que la señal de entrada al osciloscopio es la misma en ambos casos ?
+
+
+
+a)El mando de sensibilidad vertical (VOLT/DIV).
+b)El mando de tensión de disparo (LEVEL).
+c)El mando de sensibilidad horizontal (TIME/DIV).
+d)El mando de invertir canal (INV).
+
+ 
+14.-Sobre el circuito de la figura, ¿qué valor indicaría el amperímetro suponiendo que es ideal?
+
+
+
+a)0.05 A
+b)0 porque el amperímetro está conectado incorrectamente
+c)1 A.     
+d)0.1 A. 
+
+
+
+
+
+
+
+
+
+
+
+15.-Se selecciona una tensión en vacío para el generador de la figura de Eg=6 Vp . A continuación se conecta una resistencia R entre las bornas A y B del generador, observándose que la tensión en bornas de R es menor que 3 Vp. Por lo tanto:
+
+
+a)R es igual a 100 ?
+b)R es mayor que 100 ?
+c)R es igual a 200 ?
+d)R es menor que 100 ?
+
+
+
+
+
+16.-En el circuito de la figura 1, se ha realizado el siguiente montaje. Sabiendo que el canal 2 tiene pulsado la tecla INV y:
+
+Time/div: 1 mseg/div.
+Volt/div(CH1): 1 volt/div
+Volt/div(CH2): 2 Volt/div.
+
+
+
+Figura 1
+
+¿Cuál es el desfase entre las dos señales de la figura 1?
+
+a)0 rad.
+b) rad.
+c) rad.
+d)Ninguna de las anteriores.
+
+
+17.-A la vista de las señales de la figura 1, ¿ qué tipo de impedancia se encuentra representado por Z?
+
+a)Inductiva.
+b)Capacitiva
+c)Resistiva.
+d)Es una bobina.
+
+
+
+
+
+
+
+18.-Para la señal del canal 2 (CH2) de la figura 1 su valor pico-pico será: 
+
+a)16 V
+b)4 V
+c) V.
+d)8 V.
+
+
+19.- En un circuito formado por bobinas, resistencias y condensadores y alimentado por un generador de tensión de frecuencia 1 KHz. ¿Es posible medir tensiones en el circuito superiores a las del generador que lo alimenta?
+NOTA: Trabajamos en régimen permanente.
+
+a)Sí.
+b)No.
+c)Depende del modelo de generador.
+d)Ninguna de las anteriores.
+
+
+
+20.- En el siguiente circuito:
+
+
+se observa que siempre que aumenta la frecuencia del generador disminuye el valor medido por el amperímetro. De ello se deduce:
+
+a)X es una resistencia.
+b)X es un condensador.
+c)X es una bobina real.
+d)Ninguna de las anteriores.
+
+
+

@@ -1,0 +1,14 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/miguel/webs/myapp"
+		}
+	],
+
+    "settings": {
+        "xdebug": { 
+        	"url": "http://localhost/myapp"
+      }
+    }
+}

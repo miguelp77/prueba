@@ -1,0 +1,4 @@
+lineas modificadas en httpd.conf
+
+ln 390
+ln 365 DocumentRoot "/opt/lampp/htdocs"

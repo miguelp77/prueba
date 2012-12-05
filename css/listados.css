@@ -1,0 +1,16 @@
+img{
+	border:none;
+}
+.css_button
+{
+	display: inline-block;
+	width:100px;
+	border:#dedede solid 2px; 
+	background-color:#f5f5f5; 
+	color:#819215;
+	font-size:12px;
+	padding:3px; 
+	
+/*	-moz-border-radius: 3px; -webkit-border-radius: 5px; 
+*/
+}

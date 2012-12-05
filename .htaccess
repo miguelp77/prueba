@@ -1,0 +1,17 @@
+DirectoryIndex index.php
+Options All -Indexes
+
+#<Limit GET>
+#order deny,allow
+#deny from all
+##allow from localhost
+#allow /public
+#</Limit>
+## asegurar htaccess
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+ErrorDocument 403 /public/403.html  

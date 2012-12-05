@@ -1,0 +1,98 @@
+DirectoryIndex index.php
+
+IndexIgnore *
+
+ErrorDocument 403 /pfc/public/403.html  
+ErrorDocument 404 /pfc/public/404.html  
+ErrorDocument 500 /pfc/public/500.html  
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+
+#php_value display_errors "Off"
+
+# redirect all visitors to alternate site but retain full access for you
+#ErrorDocument 403 http://www.google.com
+#Order deny,allow
+#Deny from all
+#Allow from 99.88.77.66
+
+#todo a index
+#RewriteEngine on
+#RewriteRule !\.(gif|jpg|ico|css|js|txt)$ /index.php
+
+
+# automatically corect simple speling erors
+<IfModule mod_speling.c>
+ CheckSpelling On
+</IfModule>
+
+# prevent viewing of a specific file
+#<files monitor.php >
+# order allow,deny
+# deny from all
+#</files>
+
+#email del Admin
+ServerSignature EMail
+SetEnv SERVER_ADMIN paniagua.miguel@gmail.com
+
+
+#Prueba
+#Options +FollowSymLinks
+#RewriteEngine On
+#RewriteBase /
+
+
+
+
+# If the hour is 17 (5 PM) Then deny all access
+#RewriteCond %{TIME_HOUR} ^17$
+#RewriteRule ^.*$ - [F,L]
+
+
+
+
+
+## PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+
+
+# users can load only "special.zip", and the css and js files.
+#    Options +FollowSymlinks
+##    RewriteEngine On
+#    RewriteCond %{REQUEST_FILENAME} !^(.+)\.css$
+#    RewriteCond %{REQUEST_FILENAME} !^(.+)\.js$
+#    RewriteCond %{REQUEST_FILENAME} !special.zip$
+##    RewriteCond %{REQUEST_FILENAME} !index.php$
+#    RewriteRule ^(.+)$ /pfc/public/500.html [NC]
+#RewriteRule ^pru/?$ prueba.php [NC,L] # Handle requests for "pet-care"
+
+#AuthType basic
+#AuthName "This directory is protected"
+#AuthUserFile /dev/.htpasswd
+#AuthGroupFile /dev/null
+#Require valid-user
+
+#AuthType Basic
+#AuthName "This is that"
+#AuthUserFile /dev/.htpasswd
+#require valid-user
+
+
+
+# block visitors referred from indicated domains
+# <IfModule mod_rewrite.c>
+#  RewriteEngine on
+#  RewriteCond %{HTTP_REFERER} scumbag\.com [NC,OR]
+#  RewriteCond %{HTTP_REFERER} wormhole\.com [NC,OR]
+#  RewriteRule .* - [F]
+# </ifModule>

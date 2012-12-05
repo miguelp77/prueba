@@ -1,0 +1,59 @@
+#intro {
+	width:800px;
+	}
+#contenido{
+	width:700px;
+	float:left;
+}	
+#formDesc{
+	display:none;
+}
+#left_col{
+	margin:10px;
+	padding:10px;
+	width:120px;
+	float:left;
+}
+#zona{
+	margin:10px;
+	width:320px;
+	float:left;
+	border: solid 1px black;
+}
+#formulario{
+	float:left;
+	margin: 0.5em;
+	}
+
+.ready{
+	margin:1em;
+	padding-left:0.3em;
+	float:left;
+	width:300px;
+	}
+	
+.temas{
+	display:none;
+	}
+/*LISTAS*/	
+ol{
+	background: #f5f4e1;
+	margin: 0px;
+	padding:0px;
+	}
+li{
+	background: #f5f4e1;
+	margin-left: 30px;
+	padding-left:10px;
+	}
+ul{
+	background: #ffffff;
+	color:#b4aa97;
+	margin: 0px;
+	padding:0px;
+	border-top:solid 1px black;
+	}
+li:nth-child(odd){
+	background: #ffffff;
+}
+
