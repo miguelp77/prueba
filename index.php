@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	require_once('includes/db_tools.inc');
-
 ?> 
 <!DOCTYPE HTML>
 <html lang="es-ES">
@@ -9,7 +8,7 @@
 	<meta charset="UTF-8">
 	<title>Login</title>
 	<link rel=stylesheet href="css/main.css" type="text/css">
-		<script src="jquery/jquery-1.4.2.js" type="text/javascript"></script>
+	<script src="jquery/jquery-1.4.2.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/login.js"> </script>
 </head>
 <body>
@@ -19,15 +18,6 @@
 	<!-- Pantalla de login comun -->
 	</div>
 	<p class="barra"></p>
-<!--
-	<div id="menu">
- Aqui va el menú. 		
-		<div class="css_btt">opt</div><br />
-		<div class="css_btt">opt</div><br />
-		<div class="css_btt">opt</div><br />
-		<div class="css_btt">opt</div><br />
-	</div>
--->
 	<div id="contenido">
 		<!-- Aqui va el contenido -->
 	<div class="consola"><?php if(isset($_SESSION['msg'])){echo $_SESSION['msg']; unset($_SESSION['msg']);}?></div>
