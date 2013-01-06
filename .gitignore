@@ -1,0 +1,12 @@
+wkhtmltopdf-i386
+
+#Directorios a ignorar
+
+mathjax/*
+error/*
+img/*
+backups/*
+tex2im-1.8/*
+tmp/*
+fancybox/*
+

@@ -31,19 +31,20 @@
 	<div id="contenido">
 		<!-- Aqui va el contenido -->
 	<div class="consola"><?php if(isset($_SESSION['msg'])){echo $_SESSION['msg']; unset($_SESSION['msg']);}?></div>
-		<form>
+		<form action="#" method="POST">
 				<fieldset>
 					<legend>Login</legend>
 					<div class="campo">Usuario</div>
-					<div class="campo"><input placeholder="Introduzca su nombre" type="text" name="alias" autocomplete="off"/></div>
-							<div class="clear"></div>
+					<div class="campo">
+						<input placeholder="Introduzca su nombre" type="text" name="alias" autocomplete="off" required="required" />
+					</div>
+					<div class="clear"></div>
 					<div class="campo">Contraseña</div>
 					<div class="campo"><input placeholder="Introduzca su contraseña" type="text" name="pass" autocomplete="off"/></div>
-							<div class="clear"></div>
-		
+					<div class="clear"></div>
 				</fieldset>
 		</form>
-		<div class="campo"><hr /></div><button name="validar">Validar</button>
+		<button name="validar">Validar</button>
 	</div>
 
 	</div>	

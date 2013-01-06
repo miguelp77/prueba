@@ -57,8 +57,8 @@ input[type='text'] { margin-right: 4px;}
 #contenido{
   background: #eee;
 	float:left;
-	max-width:960px;
-	min-width:812px;
+	max-width:812px;
+	min-width:800px;
 	padding:0.5em;
 	margin-left:1em;
 }
@@ -98,7 +98,16 @@ input[type='text'] { margin-right: 4px;}
 	width:6em;
 	font-size: medium;
 	text-align:left;
+	margin-top: 2px;
 }
+.campo:valid {
+	border-color: #0f0;
+}
+.campo:invalid {
+	border-color: #f00;
+}
+/*input:required {border-color: orange;}*/
+
 .c15{
 	float:left;
 	width:15em;
@@ -484,7 +493,8 @@ width:7em;
 li { list-style: none; display: table-row;}
 li:nth-child(odd) { background-color:#eee;  }
 li:nth-child(even) { background-color: #fff; }
-
+#botonera .css_btt_l {color: red;}
+#botonera ul li {background: #eee;}
 .caja_20{
 	width: 225px;
 	min-width: 160px;

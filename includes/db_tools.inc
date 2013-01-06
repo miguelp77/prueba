@@ -219,6 +219,7 @@ function create_alumnos_table(){
 		$sql .= " `Psw` varchar(20) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'pass', ";
 		$sql .= " `status` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL, ";
 		$sql .= " `examenes` varchar(120) COLLATE utf8_spanish_ci DEFAULT NULL, ";		
+		$sql .= " `grupos` varchar(120) COLLATE utf8_spanish_ci NOT NULL DEFAULT '0', ";		
 		$sql .= "  PRIMARY KEY (`Alumno_id`) ";
 		$sql .= " ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci";
 		return $query = mysql_query($sql) or die(mysql_error());
@@ -317,12 +318,12 @@ Prueba
 ***/
 function db_clone($origen,$destino=null){
 
-//	if($destino==null) $destino=$origen."_bak";
-	$destino='asg_test';
-//	$sql="CREATE DATABASE $destino";
-//	$query = mysql_query($sql) or die(mysql_error());
-//	$sql="ALTER DATABASE $destino DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci";
-//	$query = mysql_query($sql) or die(mysql_error());
+	if($destino==null) $destino=$origen."_bak";
+//	$destino='asg_test';
+	$sql="CREATE DATABASE $destino";
+	$query = mysql_query($sql) or die(mysql_error());
+	$sql="ALTER DATABASE $destino DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci";
+	$query = mysql_query($sql) or die(mysql_error());
 
 	$result = mysql_list_tables($origen);
 	$num_rows = mysql_num_rows($result);
@@ -333,8 +334,8 @@ function db_clone($origen,$destino=null){
 			$tabla_origen=$origen.".".$table_name;
 			$tabla_destino=$destino.".".$table_name;  
 			echo $tabla_destino.'<br />';
-//			$sql="INSERT INTO $tabla_destino SELECT * FROM $tabla_origen" ;
-//			$query = mysql_query($sql) or die(mysql_error());
+			$sql="INSERT INTO $tabla_destino SELECT * FROM $tabla_origen" ;
+			$query = mysql_query($sql) or die(mysql_error());
 		}
 	}
 }
