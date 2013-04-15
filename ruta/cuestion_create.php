@@ -74,6 +74,7 @@ function destinos(){
 		
 		<div class="css_btt_r" name="compactar"><a href="#" title="compactar">Compactar</a></div>					
 	<div class="clear"></div>
+	<hr />
 	</div>	
 
 <?php 
@@ -87,14 +88,6 @@ function destinos(){
 //	echo $ini.'---'.$ultima.'<br />';
 	numero_de_cuestiones($ini,19,$ultima);
 ?>
-<div id="botonera">
-	<ul>
-	  <li><span class="css_btt_l" name="edit"> <a href="#" title="Edit">Enunciado</a></span></li>
-		<li><span class="css_btt_l" name="img1"> <a href="#f_imagen1" title="imagen 1" id="img1">Imagen 1</a></span></li>
-    <li><span class="css_btt_l" name="img2"> <a href="#" title="img2">Imagen 2</a></span></li>
-    <li><span class="css_btt_l" name="answer"> <a href="#" title="Answer">Respuestas</a></span></li>
-	</ul>
-</div> 
 <div class="clear"></div>
 <div id="copiar">
 	<hr />
@@ -131,28 +124,28 @@ function destinos(){
 <!-- Eleccion de la imagen 1-->
 
 	<div id='f_imagen1' style="width:900px;height:300px;overflow:auto;">
+		<hr />
 		<?php
-//			echo '<form name="imagenes" action="">';
-			echo '<hr />';
-			$file_list=give_files('img');
-			echo '<select class="im_sel1" name="im1" size="1">';
-			foreach($file_list as $item){				
-				$cadena=$item['name'].'.'.$item['ext'];
-				echo '<option value="'.$cadena.' name="im1" >'.$cadena.'</option>';
-				if($item['ext']=='png'){
-					$total_items++;
-					$img_source[]=$cadena;
-				}
-			}
-			echo '</select>';
-			echo '<button name="im1">Seleccionar</button>';
-			$current=2;
-			echo '<div class="im1_wrap">';
-			echo '<img src="'.$img_source[$current].'" alt="Imagen" /><br>'.$img_source[$current].'</div>';
-//			echo '<div class="wrap">';
-//			echo '<img src="'.$img_source[$current].'" alt="Imagen" /><br />'.$img_source[$current].'</div>';
-			echo '<div class="clear"></div>';
+			// $file_list=give_files('img');
+			// echo '<select class="im_sel1" name="im1" size="1">';
+			// foreach($file_list as $item){				
+			// 	$cadena=$item['name'].'.'.$item['ext'];
+			// 	echo '<option value="'.$cadena.' name="im1" >'.$cadena.'</option>';
+			// 	if($item['ext']=='png'){
+			// 		$total_items++;
+			// 		$img_source[]=$cadena;
+			// 	}
+			// }
+			// echo '</select>';
+			// echo '<button name="im1">Seleccionar</button>';
+			// $current=2;
+			// echo '<div class="im1_wrap">';
+			// echo '<img src="'.$img_source[$current].'" alt="Imagen" /><br>'.$img_source[$current].'</div>';
+			
+			// show_img('img/','jpg');
+			print_r(read_db_img());
 		?>
+		<div class="clear"></div>
 	</div>
 
 <!-- Eleccion de la imagen 2-->
@@ -207,7 +200,7 @@ function destinos(){
 		<?php
 			if(isset($_SESSION['idQ']) && GetImage($idQ)!=null){ 
 				echo "<img class='im1' src='".GetImage($idQ)."' />";
-				echo '<span class="del_im1" style="vertical-align: top"><img src="./img/cross.png" alt=""/></span>';
+				echo '<span class="del_im1" style="vertical-align: top"><img src="../img/cross.png" alt=""/></span>';
 			}else echo "";
 		
 		?> 
@@ -218,7 +211,7 @@ function destinos(){
 			<span class='resaltada'></span><br />
 		<?php 
 			if(isset($_SESSION['idQ']) && GetImage2($idQ)!=null){
-				echo '<span class="del_im2" style="vertical-align: top"><img src="./img/cross.png" alt=""/></span>';
+				echo '<span class="del_im2" style="vertical-align: top"><img src="../img/cross.png" alt=""/></span>';
 				echo "<img class='im2' src='".GetImage2($idQ)."' />";
 			}else echo "";
 		?> 
@@ -241,13 +234,27 @@ function destinos(){
 		</form>
 	</div>
 	<hr />
+	<div id="botonera">
+		<ul>
+		  <li><span class="css_btt_l" name="edit"> <a href="#" title="Edit">Enunciado</a></span></li>
+			<li><span class="css_btt_l" name="img1"> <a href="#f_imagen1" title="imagen 1" id="img1">Imagen 1</a></span></li>
+	    <li><span class="css_btt_l" name="img2"> <a href="#" title="img2">Imagen 2</a></span></li>
+	    <li><span class="css_btt_l" name="answer"> <a href="#" title="Answer">Respuestas</a></span></li>
+		</ul>
+	</div> 
+	<hr />
+
 	<div class="black rot">+</div>
+
 	<div id="conceptos_resumen"><?php if(isset($idQ)){ $cad=to_title($idQ); echo $cad; } ?></div>
 	<div id="conceptos_op">
 		<br />
 		<?php	if(isset($_SESSION['idQ'])) showConceptos($idQ); ?>
 	</div>
-	<div id="pie"></div>
+	<?php 
+		// $files=give_files('../img');
+		// var_dump($files);
+	?>
 	</div>
 	 <!--- Fin del contenido -->
 

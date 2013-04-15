@@ -63,9 +63,23 @@ if($numero_de_alumnos>0){
 		echo '<div class="scroll-panel">';
 		while($result=mysql_fetch_assoc($query)){
 			$nEx=next_source($result['Alumno_id']);
-					
-		echo '<span class="naranja"> '.$result['Apellidos'].', '.$result['Nombre'].' | '.$result['DNI'].' [ '.$nEx.' ]['.$result['Alias']."] [".$result['Psw']."]".'</span>';
-		echo '<span class="tag">'.$result['grupos'].'</span>';
+			
+		echo '<span class="naranja"> ';
+		echo '<span class="cajarow">'.$result['Apellidos'].', '.$result['Nombre'].' </span>';
+		// echo '<span class="cajarow">'.$result['DNI'].' </span>';
+		echo '<span class="cajarow">'.$result['Alias'].' </span>';
+		echo '<span class="cajarow">'.$result['Psw'].' </span>';
+		// echo '<span class="cajarow">'.$result['Psw'].' </span>';
+		if($nEx=='')$nEx='-' ;
+		echo '<span class="littlecajarow">'.$nEx.' </span>';
+		$arr_grupos = explode(',', $result['grupos']);
+		foreach ($arr_grupos as $key => $value) {
+			# code...
+			echo '<span class="tag">'.$value.'</span>';
+		}
+		echo '</span>';
+		// echo $result['DNI'].' [ '.$nEx.' ]['.$result['Alias']."] [".$result['Psw']."]";
+		// echo '<span class="tag">'.$result['grupos'].'</span>'.'</span>';
 		echo "<div class='css_btt_r' name=".$result['Alumno_id']." title='editar'><a href='#aqui'>editar</a></div>";
 		echo "<div class='css_btt_r' name=".$result['Alumno_id']." title='borrar'>borrar</div>";
 		echo "<hr />";

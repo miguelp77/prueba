@@ -1,4 +1,14 @@
 <?php
+/**
+*
+* Funciones Basicas
+* Varias funciones para actuar con la base de datos.
+* 
+* @author  Miguel Paniagua
+*
+* namespace ns;
+*/
+
 // defined('FOLDER')   ? null : define("FOLDER", $_SERVER['DOCUMENT_ROOT']."/myapp/");
 // require_once(FOLDER.'includes/db_config.php');
  require_once('includes/db_config.php');
@@ -6,11 +16,25 @@
 
 //require_once('includes/fixing_exp.inc');
 //funciones basicas
+
+/**
+*
+* Conectar DB
+* Conexion a la base de datos 
+* @return conexion 
+*/	
 function connect_to_db(){
 	$conn=mysql_connect(DB_SERVER,DB_USER,DB_PASS);
 //	echo "Conectado <br />";
 	return $conn;  
 }
+/**
+*
+* Conectar DB
+* Conexion a la base de datos 
+* @param mixed $database Nombre de la base de datos
+* @return conexion 
+*/
 function conectar($database=NULL){
 	if ($database != NULL) {
 		$conn=mysql_connect(DB_SERVER,DB_USER,DB_PASS);
@@ -32,6 +56,13 @@ function conectar($database=NULL){
 		return $conn;  
   }
 }
+/**
+*
+* Nombre asignatura
+* Devuelve el nombre de la asignatura  
+* @param string $db
+* @return string Cadena con el nombre de la asignatura
+*/
 function asg_name($db=null){
 /* Devuelve el nombre de la asignatura, sin arreglo*/
 	if($db!=null){
@@ -42,15 +73,36 @@ function asg_name($db=null){
 		return $asig;
 	}
 }
+/**
+*
+* Pasa a UTF8
+* Codifica la cadena a UTF8 
+* @param string $cadena Nombre de la base de datos
+* @return string $cadena Cadena codificada en UTF8 
+*/
 function parse_utf8($cadena){
 	$b=mb_detect_encoding($cadena, 'UTF-8', true); // Check si es UTF8
 	if(!$b) $cadena=utf8_encode($cadena);
 	return $cadena;
 }
+/**
+*
+* Comprueba formato
+* Comprueba que la cadena es UTF8 
+* @param string $cadena Cadena a comprobar
+* @return bool
+*/
 function check_UTF8($cadena){
 	return mb_detect_encoding($cadena, 'UTF-8', true);
 }
-
+/**
+*
+* Generacion de contraseña
+* La generacion de contraseña sera automatica y se almacenara en texto plano 
+* @param int $length Longitud de la contraseña
+* @param int $strength Fortaliza
+* @return string $password Contraseña
+*/
 function generatePassword($length=9, $strength=2) {
 	$vowels = 'aeiou';
 	$consonants = 'bdghjmnpqrstvz';
@@ -80,6 +132,14 @@ function generatePassword($length=9, $strength=2) {
 //	$password=filtro_letras($password);
 	return $password;
 }
+/**
+*
+* Genera Nombre de usuario
+* Genera el nombre de usuario aleatorio 
+* @param int $length Longitud del nombre de usuario
+* @param string $user Usuario
+* @return string $reto Username 
+*/
 function generateUser($length=6, $user='aeiou') {
 	$user=str_replace(' ','',$user);
 	$user .= 'AEIOUXYZ';
@@ -248,7 +308,7 @@ function montar_pdfprinter($db=null,$opciones=null,$valores=null){
 		$sql="INSERT INTO pdfprinter (status,BBDD,opciones,valores,marca,rmks) ";
 		$sql .="VALUES ('$status','$db','$opciones','$valores','$marca','$rmks')";
 		$query=mysql_query($sql) or die(mysql_error());
-		echo $sql.'<br />';
+		// echo $sql.'<br />';
 		return mysql_close($link);
 	}else return false;
 }
@@ -311,10 +371,14 @@ function listado_alumnos($db=null){
 	mysql_close($link);	
 	}else return false;
 }
+//LISTA DE NOTAS DESDE pront_notas.php
+
 function listado_notas($db=null,$fecha=null,$rmks=null){
 	$p_num=0; //numero de alumnos presentados	
+
 	if($db!=null){
 		$link=conectar($db);
+//Cabecera
 		echo '<b><br />Alumnos presentados.<br /></b>';	
 		echo '<hr />';		
 		echo '<span class="c15">Apellidos,Nombre</span>';
@@ -323,28 +387,38 @@ function listado_notas($db=null,$fecha=null,$rmks=null){
 		echo '<span class="c15">Nota</span>';		
 		echo '<br /><hr />';
 		$i=0;
-		$presentados_ids=Array();
-	//	$np_ids=Array();
-	//	$np_total=Array();
-		if($fecha!=null){
-			$al=walk_idA_alumnos();//de Alumnos
+
+		if($fecha!=null && $rmks!=null){
+	//Obtengo los IDs de los alumnos de los grupos seleccionados
+		// - Grupos que se han seleccionado
+			$presentados_ids=Array();
+			$grupos=array();
+			if($rmks!=null){
+				$grupos=explode(',',$rmks);
+			}
+			foreach ($grupos as $key => $value) {
+					$pertenecen[$value] = alumnos_de($value); 
+			}		
+			// $al=walk_idA_alumnos();//de Alumnos
 //Inicio de grupo
-		$grupos=array();
-//		var_dump($rmks);		
-		if($rmks!=null){
-			$grupos=explode(',',$rmks);
-		}
-				
+									
 //Fin de grupo
 			foreach($grupos as $grupo){
+			//Comienza la lista
 			echo '<span class="c15"><br />GRUPO: '.$grupo.'</span><br />';
-			foreach($al as $k=>$v){
-				$datos=give_their_data($v);
-				$al_fcha=get_fechas($v);
-				$al_ntas=get_notas($v);
-				if($al_fcha!=null) //Linea de depuracion
-				foreach($al_fcha as $kf=>$fcha){
-					if($fcha==$fecha && $datos[3]==$grupo){
+			$al = $pertenecen[$grupo];
+			foreach($al as $k=>$id_alumno){
+				//Obtengo los datos del alumno
+				$datos=give_their_data($id_alumno);
+				// ARRAY de las fechas en las que se ha presentado 
+				$al_fcha=get_fechas($id_alumno);
+				// ARRAY de las notas de la convocatoria
+				$al_ntas=get_notas($id_alumno);
+				// echo 'fechas '.count($al_fcha).' notas '.count($al_ntas).'<br />';
+				if($al_fcha!=null) //Linea de proteccion - depuracion
+				foreach($al_fcha as $kf => $fcha){
+					if($fcha == $fecha){
+						echo 'la fecha es igual'.$kf.'<br />';
 						$nota[]=$al_ntas[$kf];
 //					echo 'alumno '.$datos[0].' nota '.$al_ntas[$kf].'<br />';
 						$i++;
@@ -352,16 +426,21 @@ function listado_notas($db=null,$fecha=null,$rmks=null){
 //						$presentados_ids[]=$v;
 						if($i%2) echo "<div class=\"clear colorme\">";
 						else echo "<div class=\"clear colorme odd\">";
-						echo '<span class="c15">'.$datos[0].','.$datos[1].'</span>';
-						echo '<span class="c15">'.$datos[2].'</span>';
-						echo '<span class="campo"> </span>';
-						echo '<span class="c15">'.$al_ntas[$kf].'</span>';
+					
+							echo '<span class="c15">'.$datos[0].','.$datos[1].'</span>';
+							echo '<span class="c15">'.$datos[2].'</span>';
+							echo '<span class="campo"> </span>';
+							echo '<span class="c15">'.$al_ntas[$kf].'</span>';
 						echo '</div>';
-						if(!in_array($v,$presentados_ids))$presentados_ids[]=$v;
+						
+						if(!in_array($id_alumno,$presentados_ids))$presentados_ids[]=$id_alumno;
+						
 						$p_num++;
-					}
-				}
-			}
+					} // Fin IF comparando fechas
+				} //Fin de FOREACH recorriendo las fechas
+				unset($al_fcha);
+				unset($al_ntas);
+			} //Fin del IF de proteccion
 			}			
 			$np_num=0;
 		if(isset($nota)){	
@@ -420,8 +499,8 @@ function to_pdf($fuente='final.php',$destino=null){
 	$origen="http://localhost/myapp/ruta/".$fuente;
 	if($destino!=null){
 		$destino =$destino.".pdf";
-		passthru("./wkhtmltopdf-i386 --javascript-delay 7000 $origen pdfs/$destino");
-		return true;
+		passthru("./wkhtmltopdf-i386 --javascript-delay 7000 $origen pdfs/$destino", $retorno);
+		return $retorno;
 	}else return false;
 }
 
@@ -432,7 +511,7 @@ function fast_pdf($fuente='final.php',$destino=null){
 	// echo 'origen del pdf (basics.php 432) '.$origen.'<br />';	
 	if($destino!=null){
 		$destino =$destino.".pdf";
-		echo $destino.'<br />';
+		// echo $destino.'<br />';
 		$passt=passthru(".././wkhtmltopdf-i386 $origen pdfs/$destino", $retorno);
 		return $retorno;
 	}else return false;
@@ -782,6 +861,7 @@ function array_complete($origen=null,$actual=null,$notas=null){
 	$comb=array_combine($total,$np);
 	return $comb;
 }
+
 //Grupos de alumnos
 function get_grupos(){
 	$arr=array();
@@ -793,8 +873,76 @@ function get_grupos(){
 	}
 	return $arr;
 }
+function getGroups(){
+	$arr=array();
+	$sql='SELECT nombre FROM Grupos';
+	$query = mysql_query($sql) or die(mysql_error());	
+	while($row=mysql_fetch_row($query)){
+		if($row[0]==null) $row[0]='-';
+		if(!in_array($row[0],$arr)) array_push($arr,$row[0]);
+	}
+	return $arr;
+}
+
+//Ver linea 340
+function alumnos_de($grupo){
+	
+	$sql="SELECT asignados FROM Grupos WHERE nombre ='$grupo' LIMIT 1";
+	$query = mysql_query($sql) or die(mysql_error());	
+	$row=mysql_fetch_row($query);
+	if($row[0]==null) return false;
+	else{
+		return explode(',', $row[0]);
+	}
+
+}
 
 //Fin de grupos de alumnos
+/**
+* Funciones Examen
+* Funciones que son utilizadas durante la realizacion de las pruebas
+*/
+/**
+*
+* Duracion  del examen
+*
+*
+*/
+	function duracion(){
+		if(isset($_SESSION['duracion']))
+			return $_SESSION['duracion'];
+		else sin_examenes('#01 - Duracion no definida');
+	}
+	function sin_examenes($msg='#00'){
+			$_SESSION['msg']='Sin examenes. Consulte al administrador '.$msg;
+			redirect_to('../index.php');
+	}	
+	function asignatura_name(){
+		if($_SESSION['db_name']){
+			$db=$_SESSION['db_name'];		
+			$db=str_replace("asg_","",$db);
+			$db=str_replace("_"," ",$db);
+			return $db;
+		}else{
+			del_cookie('idA');
+			sin_examenes('#02');
+		}
+	}
 
-
+	function numero(){
+		if(isset($_SESSION['numero']) AND $_SESSION['numero']>0)
+			return (int)$_SESSION['numero'];
+		else return '--';
+	}	
+	
+	function correcta(){
+		$total=numero();
+		if(is_int($total))return round((10/$total),2);
+		else return $total;
+	}
+	function incorrecta(){
+		$total=numero();
+		if(is_int($total))return round((-3.3/$total),2);
+		else return $total;	
+	}
 ?>

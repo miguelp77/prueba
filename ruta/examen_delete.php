@@ -6,35 +6,71 @@
 		$db=$_SESSION['db_name'];
 		$conn=conectar($db);
 	}else redirect_to('admin_test.php');
-//Variables
-	$idExamen=$_POST['idExamen'];
-	$examenes=array(); //
-	$arr=array(); //
-// Consulto los EXAMENES asignados por cada ALUMNO 
-	$sql="SELECT examenes,Alumno_id FROM Alumnos";
+//Obtengo
+	$idExamen = $_POST['idExamen'];
+	$grupo    = $_POST['grupo'];
+
+	// Leo los examenes que tiene el grupo
+	$id_examenes=array();
+	// Obtengo el array de examenes que tiene el grupo
+	$id_examenes = list_ex_grupo($grupo);
+
+	// $sql="SELECT tipo FROM Grupos WHERE nombre = '$grupo' LIMIT 1";
+	// $query=mysql_query($sql) or die(mysql_error());
+	// $row=mysql_fetch_row($query);
+	// if(count($row[0])>=1)
+	// $id_examenes = explode(',', $row[0]);
+
+	// Elimino el id de examen del grupo
+	foreach ($id_examenes as $key => $value) {
+		if($value == $idExamen) unset($id_examenes[$key]);
+	}
+
+	var_dump($id_examenes);
+
+	// Lo combierto en string para almacenarlos
+	$tipos = implode(',', $id_examenes);
+
+	// Actualizo los examenes del grupo
+	$sql="UPDATE Grupos SET tipo='$tipos' WHERE nombre='$grupo' LIMIT 1";
 	$query=mysql_query($sql) or die(mysql_error());
-	while($row=mysql_fetch_row($query)){
-		$id=$row[1]; //ALUMNO
-		if(empty($row[0])){
-			//$examen_str=$idExamen;
-			continue; // NO HAY EXAMENES
-		}else{ //HAY EXAMENES
-			$examen_str=str_replace($idExamen,"",$row['0']); //Elimino de la cadena	
-			$arr=explode(",",$examen_str); // lo paso a ARRAY
-			foreach($arr as $i){
-				$i = trim($i); // elimino los espacios en blanco del array 
-        if(!empty($i)) array_push($examenes,$i); //Si tiene contenido lo pusheo a examenes
-   		} 
-			$examen_str=implode(",",$examenes);// Lo paso a CADENA
-			while(!empty($examenes)) array_pop($examenes); //Vacio el array
-			
-	//		$examenes=array_replace($examenes, $idExamen);
-	//		array_push($examenes,$idExamen);
-//			$examen_str=implode(",",$examenes);
+
+	unset($id_examenes);
+	
+	//Actualizo a los alumnos que pertenecen a ese grupo
+	
+	// Obtengo los alumnos del grupo
+	$sql="SELECT asignados FROM Grupos WHERE nombre='$grupo' LIMIT 1";
+	$query=mysql_query($sql) or die(mysql_error());
+
+	$alumnos  = array();
+	$examenes = array();
+	
+	while ($row=mysql_fetch_row($query)) {
+		if(!empty($row[0])){
+			if(strlen($row[0])<2) $alumnos = $row[0];
+			else $alumnos = explode(",", $row[0]);
 		}
-			$sql3="UPDATE Alumnos SET examenes='$examen_str' WHERE Alumno_id=$id LIMIT 1";
-			$query3=mysql_query($sql3) or die(mysql_error());
-	}		
-//	echo "Guardado!";
+	}
+	// Se le asigna a cada alumno la prueba
+
+	foreach ($alumnos as $alumno) {
+	//Obtengo los examenes que ya tiene asignados	
+		$examenes=get_examen($alumno);
+	//Le añado el nuevo
+
+	// Elimino el id de examen del alumno
+	if(($key = array_search($idExamen, $examenes)) !== false) {
+    unset($examenes[$key]);
+	}
+
+
+	//Actualizo los examenes del alumno
+		$examenes_str=implode(",", $examenes);
+		update_examen($alumno,$examenes_str);
+	}
+
+
 	mysql_close($conn);
+
 ?>

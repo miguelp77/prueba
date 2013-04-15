@@ -1,6 +1,17 @@
 <?php
+/**
+*
+* Inicio Aplicacion
+* Desde esta página accederan tanto los alumnos como los profesores
+* a la aplicacion
+* @author  Miguel Paniagua
+* 
+*
+*/
 	session_start();
-	require_once('includes/db_tools.inc');
+	// namespace ns;
+require_once('includes/db_tools.inc');
+
 ?> 
 <!DOCTYPE HTML>
 <html lang="es-ES">

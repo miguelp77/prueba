@@ -8,7 +8,7 @@ $(document).ready(function() {
 			.append("<h4><ol>"+AsigName+"</ol></h4>");
 		$.ajax({
 			type: "POST",
-			url: "ruta/newAsig.php",
+			url: "newAsig.php",
 			data: "Nombre="+ AsigName ,
 			success: function(data){
 				vgAsig=data;
@@ -18,6 +18,49 @@ $(document).ready(function() {
 		});
 		$('.temas').show();
 		$('.Materia').hide(1000);
+	});
+// Recorro los checkboxed
+var selected = new Array();
+var origen;
+	function updateChecks() {         
+		var allVals = [];  
+		$('input[type=checkbox]:checked').each(function() {
+			allVals.push($(this).attr('name'));
+		// origen = $(this).attr('name');
+		});
+		selected=allVals;
+	}
+ $(':checkbox').click(updateChecks);
+updateChecks();
+//Clonar Asignatura
+	$('input[id=clonAsig]').click(function(){
+		var destino= $('input[id=Asig]').attr('value');
+		var origen=$('option:selected').val();
+		if(destino.length<1){
+			alert('Asignatura sin nombre');
+      document.getElementById("Asig").focus();
+			return false;
+		} 
+		var comienzo=destino.indexOf("asg_");
+		if(comienzo!=0) destino='asg_'+destino;
+		if(destino=='asg_admin'){
+			alert('Nombre de asignatura reservado');
+      document.getElementById("Asig").focus();
+			return false;
+		} 
+		// Opciones
+		selected=selected.join(',');
+	
+		$.ajax({
+			type: "GET",
+			url: "db_clon.php",
+			data: "destino="+ destino + "&origen=" + origen+ "&opciones=" + selected,
+			success: function(data){
+				// console.log(data);
+				alert("La asignatura "+ origen + " ha sido clonada como " + destino);
+			}
+		});
+		// selected.length=0;
 	});	
 //Nuevo tema
 	$('input[id=newTh]').click(function(){
@@ -26,7 +69,7 @@ $(document).ready(function() {
 		//	console.log(vgAsig);
 		$.ajax({
 			type: "POST",
-			url: "ruta/newTema.php",
+			url: "newTema.php",
 			data: "Nombre="+ Tema,// + "& idAsig=" + vgAsig,
 			success: function(data){
 				vgTema=data;
@@ -47,7 +90,7 @@ $(document).ready(function() {
 //		console.log(qIndex);
 		$.ajax({
 			type: "POST",
-			url: ".ruta/newConcepto.php",
+			url: "newConcepto.php",
 			data: "Nombre="+ Concepto + "& idTema=" + vgTema,
 			success: function(data){
 			//vgTema=data;

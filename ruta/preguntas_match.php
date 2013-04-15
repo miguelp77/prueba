@@ -12,6 +12,7 @@
 	$duracion=$_POST['duracion'];
 	$nombre=$_POST['nombre'];
 	$rnd=$_POST['rnd'];
+	$intentos=$_POST['intentos'];
 	$back=array();
 	$copy=array();
 function conceptos_en($idQ,$val=null){
@@ -55,5 +56,5 @@ $preguntas=join(",",$back);
 //if(examen_grabar($preguntas,$numero))echo "Grabado"."<br />";
 //	$sql="alter table Fuentes add numero TINYINT";
 //	$query=mysql_query($sql) or die(mysql_error());
-examen_grabar($preguntas,$numero,$duracion,$nombre);
+examen_grabar($preguntas,$numero,$duracion,$nombre,$intentos);
 ?>

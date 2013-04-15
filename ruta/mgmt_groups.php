@@ -17,15 +17,21 @@
 	<script type="text/javascript" src="../js/grupo.js?v1.0"></script>
 </head>
 <body>
-	<span class="small dcha">
-		Gestión de grupos
-	</span>
-
-	<div class="scroll-panel">
-	<?php
-		Groups();
-	?>
+	<span class="small dcha">Gestión de grupos</span>
+	<div id="btt_grupos">
+		<div class="css_btt" name="nuevo" title="nuevo alumno">Nuevo</div>		
 	</div>
+	<hr />
+	<div id="newGroup">
+			Nombre <input type='text' name='nombre'/> 
+			<div class="css_btt" name="saveName" title="Guardar grupo">Guardar</div>
+	</div>
+	<?php viewGroup(); ?>
+<!-- 	<div class="scroll-panel">
+	<?php
+		// Groups();
+	?>
+	</div> -->
 	 <script type="text/javascript">
 	//js
 	</script>

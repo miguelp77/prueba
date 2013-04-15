@@ -1,3 +1,15 @@
+<?php
+/**
+*
+* Error 403
+* Pagina que se mostrara cuando se devuelva un HTTP 403
+* 
+* 
+* @author  Miguel Paniagua
+*
+*/
+	namespace ns;
+?>
 <!DOCTYPE HTML>
 <html lang="es-ES">
 <head>

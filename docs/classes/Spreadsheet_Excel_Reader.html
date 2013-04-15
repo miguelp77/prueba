@@ -1,0 +1,1154 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Spreadsheet_Excel_Reader</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Cpdf.html"><i class="icon-folder-open"></i> Cpdf</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Spreadsheet.html"><i class="icon-folder-open"></i> Spreadsheet</a></li>
+<li><a href="../packages/classAlumno.html"><i class="icon-folder-open"></i> classAlumno</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">1101</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_Spreadsheet_Excel_Reader" title="Spreadsheet_Excel_Reader :: Constructor"><span class="description">Constructor</span><pre>Spreadsheet_Excel_Reader()</pre></a></li>
+<li class="method public "><a href="#method__GetIEEE754" title="_GetIEEE754 :: "><span class="description">_GetIEEE754()
+        </span><pre>_GetIEEE754()</pre></a></li>
+<li class="method public "><a href="#method__GetInt4d" title="_GetInt4d :: "><span class="description">_GetInt4d()
+        </span><pre>_GetInt4d()</pre></a></li>
+<li class="method public "><a href="#method__encodeUTF16" title="_encodeUTF16 :: "><span class="description">_encodeUTF16()
+        </span><pre>_encodeUTF16()</pre></a></li>
+<li class="method public "><a href="#method__format_value" title="_format_value :: "><span class="description">_format_value()
+        </span><pre>_format_value()</pre></a></li>
+<li class="method public "><a href="#method__getCellDetails" title="_getCellDetails :: "><span class="description">_getCellDetails()
+        </span><pre>_getCellDetails()</pre></a></li>
+<li class="method public "><a href="#method__parse" title="_parse :: Parse a workbook"><span class="description">Parse a workbook</span><pre>_parse()</pre></a></li>
+<li class="method public "><a href="#method__parsesheet" title="_parsesheet :: Parse a worksheet"><span class="description">Parse a worksheet</span><pre>_parsesheet()</pre></a></li>
+<li class="method public "><a href="#method_addcell" title="addcell :: "><span class="description">addcell()
+        </span><pre>addcell()</pre></a></li>
+<li class="method public "><a href="#method_align" title="align :: "><span class="description">align()
+        </span><pre>align()</pre></a></li>
+<li class="method public "><a href="#method_bgColor" title="bgColor :: "><span class="description">bgColor()
+        </span><pre>bgColor()</pre></a></li>
+<li class="method public "><a href="#method_bold" title="bold :: "><span class="description">bold()
+        </span><pre>bold()</pre></a></li>
+<li class="method public "><a href="#method_borderBottom" title="borderBottom :: "><span class="description">borderBottom()
+        </span><pre>borderBottom()</pre></a></li>
+<li class="method public "><a href="#method_borderBottomColor" title="borderBottomColor :: "><span class="description">borderBottomColor()
+        </span><pre>borderBottomColor()</pre></a></li>
+<li class="method public "><a href="#method_borderLeft" title="borderLeft :: "><span class="description">borderLeft()
+        </span><pre>borderLeft()</pre></a></li>
+<li class="method public "><a href="#method_borderLeftColor" title="borderLeftColor :: "><span class="description">borderLeftColor()
+        </span><pre>borderLeftColor()</pre></a></li>
+<li class="method public "><a href="#method_borderRight" title="borderRight :: "><span class="description">borderRight()
+        </span><pre>borderRight()</pre></a></li>
+<li class="method public "><a href="#method_borderRightColor" title="borderRightColor :: "><span class="description">borderRightColor()
+        </span><pre>borderRightColor()</pre></a></li>
+<li class="method public "><a href="#method_borderTop" title="borderTop :: "><span class="description">borderTop()
+        </span><pre>borderTop()</pre></a></li>
+<li class="method public "><a href="#method_borderTopColor" title="borderTopColor :: "><span class="description">borderTopColor()
+        </span><pre>borderTopColor()</pre></a></li>
+<li class="method public "><a href="#method_colcount" title="colcount :: "><span class="description">colcount()
+        </span><pre>colcount()</pre></a></li>
+<li class="method public "><a href="#method_colhidden" title="colhidden :: "><span class="description">colhidden()
+        </span><pre>colhidden()</pre></a></li>
+<li class="method public "><a href="#method_color" title="color :: "><span class="description">color()
+        </span><pre>color()</pre></a></li>
+<li class="method public "><a href="#method_colspan" title="colspan :: "><span class="description">colspan()
+        </span><pre>colspan()</pre></a></li>
+<li class="method public "><a href="#method_colwidth" title="colwidth :: "><span class="description">colwidth()
+        </span><pre>colwidth()</pre></a></li>
+<li class="method public "><a href="#method_createNumber" title="createNumber :: "><span class="description">createNumber()
+        </span><pre>createNumber()</pre></a></li>
+<li class="method public "><a href="#method_dump" title="dump :: "><span class="description">dump()
+        </span><pre>dump()</pre></a></li>
+<li class="method public "><a href="#method_dumpHexData" title="dumpHexData :: "><span class="description">dumpHexData()
+        </span><pre>dumpHexData()</pre></a></li>
+<li class="method public "><a href="#method_font" title="font :: "><span class="description">font()
+        </span><pre>font()</pre></a></li>
+<li class="method public "><a href="#method_fontIndex" title="fontIndex :: "><span class="description">fontIndex()
+        </span><pre>fontIndex()</pre></a></li>
+<li class="method public "><a href="#method_fontProperty" title="fontProperty :: "><span class="description">fontProperty()
+        </span><pre>fontProperty()</pre></a></li>
+<li class="method public "><a href="#method_fontRecord" title="fontRecord :: "><span class="description">fontRecord()
+        </span><pre>fontRecord()</pre></a></li>
+<li class="method public "><a href="#method_format" title="format :: "><span class="description">format()
+        </span><pre>format()</pre></a></li>
+<li class="method public "><a href="#method_formatColor" title="formatColor :: "><span class="description">formatColor()
+        </span><pre>formatColor()</pre></a></li>
+<li class="method public "><a href="#method_formatIndex" title="formatIndex :: "><span class="description">formatIndex()
+        </span><pre>formatIndex()</pre></a></li>
+<li class="method public "><a href="#method_getCol" title="getCol :: "><span class="description">getCol()
+        </span><pre>getCol()</pre></a></li>
+<li class="method public "><a href="#method_height" title="height :: "><span class="description">height()
+        </span><pre>height()</pre></a></li>
+<li class="method public "><a href="#method_hyperlink" title="hyperlink :: "><span class="description">hyperlink()
+        </span><pre>hyperlink()</pre></a></li>
+<li class="method public "><a href="#method_info" title="info :: "><span class="description">info()
+        </span><pre>info()</pre></a></li>
+<li class="method public "><a href="#method_isDate" title="isDate :: "><span class="description">isDate()
+        </span><pre>isDate()</pre></a></li>
+<li class="method public "><a href="#method_italic" title="italic :: "><span class="description">italic()
+        </span><pre>italic()</pre></a></li>
+<li class="method public "><a href="#method_myHex" title="myHex :: "><span class="description">myHex()
+        </span><pre>myHex()</pre></a></li>
+<li class="method public "><a href="#method_raw" title="raw :: "><span class="description">raw()
+        </span><pre>raw()</pre></a></li>
+<li class="method public "><a href="#method_rawColor" title="rawColor :: "><span class="description">rawColor()
+        </span><pre>rawColor()</pre></a></li>
+<li class="method public "><a href="#method_read" title="read :: Read the spreadsheet file using OLE, then parse"><span class="description">Read the spreadsheet file using OLE, then parse</span><pre>read()</pre></a></li>
+<li class="method public "><a href="#method_read16bitstring" title="read16bitstring :: "><span class="description">read16bitstring()
+        </span><pre>read16bitstring()</pre></a></li>
+<li class="method public "><a href="#method_rowcount" title="rowcount :: "><span class="description">rowcount()
+        </span><pre>rowcount()</pre></a></li>
+<li class="method public "><a href="#method_rowheight" title="rowheight :: "><span class="description">rowheight()
+        </span><pre>rowheight()</pre></a></li>
+<li class="method public "><a href="#method_rowhidden" title="rowhidden :: "><span class="description">rowhidden()
+        </span><pre>rowhidden()</pre></a></li>
+<li class="method public "><a href="#method_rowspan" title="rowspan :: "><span class="description">rowspan()
+        </span><pre>rowspan()</pre></a></li>
+<li class="method public "><a href="#method_setColumnFormat" title="setColumnFormat :: Force a column to use a certain format"><span class="description">Force a column to use a certain format</span><pre>setColumnFormat()</pre></a></li>
+<li class="method public "><a href="#method_setDefaultFormat" title="setDefaultFormat :: Set the default number format"><span class="description">Set the default number format</span><pre>setDefaultFormat()</pre></a></li>
+<li class="method public "><a href="#method_setOutputEncoding" title="setOutputEncoding :: Set the encoding method"><span class="description">Set the encoding method</span><pre>setOutputEncoding()</pre></a></li>
+<li class="method public "><a href="#method_setRowColOffset" title="setRowColOffset :: "><span class="description">setRowColOffset()
+        </span><pre>setRowColOffset()</pre></a></li>
+<li class="method public "><a href="#method_setUTFEncoder" title="setUTFEncoder :: $encoder = 'iconv' or 'mb'
+ set iconv if you would like use 'iconv' for encode UTF-16LE to your encoding
+ set mb if you would like use 'mb_convert_encoding' for encode UTF-16LE to your encoding"><span class="description">$encoder = 'iconv' or 'mb'
+ set iconv if you would like use 'iconv' for encode UTF-16LE to your encoding
+ set mb if you would like use 'mb_convert_encoding' for encode UTF-16LE to your encoding</span><pre>setUTFEncoder()</pre></a></li>
+<li class="method public "><a href="#method_style" title="style :: "><span class="description">style()
+        </span><pre>style()</pre></a></li>
+<li class="method public "><a href="#method_type" title="type :: "><span class="description">type()
+        </span><pre>type()</pre></a></li>
+<li class="method public "><a href="#method_underline" title="underline :: "><span class="description">underline()
+        </span><pre>underline()</pre></a></li>
+<li class="method public "><a href="#method_val" title="val :: "><span class="description">val()
+        </span><pre>val()</pre></a></li>
+<li class="method public "><a href="#method_value" title="value :: "><span class="description">value()
+        </span><pre>value()</pre></a></li>
+<li class="method public "><a href="#method_xfProperty" title="xfProperty :: "><span class="description">xfProperty()
+        </span><pre>xfProperty()</pre></a></li>
+<li class="method public "><a href="#method_xfRecord" title="xfRecord :: "><span class="description">xfRecord()
+        </span><pre>xfRecord()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public "><a href="#property__coloffset" title="$_coloffset :: "><span class="description"></span><pre>$_coloffset</pre></a></li>
+<li class="property public "><a href="#property__columnsFormat" title="$_columnsFormat :: "><span class="description"></span><pre>$_columnsFormat</pre></a></li>
+<li class="property public "><a href="#property__defaultEncoding" title="$_defaultEncoding :: "><span class="description"></span><pre>$_defaultEncoding</pre></a></li>
+<li class="property public "><a href="#property__defaultFormat" title="$_defaultFormat :: "><span class="description"></span><pre>$_defaultFormat</pre></a></li>
+<li class="property public "><a href="#property__ole" title="$_ole :: "><span class="description"></span><pre>$_ole</pre></a></li>
+<li class="property public "><a href="#property__rowoffset" title="$_rowoffset :: "><span class="description"></span><pre>$_rowoffset</pre></a></li>
+<li class="property public "><a href="#property_boundsheets" title="$boundsheets :: "><span class="description"></span><pre>$boundsheets</pre></a></li>
+<li class="property public "><a href="#property_colInfo" title="$colInfo :: "><span class="description"></span><pre>$colInfo</pre></a></li>
+<li class="property public "><a href="#property_colindexes" title="$colindexes :: "><span class="description"></span><pre>$colindexes</pre></a></li>
+<li class="property public "><a href="#property_colnames" title="$colnames :: "><span class="description"></span><pre>$colnames</pre></a></li>
+<li class="property public "><a href="#property_colors" title="$colors :: "><span class="description"></span><pre>$colors</pre></a></li>
+<li class="property public "><a href="#property_data" title="$data :: "><span class="description"></span><pre>$data</pre></a></li>
+<li class="property public "><a href="#property_dateFormats" title="$dateFormats :: List of default date formats used by Excel"><span class="description"></span><pre>$dateFormats</pre></a></li>
+<li class="property public "><a href="#property_defaultColWidth" title="$defaultColWidth :: "><span class="description"></span><pre>$defaultColWidth</pre></a></li>
+<li class="property public "><a href="#property_fontRecords" title="$fontRecords :: "><span class="description"></span><pre>$fontRecords</pre></a></li>
+<li class="property public "><a href="#property_formatRecords" title="$formatRecords :: "><span class="description"></span><pre>$formatRecords</pre></a></li>
+<li class="property public "><a href="#property_lineStyles" title="$lineStyles :: "><span class="description"></span><pre>$lineStyles</pre></a></li>
+<li class="property public "><a href="#property_lineStylesCss" title="$lineStylesCss :: "><span class="description"></span><pre>$lineStylesCss</pre></a></li>
+<li class="property public "><a href="#property_numberFormats" title="$numberFormats :: Default number formats used by Excel"><span class="description"></span><pre>$numberFormats</pre></a></li>
+<li class="property public "><a href="#property_rowInfo" title="$rowInfo :: "><span class="description"></span><pre>$rowInfo</pre></a></li>
+<li class="property public "><a href="#property_sheets" title="$sheets :: "><span class="description"></span><pre>$sheets</pre></a></li>
+<li class="property public "><a href="#property_sst" title="$sst :: "><span class="description"></span><pre>$sst</pre></a></li>
+<li class="property public "><a href="#property_standardColWidth" title="$standardColWidth :: "><span class="description"></span><pre>$standardColWidth</pre></a></li>
+<li class="property public "><a href="#property_xfRecords" title="$xfRecords :: "><span class="description"></span><pre>$xfRecords</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Spreadsheet_Excel_Reader"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Spreadsheet_Excel_Reader.html">Spreadsheet_Excel_Reader</a>
+</li>
+</ul>
+<div class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_Spreadsheet_Excel_Reader"></a><div class="element clickable method public method_Spreadsheet_Excel_Reader" data-toggle="collapse" data-target=".method_Spreadsheet_Excel_Reader .collapse">
+<h2>Constructor</h2>
+<pre>Spreadsheet_Excel_Reader($file, $store_extended_info, $outputEncoding) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Some basic initialisation</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+<div class="subelement argument"><h4>$store_extended_info</h4></div>
+<div class="subelement argument"><h4>$outputEncoding</h4></div>
+</div></div>
+</div>
+<a id="method__GetIEEE754"></a><div class="element clickable method public method__GetIEEE754" data-toggle="collapse" data-target=".method__GetIEEE754 .collapse">
+<h2>_GetIEEE754()
+        </h2>
+<pre>_GetIEEE754($rknum) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$rknum</h4></div>
+</div></div>
+</div>
+<a id="method__GetInt4d"></a><div class="element clickable method public method__GetInt4d" data-toggle="collapse" data-target=".method__GetInt4d .collapse">
+<h2>_GetInt4d()
+        </h2>
+<pre>_GetInt4d($data, $pos) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+<div class="subelement argument"><h4>$pos</h4></div>
+</div></div>
+</div>
+<a id="method__encodeUTF16"></a><div class="element clickable method public method__encodeUTF16" data-toggle="collapse" data-target=".method__encodeUTF16 .collapse">
+<h2>_encodeUTF16()
+        </h2>
+<pre>_encodeUTF16($string) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$string</h4></div>
+</div></div>
+</div>
+<a id="method__format_value"></a><div class="element clickable method public method__format_value" data-toggle="collapse" data-target=".method__format_value .collapse">
+<h2>_format_value()
+        </h2>
+<pre>_format_value($format, $num, $f) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$format</h4></div>
+<div class="subelement argument"><h4>$num</h4></div>
+<div class="subelement argument"><h4>$f</h4></div>
+</div></div>
+</div>
+<a id="method__getCellDetails"></a><div class="element clickable method public method__getCellDetails" data-toggle="collapse" data-target=".method__getCellDetails .collapse">
+<h2>_getCellDetails()
+        </h2>
+<pre>_getCellDetails($spos, $numValue, $column) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$spos</h4></div>
+<div class="subelement argument"><h4>$numValue</h4></div>
+<div class="subelement argument"><h4>$column</h4></div>
+</div></div>
+</div>
+<a id="method__parse"></a><div class="element clickable method public method__parse" data-toggle="collapse" data-target=".method__parse .collapse">
+<h2>Parse a workbook</h2>
+<pre>_parse() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method__parsesheet"></a><div class="element clickable method public method__parsesheet" data-toggle="collapse" data-target=".method__parsesheet .collapse">
+<h2>Parse a worksheet</h2>
+<pre>_parsesheet($spos) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$spos</h4></div>
+</div></div>
+</div>
+<a id="method_addcell"></a><div class="element clickable method public method_addcell" data-toggle="collapse" data-target=".method_addcell .collapse">
+<h2>addcell()
+        </h2>
+<pre>addcell($row, $col, $string, $info) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$string</h4></div>
+<div class="subelement argument"><h4>$info</h4></div>
+</div></div>
+</div>
+<a id="method_align"></a><div class="element clickable method public method_align" data-toggle="collapse" data-target=".method_align .collapse">
+<h2>align()
+        </h2>
+<pre>align($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_bgColor"></a><div class="element clickable method public method_bgColor" data-toggle="collapse" data-target=".method_bgColor .collapse">
+<h2>bgColor()
+        </h2>
+<pre>bgColor($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_bold"></a><div class="element clickable method public method_bold" data-toggle="collapse" data-target=".method_bold .collapse">
+<h2>bold()
+        </h2>
+<pre>bold($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_borderBottom"></a><div class="element clickable method public method_borderBottom" data-toggle="collapse" data-target=".method_borderBottom .collapse">
+<h2>borderBottom()
+        </h2>
+<pre>borderBottom($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_borderBottomColor"></a><div class="element clickable method public method_borderBottomColor" data-toggle="collapse" data-target=".method_borderBottomColor .collapse">
+<h2>borderBottomColor()
+        </h2>
+<pre>borderBottomColor($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_borderLeft"></a><div class="element clickable method public method_borderLeft" data-toggle="collapse" data-target=".method_borderLeft .collapse">
+<h2>borderLeft()
+        </h2>
+<pre>borderLeft($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_borderLeftColor"></a><div class="element clickable method public method_borderLeftColor" data-toggle="collapse" data-target=".method_borderLeftColor .collapse">
+<h2>borderLeftColor()
+        </h2>
+<pre>borderLeftColor($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_borderRight"></a><div class="element clickable method public method_borderRight" data-toggle="collapse" data-target=".method_borderRight .collapse">
+<h2>borderRight()
+        </h2>
+<pre>borderRight($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_borderRightColor"></a><div class="element clickable method public method_borderRightColor" data-toggle="collapse" data-target=".method_borderRightColor .collapse">
+<h2>borderRightColor()
+        </h2>
+<pre>borderRightColor($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_borderTop"></a><div class="element clickable method public method_borderTop" data-toggle="collapse" data-target=".method_borderTop .collapse">
+<h2>borderTop()
+        </h2>
+<pre>borderTop($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_borderTopColor"></a><div class="element clickable method public method_borderTopColor" data-toggle="collapse" data-target=".method_borderTopColor .collapse">
+<h2>borderTopColor()
+        </h2>
+<pre>borderTopColor($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_colcount"></a><div class="element clickable method public method_colcount" data-toggle="collapse" data-target=".method_colcount .collapse">
+<h2>colcount()
+        </h2>
+<pre>colcount($sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_colhidden"></a><div class="element clickable method public method_colhidden" data-toggle="collapse" data-target=".method_colhidden .collapse">
+<h2>colhidden()
+        </h2>
+<pre>colhidden($col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_color"></a><div class="element clickable method public method_color" data-toggle="collapse" data-target=".method_color .collapse">
+<h2>color()
+        </h2>
+<pre>color($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_colspan"></a><div class="element clickable method public method_colspan" data-toggle="collapse" data-target=".method_colspan .collapse">
+<h2>colspan()
+        </h2>
+<pre>colspan($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_colwidth"></a><div class="element clickable method public method_colwidth" data-toggle="collapse" data-target=".method_colwidth .collapse">
+<h2>colwidth()
+        </h2>
+<pre>colwidth($col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_createNumber"></a><div class="element clickable method public method_createNumber" data-toggle="collapse" data-target=".method_createNumber .collapse">
+<h2>createNumber()
+        </h2>
+<pre>createNumber($spos) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$spos</h4></div>
+</div></div>
+</div>
+<a id="method_dump"></a><div class="element clickable method public method_dump" data-toggle="collapse" data-target=".method_dump .collapse">
+<h2>dump()
+        </h2>
+<pre>dump($row_numbers, $col_letters, $sheet, $table_class) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row_numbers</h4></div>
+<div class="subelement argument"><h4>$col_letters</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+<div class="subelement argument"><h4>$table_class</h4></div>
+</div></div>
+</div>
+<a id="method_dumpHexData"></a><div class="element clickable method public method_dumpHexData" data-toggle="collapse" data-target=".method_dumpHexData .collapse">
+<h2>dumpHexData()
+        </h2>
+<pre>dumpHexData($data, $pos, $length) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+<div class="subelement argument"><h4>$pos</h4></div>
+<div class="subelement argument"><h4>$length</h4></div>
+</div></div>
+</div>
+<a id="method_font"></a><div class="element clickable method public method_font" data-toggle="collapse" data-target=".method_font .collapse">
+<h2>font()
+        </h2>
+<pre>font($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_fontIndex"></a><div class="element clickable method public method_fontIndex" data-toggle="collapse" data-target=".method_fontIndex .collapse">
+<h2>fontIndex()
+        </h2>
+<pre>fontIndex($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_fontProperty"></a><div class="element clickable method public method_fontProperty" data-toggle="collapse" data-target=".method_fontProperty .collapse">
+<h2>fontProperty()
+        </h2>
+<pre>fontProperty($row, $col, $sheet, $prop) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+<div class="subelement argument"><h4>$prop</h4></div>
+</div></div>
+</div>
+<a id="method_fontRecord"></a><div class="element clickable method public method_fontRecord" data-toggle="collapse" data-target=".method_fontRecord .collapse">
+<h2>fontRecord()
+        </h2>
+<pre>fontRecord($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_format"></a><div class="element clickable method public method_format" data-toggle="collapse" data-target=".method_format .collapse">
+<h2>format()
+        </h2>
+<pre>format($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_formatColor"></a><div class="element clickable method public method_formatColor" data-toggle="collapse" data-target=".method_formatColor .collapse">
+<h2>formatColor()
+        </h2>
+<pre>formatColor($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_formatIndex"></a><div class="element clickable method public method_formatIndex" data-toggle="collapse" data-target=".method_formatIndex .collapse">
+<h2>formatIndex()
+        </h2>
+<pre>formatIndex($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_getCol"></a><div class="element clickable method public method_getCol" data-toggle="collapse" data-target=".method_getCol .collapse">
+<h2>getCol()
+        </h2>
+<pre>getCol($col) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$col</h4></div>
+</div></div>
+</div>
+<a id="method_height"></a><div class="element clickable method public method_height" data-toggle="collapse" data-target=".method_height .collapse">
+<h2>height()
+        </h2>
+<pre>height($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_hyperlink"></a><div class="element clickable method public method_hyperlink" data-toggle="collapse" data-target=".method_hyperlink .collapse">
+<h2>hyperlink()
+        </h2>
+<pre>hyperlink($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_info"></a><div class="element clickable method public method_info" data-toggle="collapse" data-target=".method_info .collapse">
+<h2>info()
+        </h2>
+<pre>info($row, $col, $type, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$type</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_isDate"></a><div class="element clickable method public method_isDate" data-toggle="collapse" data-target=".method_isDate .collapse">
+<h2>isDate()
+        </h2>
+<pre>isDate($spos) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$spos</h4></div>
+</div></div>
+</div>
+<a id="method_italic"></a><div class="element clickable method public method_italic" data-toggle="collapse" data-target=".method_italic .collapse">
+<h2>italic()
+        </h2>
+<pre>italic($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_myHex"></a><div class="element clickable method public method_myHex" data-toggle="collapse" data-target=".method_myHex .collapse">
+<h2>myHex()
+        </h2>
+<pre>myHex($d) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$d</h4></div>
+</div></div>
+</div>
+<a id="method_raw"></a><div class="element clickable method public method_raw" data-toggle="collapse" data-target=".method_raw .collapse">
+<h2>raw()
+        </h2>
+<pre>raw($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_rawColor"></a><div class="element clickable method public method_rawColor" data-toggle="collapse" data-target=".method_rawColor .collapse">
+<h2>rawColor()
+        </h2>
+<pre>rawColor($ci) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$ci</h4></div>
+</div></div>
+</div>
+<a id="method_read"></a><div class="element clickable method public method_read" data-toggle="collapse" data-target=".method_read .collapse">
+<h2>Read the spreadsheet file using OLE, then parse</h2>
+<pre>read($sFileName) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$sFileName</h4></div>
+</div></div>
+</div>
+<a id="method_read16bitstring"></a><div class="element clickable method public method_read16bitstring" data-toggle="collapse" data-target=".method_read16bitstring .collapse">
+<h2>read16bitstring()
+        </h2>
+<pre>read16bitstring($data, $start) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+<div class="subelement argument"><h4>$start</h4></div>
+</div></div>
+</div>
+<a id="method_rowcount"></a><div class="element clickable method public method_rowcount" data-toggle="collapse" data-target=".method_rowcount .collapse">
+<h2>rowcount()
+        </h2>
+<pre>rowcount($sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_rowheight"></a><div class="element clickable method public method_rowheight" data-toggle="collapse" data-target=".method_rowheight .collapse">
+<h2>rowheight()
+        </h2>
+<pre>rowheight($row, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_rowhidden"></a><div class="element clickable method public method_rowhidden" data-toggle="collapse" data-target=".method_rowhidden .collapse">
+<h2>rowhidden()
+        </h2>
+<pre>rowhidden($row, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_rowspan"></a><div class="element clickable method public method_rowspan" data-toggle="collapse" data-target=".method_rowspan .collapse">
+<h2>rowspan()
+        </h2>
+<pre>rowspan($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_setColumnFormat"></a><div class="element clickable method public method_setColumnFormat" data-toggle="collapse" data-target=".method_setColumnFormat .collapse">
+<h2>Force a column to use a certain format</h2>
+<pre>setColumnFormat($column, $sFormat) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$column</h4></div>
+<div class="subelement argument"><h4>$sFormat</h4></div>
+</div></div>
+</div>
+<a id="method_setDefaultFormat"></a><div class="element clickable method public method_setDefaultFormat" data-toggle="collapse" data-target=".method_setDefaultFormat .collapse">
+<h2>Set the default number format</h2>
+<pre>setDefaultFormat($sFormat) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$sFormat</h4></div>
+</div></div>
+</div>
+<a id="method_setOutputEncoding"></a><div class="element clickable method public method_setOutputEncoding" data-toggle="collapse" data-target=".method_setOutputEncoding .collapse">
+<h2>Set the encoding method</h2>
+<pre>setOutputEncoding($encoding) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$encoding</h4></div>
+</div></div>
+</div>
+<a id="method_setRowColOffset"></a><div class="element clickable method public method_setRowColOffset" data-toggle="collapse" data-target=".method_setRowColOffset .collapse">
+<h2>setRowColOffset()
+        </h2>
+<pre>setRowColOffset($iOffset) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$iOffset</h4></div>
+</div></div>
+</div>
+<a id="method_setUTFEncoder"></a><div class="element clickable method public method_setUTFEncoder" data-toggle="collapse" data-target=".method_setUTFEncoder .collapse">
+<h2>$encoder = 'iconv' or 'mb'
+ set iconv if you would like use 'iconv' for encode UTF-16LE to your encoding
+ set mb if you would like use 'mb_convert_encoding' for encode UTF-16LE to your encoding</h2>
+<pre>setUTFEncoder($encoder) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$encoder</h4></div>
+</div></div>
+</div>
+<a id="method_style"></a><div class="element clickable method public method_style" data-toggle="collapse" data-target=".method_style .collapse">
+<h2>style()
+        </h2>
+<pre>style($row, $col, $sheet, $properties) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+<div class="subelement argument"><h4>$properties</h4></div>
+</div></div>
+</div>
+<a id="method_type"></a><div class="element clickable method public method_type" data-toggle="collapse" data-target=".method_type .collapse">
+<h2>type()
+        </h2>
+<pre>type($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_underline"></a><div class="element clickable method public method_underline" data-toggle="collapse" data-target=".method_underline .collapse">
+<h2>underline()
+        </h2>
+<pre>underline($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_val"></a><div class="element clickable method public method_val" data-toggle="collapse" data-target=".method_val .collapse">
+<h2>val()
+        </h2>
+<pre>val($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_value"></a><div class="element clickable method public method_value" data-toggle="collapse" data-target=".method_value .collapse">
+<h2>value()
+        </h2>
+<pre>value($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<a id="method_xfProperty"></a><div class="element clickable method public method_xfProperty" data-toggle="collapse" data-target=".method_xfProperty .collapse">
+<h2>xfProperty()
+        </h2>
+<pre>xfProperty($row, $col, $sheet, $prop) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+<div class="subelement argument"><h4>$prop</h4></div>
+</div></div>
+</div>
+<a id="method_xfRecord"></a><div class="element clickable method public method_xfRecord" data-toggle="collapse" data-target=".method_xfRecord .collapse">
+<h2>xfRecord()
+        </h2>
+<pre>xfRecord($row, $col, $sheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$row</h4></div>
+<div class="subelement argument"><h4>$col</h4></div>
+<div class="subelement argument"><h4>$sheet</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__coloffset"> </a><div class="element clickable property public property__coloffset" data-toggle="collapse" data-target=".property__coloffset .collapse">
+<h2></h2>
+<pre>$_coloffset </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__columnsFormat"> </a><div class="element clickable property public property__columnsFormat" data-toggle="collapse" data-target=".property__columnsFormat .collapse">
+<h2></h2>
+<pre>$_columnsFormat </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__defaultEncoding"> </a><div class="element clickable property public property__defaultEncoding" data-toggle="collapse" data-target=".property__defaultEncoding .collapse">
+<h2></h2>
+<pre>$_defaultEncoding </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__defaultFormat"> </a><div class="element clickable property public property__defaultFormat" data-toggle="collapse" data-target=".property__defaultFormat .collapse">
+<h2></h2>
+<pre>$_defaultFormat </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__ole"> </a><div class="element clickable property public property__ole" data-toggle="collapse" data-target=".property__ole .collapse">
+<h2></h2>
+<pre>$_ole </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__rowoffset"> </a><div class="element clickable property public property__rowoffset" data-toggle="collapse" data-target=".property__rowoffset .collapse">
+<h2></h2>
+<pre>$_rowoffset </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_boundsheets"> </a><div class="element clickable property public property_boundsheets" data-toggle="collapse" data-target=".property_boundsheets .collapse">
+<h2></h2>
+<pre>$boundsheets </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_colInfo"> </a><div class="element clickable property public property_colInfo" data-toggle="collapse" data-target=".property_colInfo .collapse">
+<h2></h2>
+<pre>$colInfo </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_colindexes"> </a><div class="element clickable property public property_colindexes" data-toggle="collapse" data-target=".property_colindexes .collapse">
+<h2></h2>
+<pre>$colindexes </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_colnames"> </a><div class="element clickable property public property_colnames" data-toggle="collapse" data-target=".property_colnames .collapse">
+<h2></h2>
+<pre>$colnames </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_colors"> </a><div class="element clickable property public property_colors" data-toggle="collapse" data-target=".property_colors .collapse">
+<h2></h2>
+<pre>$colors </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_data"> </a><div class="element clickable property public property_data" data-toggle="collapse" data-target=".property_data .collapse">
+<h2></h2>
+<pre>$data </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_dateFormats"> </a><div class="element clickable property public property_dateFormats" data-toggle="collapse" data-target=".property_dateFormats .collapse">
+<h2></h2>
+<pre>$dateFormats </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_defaultColWidth"> </a><div class="element clickable property public property_defaultColWidth" data-toggle="collapse" data-target=".property_defaultColWidth .collapse">
+<h2></h2>
+<pre>$defaultColWidth </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_fontRecords"> </a><div class="element clickable property public property_fontRecords" data-toggle="collapse" data-target=".property_fontRecords .collapse">
+<h2></h2>
+<pre>$fontRecords </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_formatRecords"> </a><div class="element clickable property public property_formatRecords" data-toggle="collapse" data-target=".property_formatRecords .collapse">
+<h2></h2>
+<pre>$formatRecords </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_lineStyles"> </a><div class="element clickable property public property_lineStyles" data-toggle="collapse" data-target=".property_lineStyles .collapse">
+<h2></h2>
+<pre>$lineStyles </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_lineStylesCss"> </a><div class="element clickable property public property_lineStylesCss" data-toggle="collapse" data-target=".property_lineStylesCss .collapse">
+<h2></h2>
+<pre>$lineStylesCss </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_numberFormats"> </a><div class="element clickable property public property_numberFormats" data-toggle="collapse" data-target=".property_numberFormats .collapse">
+<h2></h2>
+<pre>$numberFormats </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_rowInfo"> </a><div class="element clickable property public property_rowInfo" data-toggle="collapse" data-target=".property_rowInfo .collapse">
+<h2></h2>
+<pre>$rowInfo </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_sheets"> </a><div class="element clickable property public property_sheets" data-toggle="collapse" data-target=".property_sheets .collapse">
+<h2></h2>
+<pre>$sheets </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_sst"> </a><div class="element clickable property public property_sst" data-toggle="collapse" data-target=".property_sst .collapse">
+<h2></h2>
+<pre>$sst </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_standardColWidth"> </a><div class="element clickable property public property_standardColWidth" data-toggle="collapse" data-target=".property_standardColWidth .collapse">
+<h2></h2>
+<pre>$standardColWidth </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_xfRecords"> </a><div class="element clickable property public property_xfRecords" data-toggle="collapse" data-target=".property_xfRecords .collapse">
+<h2></h2>
+<pre>$xfRecords </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-04-08T23:16:52+02:00.<br></footer></div>
+</div>
+</body>
+</html>

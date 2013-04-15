@@ -17,8 +17,10 @@ RewriteBase /
 #RewriteRule ^([^/]+)/$ $1.php
 #RewriteRule ^(.*?)/?$ $1\.php
 #RewriteRule ^(.*)\.html$ $1.php [R=301,L]
+#RewriteRule ^(\w+)\.php$ /$1 [R=301]
 
  
+
 AddType application/x-httpd-php .htm .html
 
 

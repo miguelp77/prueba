@@ -108,6 +108,7 @@ function GetEq($num=1){
 
     // Get this folder and files name.
 
+
 function give_files($dir=null){
 	$this_script = basename(__FILE__);
 	$this_folder = str_replace('/'.$this_script, '', $_SERVER['SCRIPT_NAME']);
@@ -170,11 +171,15 @@ function give_files($dir=null){
 }
 
 function php_multisort($data,$keys){
+	print_r($data);
 	foreach ($data as $key => $row){
+		if(!is_array($keys)) array_push($keys, $keys);
 		foreach ($keys as $k){
 			$cols[$k['key']][$key] = $row[$k['key']];
 		}
+	
 	}
+
 	$idkeys = array_keys($data);
 	$i=0;
 	foreach ($keys as $k){
@@ -200,6 +205,71 @@ function bytes_to_string($size, $precision = 0) {
 	$return['num'] = round($size, $precision);
 	$return['str'] = $sizes[$total];
 	return $return;
+}
+
+function read_db_img(){
+	$sql = "SELECT eq_path,eq_des FROM asg_admin.Ecuaciones";
+	$query = mysql_query($sql) or die(mysql_error());
+	// $row = mysql_fetch_row($query);
+	$type = 'png';
+	// return $row;
+	echo '<ul>';
+	while($row = mysql_fetch_row($query)){
+		$file=$row[0];
+		$descripcion = $row[1];
+		// foreach($ruta as $file){
+	 //Si no es un directorio es un archivo
+	 		if(!is_dir($file)){
+	  // Obtengo la extension
+	 			$ext = pathinfo($file, PATHINFO_EXTENSION);
+	  // Si es de la extension que se busca
+	  		if($ext==$type){
+	  	// Presenta la imagen
+					echo "<li class='rowbox'>";
+						echo "<span class='box'>";
+						echo 	'<input class="checkbox" type="checkbox" value="'.$file.'" />';
+						echo 	'<img class="mainimage" src="'.$file.'">';
+		  			 echo '</span>';
+						echo "<span class='box'>";
+		  			$str=explode('/', $file);
+						echo 	"<h3>".$str[1].'</h3>';	  
+						echo 	'<p>'.$descripcion.'</p>';
+		  			 echo '</span>';
+		  		echo '</li>';
+	   		}
+		 	}
+		// }
+	}
+	echo '</ul>';
+}
+
+function show_img($directory=null, $type='png'){
+
+	if($directory==null) $directory = "../img/";
+	//Leo todas los archivos del directorio
+	$files = glob($directory . "*");
+
+	foreach($files as $file)
+	{
+	 //Si no es un directorio es un archivo
+	 if(!is_dir($file))
+	 {
+	  // Obtengo la extension
+	  $ext = pathinfo($file, PATHINFO_EXTENSION);
+	  // Si es de la extension que se busca
+	  if($ext==$type){
+	  	// Presenta la imagen
+			echo "<span class='box'>";
+			echo 	'<input class="checkbox" type="checkbox" value="'.$file.'" />';
+				echo '<img class="mainimage" src="'.$file.'">';
+		  echo '</span>';
+		  $str=explode('/', $file);
+			echo $str[1];
+			echo '<br />';	  
+	   }
+
+	 }
+	}
 }
 
 ?>

@@ -11,11 +11,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Definicion de la asignatura</title>
-	<link rel=stylesheet href="css/intro.css" type="text/css">
-	<link rel=stylesheet href="css/main.css" type="text/css">
-	<script type="text/javascript" src="jquery/jquery-1.4.2.js" ></script>
-	<script type="text/javascript" src="jquery/jquery.cookie.js" ></script>
-	<script src="js/DefAsig.js" type="text/javascript"></script>
+	<link rel=stylesheet href="../css/intro.css" type="text/css">
+	<link rel=stylesheet href="../css/main.css" type="text/css">
+	<script type="text/javascript" src="../jquery/jquery-1.4.2.js" ></script>
+	<script type="text/javascript" src="../jquery/jquery.cookie.js" ></script>
 </head>
 <body>
 
@@ -28,7 +27,15 @@
 					Nueva asignatura<br />
 					<input type="text" id="Asig"/>
 					<input type="button" value="Crear" id="newAsig"/><br />
+					<div id="opciones">
+						<input type="checkbox" name="Alumnos,Grupos" id="alumnos" value="unchecked" checked>Alumnos
+						<input type="checkbox" name="Cuestiones,Conceptos,Respuestas,Temas" id="cuestiones" value="unchecked" checked>Cuestiones
+						<input type="checkbox" name="Examenes,Fuentes" id="examenes" value="unchecked" checked>Examenes
+					</div>
+					<?php db_list(); ?>
+					<input type="button" name ='clonar' value="clonar" id="clonAsig"/><br />	
 				</div>
+
 				<div class="temas">
 					Nuevo tema<br />
 					<input type="text" id="Tema"/>
@@ -45,6 +52,7 @@
 		<div class="ready"></div>
 	<!-- </div> -->
 	<!--Cargo aqui el js para que haga efecto sobre todo -->
+	<script type="text/javascript" src="../js/DefAsig.js"></script>
 
 </body>
 </html>

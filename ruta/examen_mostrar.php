@@ -125,7 +125,7 @@ function correccion(){
 	echo $i." preguntas ".$porcentaje." = ".$porcentaje/($i*10);
 }
 //Antes en prueba.php
-function get_examen(){
+function gets_examen(){
 	$idA=$_SESSION['idAlumno'];
 	$idAs=$_SESSION['idAs'];
 	$seg=1;
@@ -183,7 +183,7 @@ function rutina_examinar(){
 	$examen=examen_pre();
 
 	if(empty($examen)){
-		$id=get_examen();
+		$id=gets_examen();
 		if($id==false){ 
 //			$fecha_mysql = date('Y-m-d H:i:s');
 			set_num_exam($idAs,0);

@@ -2,39 +2,113 @@ $(document).ready(function() {
 
 var ajax_load = "<img src='img/ajax-loader.gif' alt='Cargando...' />";  
 var id=0;
-	$('.css_btt_r[title=Cambiar]').click(function(){
+var packet=new Array();
+var origen;
+$('.css_btt_r[title=Cambiar]').click(function(){
 		id=$(this).attr('name');
-		console.log(id);
+		// console.log(id);
 		$(this).html(id);
 	});//Fin Grupos
-//Mover a los alumnos
-		$('.css_btt[name=mover]').click(function(){
+//Copiar alumnos a otro grupo
+$('.css_btt[name=copiar]').click(function(){
 //		id=$(this).attr('name');
-			var grupo=$('option:selected').val();
-			// console.log(grupo);
-			$.ajax({
-				type:"POST",
-				url: "set_grupo.php",
-				data: "packet="+packet+"&grupo="+grupo,
-				success: function (){
-					$('#contenido').html(ajax_load).load('mgmt_groups.php');
-				}
-			});	
-	});
+	var grupo=$('option:selected').val();
+	var operacion = 'copiar';
+	// console.log(packet);
+
+	$.ajax({
+		type:"POST",
+		url: "set_grupo.php",
+		data: "packet="+packet+"&operacion="+operacion+"&origen="+origen+"&grupo="+grupo,
+		success: function (){
+			$('#contenido').html(ajax_load).load('mgmt_groups.php');
+		}
+	});	
+});
+//Mover a los alumnos
+$('.css_btt[name=mover]').click(function(){
+//		id=$(this).attr('name');
+	var grupo=$('option:selected').val();
+	var operacion='mover';
+	// console.log(packet);
+	$.ajax({
+		type:"POST",
+		url: "set_grupo.php",
+		data: "packet="+packet+"&operacion="+operacion+"&origen="+origen+"&grupo="+grupo,
+		success: function (){
+			$('#contenido').html(ajax_load).load('mgmt_groups.php');
+		}
+	});	
+});
 //Fin de mover a los alumnos
+//Copiar a los alumnos
+$('.css_btt[name=copiar]').click(function(){
+//		id=$(this).attr('name');
+	var grupo=$('option:selected').val();
+		// console.log(grupo);
+	// $.ajax({
+	// 	type:"POST",
+	// 	url: "set_grupo.php",
+	// 	data: "packet="+packet+"&grupo="+grupo,
+	// 	success: function (){
+	// 		$('#contenido').html(ajax_load).load('mgmt_groups.php');
+	// 	}
+	// });	
+});
+//Fin de copiar a los alumnos
 
 //Checkboxes
-	var packet=new Array();
-	
+	var gr=0;
+	var ultimo_gr;
+	var origen;
 	function updateChecks() {         
-		var allVals = [];  
+		var check;
+		var last_id;
+		var allVals = [];
 		$('input[type=checkbox]:checked').each(function() {
-			allVals.push($(this).val());
+			check = $(this).val();
+			// allVals.push(check);
+			origen = $(this).attr('name'); //grupo
+			 // $('input:checkbox').removeAttr('checked');
+			if(gr != ultimo_gr){
+				// console.log('cambio de grupo'+gr);
+			// if(ultimo_gr != origen){
+				descheck(gr);
+				gr = origen;
+				allVals=[];				
+				// packet = allVals;
+			}
+			if(gr == origen )
+				allVals.push(check);
+			// else{
+			// 	allVals = [];
+			// 	$('input:checkbox').attr('name').removeAttr('checked');
+			// 	packet = allVals;
+			// 	gr = origen;
+			// }
 		});
-		console.log(allVals);
-		packet=allVals;
+		packet = allVals;
+		// console.log(allVals);
 	}
-	 $(':checkbox').click(updateChecks);
+	// function deselectChecks(elemento, indice, array)
+	 // $(':checkbox').click(updateChecks);
+	$(':checkbox').click(ultimo);
+	$(':checkbox').click(function (){
+		updateChecks();
+	});
+	function descheck(gr){
+		$('input[name='+gr+']:checked').each(function(){
+			// console.log(this.name)
+			if(gr != ultimo_gr){	
+				$(this).removeAttr('checked');
+				// console.log('borrando '+ gr);
+			}
+		});
+	}
+	function ultimo(){
+		ultimo_gr = $(this).attr('name');
+		// console.log('ultimo check es de '+ultimo_gr)
+	}
 	//Fin checkboxes
 	//Drag and drop
 	$(function() {
@@ -83,5 +157,26 @@ var id=0;
 //			$('.sortable').css('border','red 1px solid').css('margin','2px');
 		});
 
+$('.css_btt[name=nuevo]').click(function(){
+//		id=$(this).attr('name');
+	// var grupo=$('option:selected').val();
+	$('#newGroup').toggle('slow');
+	// console.log(grupo);
+});
+$('.css_btt[name=saveName]').click(function(){
+	var nombre = $('input:text[name:nombre]').val();
+	if(nombre.length > 1){
+		$.ajax({
+			type:"POST",
+			url: "newGroup.php",
+			data: "nombre="+nombre,
+				success: function (){
+				$('#contenido').html(ajax_load).load('mgmt_groups.php');
+			}
+		});	
+	}
+});
 
+
+//FIN
 });

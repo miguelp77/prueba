@@ -392,22 +392,82 @@ function examen_listar(){
 	$query=mysql_query($sql) or die(mysql_error());
 	while($row=mysql_fetch_row($query)){
 		
+		$examen=$row[0];
 		$id=strtotime($row[1]);
 		$local=date( 'd-m-Y [H:i]', $id );
+		$intentos = $row[7];
+		switch ($intentos) {
+			case '0':
+				$texto_intentos = "La prueba sera evaluada directamente.";
+				break;
+			case '1':
+				$texto_intentos = "La prueba podra realizarse una vez de prueba.";
+				break;
+			case '99':
+				$texto_intentos = "La prueba no sera evaluada";
+				break;			
+			default:
+				$texto_intentos = "La prueba se podra realizar durante $intentos veces sin evaluación.";
+				# code...
+				break;
+		}
+
 		//echo '<div class="fuente_resaltada">';
 		echo '<div class="resumen" name="'.$row[0].'">';
-		echo "<span class='yellow'>$row[0]</span> - <b>$row[5]</b>"." seleccionadas por <b>".$row[2]."</b> el ".$local."<br /></div>";
+		echo "<span class='yellow'>$row[0]</span>  -  <b>$row[5]</b>"." seleccionadas por <b>".$row[2]."</b> el ".$local.". $texto_intentos<br /></div>";
+		calendarios($examen);
+		examenes_grupo($row[0]);
 		echo '<div class="todo '.$row[0].'">';		
-		echo "Preguntas: ".$row[3]."  en grupos de ".$row[6]." por prueba<br />";
+		echo "Preguntas: ".$row[3]."  en grupos de ".$row[6]." por prueba";
 		if($row[4]>0) echo " con una duracion de  ".$row[4]." minutos<br />"; 
 		echo "<button value='$row[0]' name='set_examen' title='Agregar fuente de examenes'>Empujar</button>";
 		echo "<button value='$row[0]' name='del_examen' title='Eliminar fuente de examenes'>Sacar</button>";	
 		echo "<button value='$row[0]' name='vanish_examen' title='Eliminar fuente de examenes'>Eliminar</button>";
+		// Inserto un selector de grupo	
+			chooseGroup($examen);
 		echo '</div>';
+
 		echo '<hr />';
 	}
 }
-
+//Calendarios
+function calendarios($examen){
+	$startDate="start".$examen;
+	$endDate="end".$examen;
+	echo '<span class="tabula">Inicio <input type="text" class="datepicker1" id="'.$startDate.'" value="'.get_start_date($examen).'" disabled /> Fin <input type="text" class="datepicker2" id="'.$endDate.'" value="'.get_end_date($examen).'"disabled/></span><img class="unlocked" id="unlock'.$examen.'" src="../img/lock.png" />';
+	echo '<br />';
+}
+function get_start_date($examen){
+	$sql="SELECT start_date FROM Fuentes WHERE idFuente='$examen'";
+	$query=mysql_query($sql) or die(mysql_error());
+	$row=mysql_fetch_row($query);
+	$phpdate = strtotime($row[0]);
+	$mysqldate = date( 'd-m-Y', $phpdate );
+	return $mysqldate;
+}
+function get_end_date($examen){
+	$sql="SELECT end_date FROM Fuentes WHERE idFuente='$examen'";
+	$query=mysql_query($sql) or die(mysql_error());
+	$row=mysql_fetch_row($query);
+	$phpdate = strtotime($row[0]);
+	$mysqldate = date( 'd-m-Y', $phpdate );
+	return $mysqldate;
+}
+// Listar los grupos a los que se han asignado el examen
+function examenes_grupo($id_grupo){
+	$examenes=array();
+	$id_examenes=array();
+	$sql="SELECT tipo,nombre FROM Grupos";
+	$query=mysql_query($sql) or die(mysql_error());
+	while($row=mysql_fetch_row($query)){
+		$id_examenes = explode(',', $row[0]);
+		$examenes["$row[1]"]=$id_examenes;
+	}
+	foreach ($examenes as $key => $value) {
+		// Si esta en el
+		if(in_array($id_grupo, $value)) echo '<span class="tag_box">'.$key.'</span> ';
+	}
+}
 //Eliminar Fuente
 
 function fuente_eliminar($fuente=null){
@@ -418,14 +478,14 @@ function fuente_eliminar($fuente=null){
 	}
 }
 
-function examen_grabar($examen,$numero=5,$duracion=60,$nombre='Sin nombre!'){
+function examen_grabar($examen,$numero=5,$duracion=60,$nombre='Sin nombre!',$intentos=0){
 	$created='default';
 	if(isset($_SESSION['user'])) $created=$_SESSION['user'];
 	$mysqldate =date( 'Y-m-d H:i:s', time());
 		
 	$identificado =$mysqldate;
 //	echo $identificado;
-	$sql="INSERT INTO Fuentes (preguntas,nombre,created,identificado,numero,duracion) VALUES ('$examen','$nombre','$created','$identificado','$numero','$duracion')";
+	$sql="INSERT INTO Fuentes (preguntas,nombre,created,identificado,numero,duracion,intentos) VALUES ('$examen','$nombre','$created','$identificado','$numero','$duracion','$intentos')";
 	$query=mysql_query($sql) or die(mysql_error());
 	return $query;
 }
@@ -627,18 +687,17 @@ function examen_get_id($idA,$bbdd){
 //			}
 //	array_shift($examenes);
 if($bbdd=='asg_admin') return false;
-	if($examenes[0]!=null){
+if($examenes[0]!=null){
 //		foreach ($examenes as $key => $value){
 //				echo $value."<br />";
 //			}
-		$pop=array_pop($examenes);
+	$pop=array_pop($examenes);
 //		$stack= join(",",$examenes);
 //		$sql2="UPDATE Alumnos SET examenes='$stack' WHERE Alumno_id=$idAlumno LIMIT 1";
 //		$query2=mysql_query($sql2) or die(mysql_error());		
 		return $pop;
 //	echo "<hr />";
 	}else return false;
-
 }
 
 function duracion_get($id=null,$bbdd){

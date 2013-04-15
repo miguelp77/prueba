@@ -65,8 +65,10 @@ if($array){
 	}
 	array_options($convocatorias);	
 echo '<span class="css_boton" name="notas_lista">Consultar</span><br />';
-	$grupos = get_grupos();
+
+	// $grupos = get_grupos();
 //	print_r($grupos);
+	$grupos = getGroups();
 	foreach($grupos as $g){
 		echo '<input type="checkbox" name="opcional" value="'.$g.'"/>'.$g;
 	}

@@ -1,5 +1,10 @@
 <?php
-	session_start();
+/**
+* Compruebo las credenciales
+* Compruebo las credenciales del usuario que haya accedido
+*
+*/
+session_start();
 require_once('includes/db_tools.inc');
 require_once('includes/cuestiones.inc');	
 //	require_once('includes/misfunciones.php');
@@ -8,6 +13,7 @@ require_once('includes/cuestiones.inc');
 		conectar($db);//	require_once('checkuser.php');
 	}
 	unset($msg);
+
 //Conecto a la BBDD
 	$ret='';
 	connect_to_db();
@@ -61,12 +67,15 @@ $result='';
 	while ($row = mysql_fetch_object($db_list)){
 	//anulo el valor de phpmyadmin
 		$bbdd=$row->Database;
-		$ok=str_begin($bbdd,"asg_");
-		if(!$ok) continue;
-		$ok2=str_begin($bbdd,"asg_admin");
-		if($ok2) continue;
+		$ok=str_begin($bbdd,"asg_"); 				// DB de la aplicacion
+		if(!$ok) continue; 									// La saltamos
+		$ok2=str_begin($bbdd,"asg_admin"); 	// DB de administracion de la aplicacion
+		if($ok2) continue;									// La saltamos
 	//	echo $bbdd."<br />";
 //	if($row->Database =="phpmyadmin") continue;
+
+
+// Busco dentro de las bases de la aplicacion
 	$sql="SELECT Alias FROM $bbdd.Alumnos LIMIT 1";
 	$exist=mysql_query($sql);
 	if(!$exist) continue;
@@ -78,9 +87,8 @@ $result='';
 	if(!$result_adm){ 
 		$result =mysql_fetch_assoc($sql);
 		if($result['Psw']==$psw && strlen($psw)>0){
-
 //			$ret="prueba";
-			$ret="instrucciones";
+			$ret="instrucciones"; // Ira a la pagina instrucciones.php
 
 			unset($_SESSION['idAlumno']);
 			unset($_SESSION['user']);			
@@ -92,28 +100,31 @@ $result='';
 			$_SESSION['login_as']='alumno';
 			$_SESSION['db_name']=$bbdd;
 //Datos de la generacion del examen desde la fuente
-			$fuente=examen_get_id($result['Alumno_id'],$bbdd);
-			$duracion=duracion_get($fuente,$bbdd);
-			$npreguntas=npreguntas_get($fuente,$bbdd);
+			// Devuelve el ID de la fuente que tiene encolado
+			$fuente=examen_get_id($result['Alumno_id'],$bbdd); // ESTO ES LO QUE VA A REEMPLAZARSE POR LA ELECCION DEL ALUMNO
+			// Devuelve el numero de minutos de la fuente
+			$duracion=duracion_get($fuente,$bbdd); // Lo guarda en variable de sesion "duracion"
+			// Devuelve el numero de preguntas de la fuente
+			$npreguntas = npreguntas_get($fuente,$bbdd); // Lo guarda en variable de sesion "numero"
 //Relleno datos para la MONITORIZACION
-			$nombre = $result['Nombre'];
-			$apellidos = $result['Apellidos'];
-			$DNI = $result['DNI'];
-			$alias=$result['Alias'];
-			$psw=$result['Psw'];
-			$status="accediendo";
-			$IP=ip2long(getIP());
-			$asignatura=$bbdd;			
-			$idA=$_SESSION['idAlumno'];
-			$idMon=check_monitor($idA,$asignatura);
-			if($idMon)$_SESSION['idAs']=$idMon; 
-			else{
+			$nombre = $result['Nombre'];  				//Nombre
+			$apellidos = $result['Apellidos'];		// Apellidos
+			$DNI = $result['DNI']; 								// DNI
+			$alias=$result['Alias']; 							// username
+			$psw=$result['Psw']; 									// password
+			$status="accediendo"; 								// mensaje para la DB de Admin
+			$IP=ip2long(getIP()); 								// IP desde donde acceden
+			$asignatura=$bbdd; 										// Nombre de la asignatura   
+			$idA=$_SESSION['idAlumno'];						// ID del alumno dentro de la asignatura
+			$idMon=check_monitor($idA,$asignatura);	// Devuelve el id dentro del la monitorizacion.Contraste de fecha entre la actual y la que puede haber almacenada
+			if($idMon)$_SESSION['idAs']=$idMon; 		// Si se logo previamente
+			else{																		// Si no, lo registro
 				$sql2="INSERT INTO asg_admin.Alumnos (idA,Nombre,Apellidos,DNI,asignatura,status) VALUES ('$idA','$nombre','$apellidos','$DNI','$asignatura','login')";
 				$query2=mysql_query($sql2) or die(mysql_error());
 // La variable de SESION  idAs es el identificador dentro de la monitorizacion
 				$_SESSION['idAs']=mysql_insert_id(); 
-			}
-		$result=true;
+			}	// Fin del else
+		$result=true; 
 		}
 	}	
 }
@@ -129,7 +140,7 @@ $result='';
 		$msg = "Usuario no registrado. Contacte con el administrador.";
   } 		
  $_SESSION['msg']=$msg;
-	echo $ret;
+	echo $ret;  // Admin o intrucciones.
 	
 function check_monitor($idA,$asignatura){
 	$sql="SELECT * FROM asg_admin.Alumnos WHERE (idA=$idA AND asignatura='$asignatura')";

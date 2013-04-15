@@ -20,80 +20,132 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel=stylesheet href="../css/main.css" type="text/css">
+	<script src="../js/jquery-ui/js/jquery-ui-1.8.1.custom.min.js"></script>
+  <link rel="stylesheet" href="../js/jquery-ui/css/ui-lightness/jquery-ui-1.8.1.custom.css" />
 <!--	<script src="../jquery/jquery-1.4.2.js"></script> -->
 <!--	<script src="jquery/jquery-shuffle.js"></script> -->
-	<script src="../js/draft.js"></script> 
 	<title><?php echo $_SESSION['user'];?></title>
 </head>
 <body>
-<div class="right2"><?php
-	if($db!='asg_admin'){
-//		echo "<u>Examenes apilados</u> <br />";
-//		alumno_listar();
-		$sql="SELECT examenes FROM Alumnos";
-		$query=mysql_query($sql);
-		$row=mysql_fetch_assoc($query);
-		$examenes=get_examenes($row['examenes']);
-		if(strlen($examenes[0])>=1){
-			echo '<u>Proximos examenes</u><br />';
-			foreach($examenes as $val){
-				$source_name=source_name($val);
-				echo '<span class="marco2" title="'.$source_name.'">'.$val.'</span>';
-			}	
+<div class="right2">
+	<?php
+		if($db!='asg_admin'){
+			//Lateral superior derecho
+			examenesAsignados();
 		}
-		//echo n_examenes_max();
-		//echo str_examenes(1);
-	}
-	?></div>
+	?>
+</div>
 
 <?php
 if(isset($db)){
-if($db=="asg_admin") echo "Conecte a una asignatura";
-else{
-//	listar_n(3);	
-//	echo "Las cuestiones con fondo naranja no tienen ninguna opcion marcada como correcta"."<br />";
-//	id_explorer("Cuestiones");
-	echo "Conceptos de la asignatura"."<br />";
-	temas_conceptos();
-
-
-echo '<br />
-Nombre <input type="text" name="nombre" id="nombre" maxlength="40" size="40" /><br /> 
+	// Si la asignatura es la de administracion NO se muestran examenes
+	if($db=="asg_admin") echo "Conecte a una asignatura";
+	else{
+		echo "Conceptos de la asignatura<br />";
+		// Se listan los conceptos que se han definido en la asignatura
+		temas_conceptos();
+?>
+<br />
+Nombre <input type="text" name="nombre" id="nombre" maxlength="40" size="40" placeholder="Nombre de la prueba"/><br /> 
 <button name="seleccion">Seleccion</button>
-<button name="todos">Todas</button><input type="checkbox" name="rand" id="rand" checked/>Aleatorias<br />
-Numero de cuestiones<input type="text" name="numero" id="numero" maxlength="2" size="2" value="5"/>
-Tiempo limite <input type="text" name="duracion" id="duracion" maxlength="2" size="2" value="30"/> minutos
+<button name="todos">Todas</button>
+<input type="checkbox" name="rand" id="rand" checked/> Aleatorias<br />
+Numero de cuestiones <input type="number" name="numero" id="numero" maxlength="2" size="2" placeholder="5"/>
+<!-- Numero de cuestiones <input type="text" name="numero" id="numero" maxlength="2" size="2" value="5"/> -->
+Tiempo limite <input type="number" name="duracion" id="duracion" maxlength="2" size="2" placeholder="Duración"/> minutos<br />
+Número de intentos <input type="number" name="intentos" id="intentos" maxlength="2" size="2" placeholder="Intentos"/> (0: Examen; 99: Ilimitados)
+<!-- Tiempo limite <input type="text" name="duracion" id="duracion" maxlength="2" size="2" value="30"/> minutos -->
 
 <div class="total_info"></div>
-';
 
-}
-if($db!="asg_admin"){
 
-	echo "<hr />";
-	echo "<h3>Contenido de los examenes creados</h3>";
+<?php
+	}//Fin del else
+//Si la DB no es la de Administracion
+	if($db!="asg_admin"){
+		echo "<hr />";
+		echo "<h3>Contenido de los examenes creados</h3>";
 //	source_minified();
 //	source_maximise();
 
 //	source_balance();
-	examen_listar();
+		examen_listar();
+	}
 }
-}
-//examenes_show(1);
-//check_correcta();
-//ALTER TABLE table_name
-//ADD column_name datatype
-//$sql="ALTER TABLE Fuentes ADD numero TINYINT NULL";
-//$query=mysql_query($sql) or die(mysql_error());
-
-//	$sql="alter table Alumnos change fk_idAsignatura status varchar (10)";
-//	$query=mysql_query($sql) or die(mysql_error());
-//delete_table("Fuentes");
-//create_fuente_table();
-
 ?>
 
 </body>
+	<script src="../js/draft.js"></script> 
+	<script>
+  $(function() {
+  	$(".datepicker2").datepicker({
+	  	  // beforeShowDay: $.datepicker.noWeekends,
+	  	  dateFormat: "dd-mm-yy",
+		  	onSelect: function(endDate){
+    			// console.log(endDate);
+		  	},
+	  	  firstDay: 1,
+	 	    dayNames: [ "Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" ],
+	 	    dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+	 	    monthNames: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ]
+			});
+  	$(".datepicker1").datepicker({
+
+  	  dateFormat: "dd-mm-yy",
+  	  firstDay: 1,
+ 	    dayNames: [ "Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" ],
+ 	    dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+ 	    monthNames: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ],
+			
+			onSelect: function(startDate){
+				var getID = $(this).attr('id');
+				var ID = getID.split("start")[1];
+				var endID='#end'+ID;
+				
+				var newDate= $(this).datepicker('getDate');
+				newDate.setDate(newDate.getDate() + 0);
+
+	      $(endID).datepicker('setDate', newDate).datepicker('option', 'minDate', newDate); 
+    		// console.log(endID);
+			}
+
+		});
+
+    $(".datepicker1").datepicker();
+    $(".datepicker2").datepicker();
+
+    $('.unlocked').click(function(){
+    	var esto = $(this).attr('src');
+			var getID = $(this).attr('id');
+			var ID = getID.split("unlock")[1];
+			var startID='#start'+ID;    	
+			var endID='#end'+ID;    	
+    	var start_date=$(startID).val();
+    	var end_date=$(endID).val();
+    	if(esto=="../img/lock-unlock.png"){
+    		$(this).data('prev_src', $(this).attr('src')).attr("src","../img/lock.png");
+        $(startID).attr('disabled','disabled');
+        $(endID).attr('disabled','disabled');
+  			$.ajax({
+					type: "POST",
+					url: "set_fuentes_date.php",
+					data: "examen="+ ID + "&start_date=" + start_date+ "&end_date=" + end_date
+					// success: function(data){
+						// alert("La asignatura "+ origen + " ha sido clonada como " + destino);
+				});
+    	}else{
+ 	   		$(this).data('prev_src', $(this).attr('src')).attr("src","../img/lock-unlock.png");
+    		$(startID).removeAttr('disabled');
+    		$(endID).removeAttr('disabled');
+    	}
+    	// if($(this).hasClass('unlocked')){
+     //  	if($(this).attr('src')=="../img/lock.png")
+     //  	$(this).data('prev_src', $(this).attr('src')).attr("src","../img/lock.png");
+	    // 	$(this).removeClass('unlocked');
+	    // 	$(this).addClass('locked');
+    	
+    })
+  
+  });
+  </script>
 </html>
-
-

@@ -14,77 +14,50 @@ $(document).ready(function(){
 //	
 	$(":checkbox").click(updateChecks);
 //
-	function updateChecks(){         
-		var allVals = [];		
-  	$('input:checked').each(function() {
-			allVals.push($(this).val());
-			radio_on=allVals;		
-			arr=radio_on.join(",");
-//		  console.log(arr);
-//		$('#checkss').html(arr);
-			$.ajax({
-				traditional: true,
-				type: "POST",
-				data:'selected='+arr,
-				url: "ajax/gettin.php",
-				success:function(data){
-					$('.fld').hide();
-					$('.fld.fecha').show();
-					$('#checkss').html(data);
-					var datos=data.split(",");
-					for(x in datos){
-	//				console.log("$('."+datos[x]+"').hide();");
-						$("'.fld."+datos[x]+"'").show();
-					}//Fin del for
-				}//Fin de success
-			});//Fin de ajax
-			return arr;
-		});//Fin de la funcion checked
-	}//Fin de la funcion
 
 	$('.report_head').click(function (){
 		var idA=$(this).attr('name');
-			$.ajax({
+		$.ajax({
 			type: "POST",
 			url: "report_ind.php",
 			data: "idA=" + idA,
 			success: function(data){
 				$('#contenido').empty();
 				$('#contenido').html(data);
-	//				data='';
-					//	$('textarea').text(data);
 			}
 		});
 	});
+
 $('span[name=orden]').click(function(){
-//		console.log('ooo');
-		$.ajax({
-			url: "expediente_ordenar.php",
-			complete: function(){
 	$.ajax({
-		url: "ajax/report_convocatoria.php",
-		success: function(data){
-			$('#contenido').html(ajax_load).html(data);
-		}
-	});
+		url: "../ruta/expediente_ordenar.php",
+		complete: function(){
+		$.ajax({
+			url: "../ajax/report_convocatoria.php",
+			success: function(data){
+				$('#contenido').html(ajax_load).html(data);
 			}
+		});
+		}
 	});			
 }); 
+
 //Completar expedientes
 $('span[name=completar]').click(function(){
 //		console.log('ooo');
-		$.ajax({
-			url: "expediente_completar.php",
-			complete: function(){
 	$.ajax({
-		url: "ajax/report_convocatoria.php",
-		success: function(data){
-			$('#contenido').html(ajax_load).html(data);
+		url: "../ruta/expediente_completar.php",
+		complete: function(){
+			$.ajax({
+				url: "../ajax/report_convocatoria.php",
+				success: function(data){
+					$('#contenido').html(ajax_load).html(data);
+				}
+			});
 		}
-	});
-			}
 	});			
 });
+
 $('span[name^=roll]').click(function(){
 	var valor=$(this).attr('name');
 	$('.'+valor).toggle(2000);
@@ -103,5 +76,32 @@ $('.line').click(function(){
 });
 
  
+	function updateChecks(){         
+		var allVals = [];		
+  	$('input:checked').each(function() {
+			allVals.push($(this).val());
+			radio_on=allVals;		
+			arr=radio_on.join(",");
+//		  console.log(arr);
+//		$('#checkss').html(arr);
+			$.ajax({
+				traditional: true,
+				type: "POST",
+				data:'selected='+arr,
+				url: "../ajax/gettin.php",
+				success:function(data){
+					$('.fld').hide();
+					$('.fld.fecha').show();
+					$('#checkss').html(data);
+					var datos=data.split(",");
+					for(x in datos){
+	//				console.log("$('."+datos[x]+"').hide();");
+						$("'.fld."+datos[x]+"'").show();
+					}//Fin del for
+				}//Fin de success
+			});//Fin de ajax
+			return arr;
+		});//Fin de la funcion checked
+	}//Fin de la funcion
 ////////////FIN
 });

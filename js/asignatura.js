@@ -6,7 +6,7 @@ $('.css_btt[name=new_asg]').click(function(){
 //Deseleccionar
 $('.css_btt[name=unset_asg]').click(function(){
 	$.ajax({
-		url: 'ruta/asignatura_unset.php',
+		url: 'asignatura_unset.php',
 		success: function(){
 			window.location.replace('admin_test.php');
 		}

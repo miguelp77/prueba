@@ -1,0 +1,92 @@
+update_alias
+
+chooseGroup($examen)
+	dropbox con los grupos que hay en la asignatura
+
+
+Estructura de la base de datos de las asignaturas
+
+Tabla: Alumnos
+
+	Alumno_id					int(10)
+	Nombre						text
+	Apellidos					text
+	DNI								varchar(14)
+	Alias 						varchar(20)
+	Psw 							varchar(20)
+	status						varchar(10)
+	examenes					varchar(120)
+	grupos						varchar(80)
+
+Tabla: Conceptos
+
+	idConcepto				int(10)
+	fk_idTema					int(10)
+	Nombre						text
+	Descripcion				text
+	Valor							int(11)
+
+Tabla: Cuestiones
+	
+	Cuestion_Id				int(10)
+	Asig_Id						tinyint(4)
+	Enunciado					text
+	Imagen						varchar(255)
+	Imagen_aux				varchar(255)
+	Q_Id							int(10)
+	Conceptos					text
+
+Tabla: Examenes
+
+	idExamen					int(10)
+	fk_Alumno_Id			int(10)
+	IP 								int(20)
+	orden							text
+	expire						datetime
+	preguntas					text
+	respuestas				text
+	resultado					decimal(4,2)
+	start							datetime
+	done							datetime
+	status						tinyint(4)
+
+Tabla: Expedientes
+
+	idExpediente			int(10)
+	idAlumno					int(10)
+	pruebas						text
+	notas							text
+	Fechas						text
+
+Tabla: Fuentes
+
+	idFuente					int(10)
+	identificado			datetime
+	created						varchar(50)
+	preguntas					text
+	duracion					tinyint(4)
+	nombre 						varchar(80)
+	numero 						tinyint(4)
+
+Tabla: Grupos
+	
+	grupo_id					int(11)
+	nombre 						varchar(255)
+	tipo							varchar(255)
+	asignados					text
+
+Tabla: Respuestas
+
+	Resp_id						int(10)
+	Respuesta 				text
+	Cuestion_id 			int(10)
+	Correcta					tinyint(1)
+	Ultima 						tinyint(1)
+	Porcentaje				tinyint(4)
+
+Tabla: Temas
+
+	idTema 						int(10)
+	fk_idAsignatura		int(11)
+	Numero 						tinyint(4)
+	Nombre 						text

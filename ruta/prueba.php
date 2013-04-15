@@ -7,7 +7,7 @@
 // Display errors in production mode
 //ini_set('display_errors', 1);
 
-//Estan definidas iser & idAlumno	
+//Estan definidas user & idAlumno	
 	if(!isset($_SESSION['user'])) redirect_to("index.php");
 	if(!isset($_SESSION['idAlumno'])) redirect_to("index.php");	
 //Base de datos seleccionada. Conexion

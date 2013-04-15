@@ -1,0 +1,569 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » Spreadsheet\Excel\Reader</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Cpdf.html"><i class="icon-folder-open"></i> Cpdf</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Spreadsheet.html"><i class="icon-folder-open"></i> Spreadsheet</a></li>
+<li><a href="../packages/classAlumno.html"><i class="icon-folder-open"></i> classAlumno</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">1101</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/Spreadsheet.Excel.Reader.html" title="Reader"><i class="icon-folder-open"></i>Reader</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function_GetInt4d" title="GetInt4d :: "><span class="description">GetInt4d()
+        </span><pre>GetInt4d</pre></a></li>
+<li class="function  "><a href="#function_array_comb" title="array_comb :: "><span class="description">array_comb()
+        </span><pre>array_comb</pre></a></li>
+<li class="function  "><a href="#function_gmgetdate" title="gmgetdate :: "><span class="description">gmgetdate()
+        </span><pre>gmgetdate</pre></a></li>
+<li class="function  "><a href="#function_v" title="v :: "><span class="description">v()
+        </span><pre>v</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#constant_BIG_BLOCK_DEPOT_BLOCKS_POS" title="BIG_BLOCK_DEPOT_BLOCKS_POS :: "><span class="description">BIG_BLOCK_DEPOT_BLOCKS_POS</span><pre>BIG_BLOCK_DEPOT_BLOCKS_POS</pre></a></li>
+<li class="constant  "><a href="#constant_BIG_BLOCK_SIZE" title="BIG_BLOCK_SIZE :: "><span class="description">BIG_BLOCK_SIZE</span><pre>BIG_BLOCK_SIZE</pre></a></li>
+<li class="constant  "><a href="#constant_EXTENSION_BLOCK_POS" title="EXTENSION_BLOCK_POS :: "><span class="description">EXTENSION_BLOCK_POS</span><pre>EXTENSION_BLOCK_POS</pre></a></li>
+<li class="constant  "><a href="#constant_IDENTIFIER_OLE" title="IDENTIFIER_OLE :: "><span class="description">IDENTIFIER_OLE</span><pre>IDENTIFIER_OLE</pre></a></li>
+<li class="constant  "><a href="#constant_NUM_BIG_BLOCK_DEPOT_BLOCKS_POS" title="NUM_BIG_BLOCK_DEPOT_BLOCKS_POS :: "><span class="description">NUM_BIG_BLOCK_DEPOT_BLOCKS_POS</span><pre>NUM_BIG_BLOCK_DEPOT_BLOCKS_POS</pre></a></li>
+<li class="constant  "><a href="#constant_NUM_EXTENSION_BLOCK_POS" title="NUM_EXTENSION_BLOCK_POS :: "><span class="description">NUM_EXTENSION_BLOCK_POS</span><pre>NUM_EXTENSION_BLOCK_POS</pre></a></li>
+<li class="constant  "><a href="#constant_PROPERTY_STORAGE_BLOCK_SIZE" title="PROPERTY_STORAGE_BLOCK_SIZE :: "><span class="description">PROPERTY_STORAGE_BLOCK_SIZE</span><pre>PROPERTY_STORAGE_BLOCK_SIZE</pre></a></li>
+<li class="constant  "><a href="#constant_ROOT_START_BLOCK_POS" title="ROOT_START_BLOCK_POS :: "><span class="description">ROOT_START_BLOCK_POS</span><pre>ROOT_START_BLOCK_POS</pre></a></li>
+<li class="constant  "><a href="#constant_SIZE_OF_NAME_POS" title="SIZE_OF_NAME_POS :: "><span class="description">SIZE_OF_NAME_POS</span><pre>SIZE_OF_NAME_POS</pre></a></li>
+<li class="constant  "><a href="#constant_SIZE_POS" title="SIZE_POS :: "><span class="description">SIZE_POS</span><pre>SIZE_POS</pre></a></li>
+<li class="constant  "><a href="#constant_SMALL_BLOCK_DEPOT_BLOCK_POS" title="SMALL_BLOCK_DEPOT_BLOCK_POS :: "><span class="description">SMALL_BLOCK_DEPOT_BLOCK_POS</span><pre>SMALL_BLOCK_DEPOT_BLOCK_POS</pre></a></li>
+<li class="constant  "><a href="#constant_SMALL_BLOCK_SIZE" title="SMALL_BLOCK_SIZE :: "><span class="description">SMALL_BLOCK_SIZE</span><pre>SMALL_BLOCK_SIZE</pre></a></li>
+<li class="constant  "><a href="#constant_SMALL_BLOCK_THRESHOLD" title="SMALL_BLOCK_THRESHOLD :: "><span class="description">SMALL_BLOCK_THRESHOLD</span><pre>SMALL_BLOCK_THRESHOLD</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_BIFF7" title="SPREADSHEET_EXCEL_READER_BIFF7 :: "><span class="description">SPREADSHEET_EXCEL_READER_BIFF7</span><pre>SPREADSHEET_EXCEL_READER_BIFF7</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_BIFF8" title="SPREADSHEET_EXCEL_READER_BIFF8 :: "><span class="description">SPREADSHEET_EXCEL_READER_BIFF8</span><pre>SPREADSHEET_EXCEL_READER_BIFF8</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT" title="SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT :: "><span class="description">SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT</span><pre>SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_MSINADAY" title="SPREADSHEET_EXCEL_READER_MSINADAY :: "><span class="description">SPREADSHEET_EXCEL_READER_MSINADAY</span><pre>SPREADSHEET_EXCEL_READER_MSINADAY</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_ARRAY" title="SPREADSHEET_EXCEL_READER_TYPE_ARRAY :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_ARRAY</span><pre>SPREADSHEET_EXCEL_READER_TYPE_ARRAY</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_BOF" title="SPREADSHEET_EXCEL_READER_TYPE_BOF :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_BOF</span><pre>SPREADSHEET_EXCEL_READER_TYPE_BOF</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_BOOLERR" title="SPREADSHEET_EXCEL_READER_TYPE_BOOLERR :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_BOOLERR</span><pre>SPREADSHEET_EXCEL_READER_TYPE_BOOLERR</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_BOUNDSHEET" title="SPREADSHEET_EXCEL_READER_TYPE_BOUNDSHEET :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_BOUNDSHEET</span><pre>SPREADSHEET_EXCEL_READER_TYPE_BOUNDSHEET</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_COLINFO" title="SPREADSHEET_EXCEL_READER_TYPE_COLINFO :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_COLINFO</span><pre>SPREADSHEET_EXCEL_READER_TYPE_COLINFO</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_CONTINUE" title="SPREADSHEET_EXCEL_READER_TYPE_CONTINUE :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_CONTINUE</span><pre>SPREADSHEET_EXCEL_READER_TYPE_CONTINUE</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_DBCELL" title="SPREADSHEET_EXCEL_READER_TYPE_DBCELL :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_DBCELL</span><pre>SPREADSHEET_EXCEL_READER_TYPE_DBCELL</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_DEFCOLWIDTH" title="SPREADSHEET_EXCEL_READER_TYPE_DEFCOLWIDTH :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_DEFCOLWIDTH</span><pre>SPREADSHEET_EXCEL_READER_TYPE_DEFCOLWIDTH</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_DIMENSION" title="SPREADSHEET_EXCEL_READER_TYPE_DIMENSION :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_DIMENSION</span><pre>SPREADSHEET_EXCEL_READER_TYPE_DIMENSION</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_EOF" title="SPREADSHEET_EXCEL_READER_TYPE_EOF :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_EOF</span><pre>SPREADSHEET_EXCEL_READER_TYPE_EOF</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_EXTSST" title="SPREADSHEET_EXCEL_READER_TYPE_EXTSST :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_EXTSST</span><pre>SPREADSHEET_EXCEL_READER_TYPE_EXTSST</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_FILEPASS" title="SPREADSHEET_EXCEL_READER_TYPE_FILEPASS :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_FILEPASS</span><pre>SPREADSHEET_EXCEL_READER_TYPE_FILEPASS</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_FONT" title="SPREADSHEET_EXCEL_READER_TYPE_FONT :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_FONT</span><pre>SPREADSHEET_EXCEL_READER_TYPE_FONT</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_FORMAT" title="SPREADSHEET_EXCEL_READER_TYPE_FORMAT :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_FORMAT</span><pre>SPREADSHEET_EXCEL_READER_TYPE_FORMAT</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_FORMULA" title="SPREADSHEET_EXCEL_READER_TYPE_FORMULA :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_FORMULA</span><pre>SPREADSHEET_EXCEL_READER_TYPE_FORMULA</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_FORMULA2" title="SPREADSHEET_EXCEL_READER_TYPE_FORMULA2 :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_FORMULA2</span><pre>SPREADSHEET_EXCEL_READER_TYPE_FORMULA2</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_HYPER" title="SPREADSHEET_EXCEL_READER_TYPE_HYPER :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_HYPER</span><pre>SPREADSHEET_EXCEL_READER_TYPE_HYPER</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_INDEX" title="SPREADSHEET_EXCEL_READER_TYPE_INDEX :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_INDEX</span><pre>SPREADSHEET_EXCEL_READER_TYPE_INDEX</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_LABEL" title="SPREADSHEET_EXCEL_READER_TYPE_LABEL :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_LABEL</span><pre>SPREADSHEET_EXCEL_READER_TYPE_LABEL</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_LABELSST" title="SPREADSHEET_EXCEL_READER_TYPE_LABELSST :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_LABELSST</span><pre>SPREADSHEET_EXCEL_READER_TYPE_LABELSST</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_MERGEDCELLS" title="SPREADSHEET_EXCEL_READER_TYPE_MERGEDCELLS :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_MERGEDCELLS</span><pre>SPREADSHEET_EXCEL_READER_TYPE_MERGEDCELLS</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_MULBLANK" title="SPREADSHEET_EXCEL_READER_TYPE_MULBLANK :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_MULBLANK</span><pre>SPREADSHEET_EXCEL_READER_TYPE_MULBLANK</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_MULRK" title="SPREADSHEET_EXCEL_READER_TYPE_MULRK :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_MULRK</span><pre>SPREADSHEET_EXCEL_READER_TYPE_MULRK</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_NAME" title="SPREADSHEET_EXCEL_READER_TYPE_NAME :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_NAME</span><pre>SPREADSHEET_EXCEL_READER_TYPE_NAME</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_NINETEENFOUR" title="SPREADSHEET_EXCEL_READER_TYPE_NINETEENFOUR :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_NINETEENFOUR</span><pre>SPREADSHEET_EXCEL_READER_TYPE_NINETEENFOUR</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_NOTE" title="SPREADSHEET_EXCEL_READER_TYPE_NOTE :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_NOTE</span><pre>SPREADSHEET_EXCEL_READER_TYPE_NOTE</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_NUMBER" title="SPREADSHEET_EXCEL_READER_TYPE_NUMBER :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_NUMBER</span><pre>SPREADSHEET_EXCEL_READER_TYPE_NUMBER</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_PALETTE" title="SPREADSHEET_EXCEL_READER_TYPE_PALETTE :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_PALETTE</span><pre>SPREADSHEET_EXCEL_READER_TYPE_PALETTE</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_RK" title="SPREADSHEET_EXCEL_READER_TYPE_RK :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_RK</span><pre>SPREADSHEET_EXCEL_READER_TYPE_RK</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_RK2" title="SPREADSHEET_EXCEL_READER_TYPE_RK2 :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_RK2</span><pre>SPREADSHEET_EXCEL_READER_TYPE_RK2</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_ROW" title="SPREADSHEET_EXCEL_READER_TYPE_ROW :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_ROW</span><pre>SPREADSHEET_EXCEL_READER_TYPE_ROW</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_SST" title="SPREADSHEET_EXCEL_READER_TYPE_SST :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_SST</span><pre>SPREADSHEET_EXCEL_READER_TYPE_SST</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_STANDARDWIDTH" title="SPREADSHEET_EXCEL_READER_TYPE_STANDARDWIDTH :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_STANDARDWIDTH</span><pre>SPREADSHEET_EXCEL_READER_TYPE_STANDARDWIDTH</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_STRING" title="SPREADSHEET_EXCEL_READER_TYPE_STRING :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_STRING</span><pre>SPREADSHEET_EXCEL_READER_TYPE_STRING</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_TXO" title="SPREADSHEET_EXCEL_READER_TYPE_TXO :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_TXO</span><pre>SPREADSHEET_EXCEL_READER_TYPE_TXO</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_UNKNOWN" title="SPREADSHEET_EXCEL_READER_TYPE_UNKNOWN :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_UNKNOWN</span><pre>SPREADSHEET_EXCEL_READER_TYPE_UNKNOWN</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_TYPE_XF" title="SPREADSHEET_EXCEL_READER_TYPE_XF :: "><span class="description">SPREADSHEET_EXCEL_READER_TYPE_XF</span><pre>SPREADSHEET_EXCEL_READER_TYPE_XF</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS" title="SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS :: "><span class="description">SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS</span><pre>SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS1904" title="SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS1904 :: "><span class="description">SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS1904</span><pre>SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS1904</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_WORKBOOKGLOBALS" title="SPREADSHEET_EXCEL_READER_WORKBOOKGLOBALS :: "><span class="description">SPREADSHEET_EXCEL_READER_WORKBOOKGLOBALS</span><pre>SPREADSHEET_EXCEL_READER_WORKBOOKGLOBALS</pre></a></li>
+<li class="constant  "><a href="#constant_SPREADSHEET_EXCEL_READER_WORKSHEET" title="SPREADSHEET_EXCEL_READER_WORKSHEET :: "><span class="description">SPREADSHEET_EXCEL_READER_WORKSHEET</span><pre>SPREADSHEET_EXCEL_READER_WORKSHEET</pre></a></li>
+<li class="constant  "><a href="#constant_START_BLOCK_POS" title="START_BLOCK_POS :: "><span class="description">START_BLOCK_POS</span><pre>START_BLOCK_POS</pre></a></li>
+<li class="constant  "><a href="#constant_TYPE_POS" title="TYPE_POS :: "><span class="description">TYPE_POS</span><pre>TYPE_POS</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/Spreadsheet.html">Spreadsheet</a></li>
+<li>
+<span class="divider">\</span><a href="../packages/Spreadsheet.Excel.html">Excel</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/Spreadsheet.Excel.Reader.html">Reader</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function_GetInt4d"></a><div class="element clickable function  function_GetInt4d" data-toggle="collapse" data-target=".function_GetInt4d .collapse">
+<h2>GetInt4d()
+        </h2>
+<pre>GetInt4d($data, $pos) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+<div class="subelement argument"><h4>$pos</h4></div>
+</div></div>
+</div>
+<a id="function_array_comb"></a><div class="element clickable function  function_array_comb" data-toggle="collapse" data-target=".function_array_comb .collapse">
+<h2>array_comb()
+        </h2>
+<pre>array_comb($array1, $array2) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$array1</h4></div>
+<div class="subelement argument"><h4>$array2</h4></div>
+</div></div>
+</div>
+<a id="function_gmgetdate"></a><div class="element clickable function  function_gmgetdate" data-toggle="collapse" data-target=".function_gmgetdate .collapse">
+<h2>gmgetdate()
+        </h2>
+<pre>gmgetdate($ts) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$ts</h4></div>
+</div></div>
+</div>
+<a id="function_v"></a><div class="element clickable function  function_v" data-toggle="collapse" data-target=".function_v .collapse">
+<h2>v()
+        </h2>
+<pre>v($data, $pos) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+<div class="subelement argument"><h4>$pos</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_BIG_BLOCK_DEPOT_BLOCKS_POS"> </a><div class="element clickable constant  constant_BIG_BLOCK_DEPOT_BLOCKS_POS" data-toggle="collapse" data-target=".constant_BIG_BLOCK_DEPOT_BLOCKS_POS .collapse">
+<h2>BIG_BLOCK_DEPOT_BLOCKS_POS</h2>
+<pre>BIG_BLOCK_DEPOT_BLOCKS_POS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_BIG_BLOCK_SIZE"> </a><div class="element clickable constant  constant_BIG_BLOCK_SIZE" data-toggle="collapse" data-target=".constant_BIG_BLOCK_SIZE .collapse">
+<h2>BIG_BLOCK_SIZE</h2>
+<pre>BIG_BLOCK_SIZE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_EXTENSION_BLOCK_POS"> </a><div class="element clickable constant  constant_EXTENSION_BLOCK_POS" data-toggle="collapse" data-target=".constant_EXTENSION_BLOCK_POS .collapse">
+<h2>EXTENSION_BLOCK_POS</h2>
+<pre>EXTENSION_BLOCK_POS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_IDENTIFIER_OLE"> </a><div class="element clickable constant  constant_IDENTIFIER_OLE" data-toggle="collapse" data-target=".constant_IDENTIFIER_OLE .collapse">
+<h2>IDENTIFIER_OLE</h2>
+<pre>IDENTIFIER_OLE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_NUM_BIG_BLOCK_DEPOT_BLOCKS_POS"> </a><div class="element clickable constant  constant_NUM_BIG_BLOCK_DEPOT_BLOCKS_POS" data-toggle="collapse" data-target=".constant_NUM_BIG_BLOCK_DEPOT_BLOCKS_POS .collapse">
+<h2>NUM_BIG_BLOCK_DEPOT_BLOCKS_POS</h2>
+<pre>NUM_BIG_BLOCK_DEPOT_BLOCKS_POS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_NUM_EXTENSION_BLOCK_POS"> </a><div class="element clickable constant  constant_NUM_EXTENSION_BLOCK_POS" data-toggle="collapse" data-target=".constant_NUM_EXTENSION_BLOCK_POS .collapse">
+<h2>NUM_EXTENSION_BLOCK_POS</h2>
+<pre>NUM_EXTENSION_BLOCK_POS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_PROPERTY_STORAGE_BLOCK_SIZE"> </a><div class="element clickable constant  constant_PROPERTY_STORAGE_BLOCK_SIZE" data-toggle="collapse" data-target=".constant_PROPERTY_STORAGE_BLOCK_SIZE .collapse">
+<h2>PROPERTY_STORAGE_BLOCK_SIZE</h2>
+<pre>PROPERTY_STORAGE_BLOCK_SIZE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_ROOT_START_BLOCK_POS"> </a><div class="element clickable constant  constant_ROOT_START_BLOCK_POS" data-toggle="collapse" data-target=".constant_ROOT_START_BLOCK_POS .collapse">
+<h2>ROOT_START_BLOCK_POS</h2>
+<pre>ROOT_START_BLOCK_POS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SIZE_OF_NAME_POS"> </a><div class="element clickable constant  constant_SIZE_OF_NAME_POS" data-toggle="collapse" data-target=".constant_SIZE_OF_NAME_POS .collapse">
+<h2>SIZE_OF_NAME_POS</h2>
+<pre>SIZE_OF_NAME_POS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SIZE_POS"> </a><div class="element clickable constant  constant_SIZE_POS" data-toggle="collapse" data-target=".constant_SIZE_POS .collapse">
+<h2>SIZE_POS</h2>
+<pre>SIZE_POS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SMALL_BLOCK_DEPOT_BLOCK_POS"> </a><div class="element clickable constant  constant_SMALL_BLOCK_DEPOT_BLOCK_POS" data-toggle="collapse" data-target=".constant_SMALL_BLOCK_DEPOT_BLOCK_POS .collapse">
+<h2>SMALL_BLOCK_DEPOT_BLOCK_POS</h2>
+<pre>SMALL_BLOCK_DEPOT_BLOCK_POS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SMALL_BLOCK_SIZE"> </a><div class="element clickable constant  constant_SMALL_BLOCK_SIZE" data-toggle="collapse" data-target=".constant_SMALL_BLOCK_SIZE .collapse">
+<h2>SMALL_BLOCK_SIZE</h2>
+<pre>SMALL_BLOCK_SIZE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SMALL_BLOCK_THRESHOLD"> </a><div class="element clickable constant  constant_SMALL_BLOCK_THRESHOLD" data-toggle="collapse" data-target=".constant_SMALL_BLOCK_THRESHOLD .collapse">
+<h2>SMALL_BLOCK_THRESHOLD</h2>
+<pre>SMALL_BLOCK_THRESHOLD </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_BIFF7"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_BIFF7" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_BIFF7 .collapse">
+<h2>SPREADSHEET_EXCEL_READER_BIFF7</h2>
+<pre>SPREADSHEET_EXCEL_READER_BIFF7 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_BIFF8"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_BIFF8" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_BIFF8 .collapse">
+<h2>SPREADSHEET_EXCEL_READER_BIFF8</h2>
+<pre>SPREADSHEET_EXCEL_READER_BIFF8 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT .collapse">
+<h2>SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT</h2>
+<pre>SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_MSINADAY"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_MSINADAY" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_MSINADAY .collapse">
+<h2>SPREADSHEET_EXCEL_READER_MSINADAY</h2>
+<pre>SPREADSHEET_EXCEL_READER_MSINADAY </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_ARRAY"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_ARRAY" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_ARRAY .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_ARRAY</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_ARRAY </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_BOF"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_BOF" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_BOF .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_BOF</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_BOF </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_BOOLERR"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_BOOLERR" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_BOOLERR .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_BOOLERR</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_BOOLERR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_BOUNDSHEET"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_BOUNDSHEET" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_BOUNDSHEET .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_BOUNDSHEET</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_BOUNDSHEET </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_COLINFO"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_COLINFO" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_COLINFO .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_COLINFO</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_COLINFO </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_CONTINUE"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_CONTINUE" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_CONTINUE .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_CONTINUE</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_CONTINUE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_DBCELL"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_DBCELL" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_DBCELL .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_DBCELL</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_DBCELL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_DEFCOLWIDTH"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_DEFCOLWIDTH" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_DEFCOLWIDTH .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_DEFCOLWIDTH</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_DEFCOLWIDTH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_DIMENSION"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_DIMENSION" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_DIMENSION .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_DIMENSION</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_DIMENSION </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_EOF"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_EOF" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_EOF .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_EOF</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_EOF </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_EXTSST"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_EXTSST" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_EXTSST .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_EXTSST</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_EXTSST </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_FILEPASS"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_FILEPASS" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_FILEPASS .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_FILEPASS</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_FILEPASS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_FONT"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_FONT" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_FONT .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_FONT</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_FONT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_FORMAT"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_FORMAT" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_FORMAT .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_FORMAT</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_FORMAT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_FORMULA"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_FORMULA" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_FORMULA .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_FORMULA</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_FORMULA </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_FORMULA2"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_FORMULA2" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_FORMULA2 .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_FORMULA2</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_FORMULA2 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_HYPER"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_HYPER" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_HYPER .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_HYPER</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_HYPER </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_INDEX"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_INDEX" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_INDEX .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_INDEX</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_INDEX </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_LABEL"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_LABEL" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_LABEL .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_LABEL</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_LABEL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_LABELSST"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_LABELSST" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_LABELSST .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_LABELSST</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_LABELSST </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_MERGEDCELLS"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_MERGEDCELLS" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_MERGEDCELLS .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_MERGEDCELLS</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_MERGEDCELLS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_MULBLANK"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_MULBLANK" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_MULBLANK .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_MULBLANK</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_MULBLANK </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_MULRK"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_MULRK" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_MULRK .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_MULRK</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_MULRK </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_NAME"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_NAME" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_NAME .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_NAME</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_NAME </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_NINETEENFOUR"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_NINETEENFOUR" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_NINETEENFOUR .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_NINETEENFOUR</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_NINETEENFOUR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_NOTE"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_NOTE" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_NOTE .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_NOTE</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_NOTE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_NUMBER"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_NUMBER" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_NUMBER .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_NUMBER</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_NUMBER </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_PALETTE"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_PALETTE" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_PALETTE .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_PALETTE</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_PALETTE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_RK"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_RK" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_RK .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_RK</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_RK </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_RK2"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_RK2" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_RK2 .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_RK2</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_RK2 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_ROW"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_ROW" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_ROW .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_ROW</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_ROW </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_SST"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_SST" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_SST .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_SST</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_SST </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_STANDARDWIDTH"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_STANDARDWIDTH" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_STANDARDWIDTH .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_STANDARDWIDTH</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_STANDARDWIDTH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_STRING"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_STRING" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_STRING .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_STRING</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_STRING </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_TXO"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_TXO" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_TXO .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_TXO</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_TXO </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_UNKNOWN"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_UNKNOWN" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_UNKNOWN .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_UNKNOWN</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_UNKNOWN </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_TYPE_XF"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_TYPE_XF" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_TYPE_XF .collapse">
+<h2>SPREADSHEET_EXCEL_READER_TYPE_XF</h2>
+<pre>SPREADSHEET_EXCEL_READER_TYPE_XF </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS .collapse">
+<h2>SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS</h2>
+<pre>SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS1904"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS1904" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS1904 .collapse">
+<h2>SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS1904</h2>
+<pre>SPREADSHEET_EXCEL_READER_UTCOFFSETDAYS1904 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_WORKBOOKGLOBALS"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_WORKBOOKGLOBALS" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_WORKBOOKGLOBALS .collapse">
+<h2>SPREADSHEET_EXCEL_READER_WORKBOOKGLOBALS</h2>
+<pre>SPREADSHEET_EXCEL_READER_WORKBOOKGLOBALS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SPREADSHEET_EXCEL_READER_WORKSHEET"> </a><div class="element clickable constant  constant_SPREADSHEET_EXCEL_READER_WORKSHEET" data-toggle="collapse" data-target=".constant_SPREADSHEET_EXCEL_READER_WORKSHEET .collapse">
+<h2>SPREADSHEET_EXCEL_READER_WORKSHEET</h2>
+<pre>SPREADSHEET_EXCEL_READER_WORKSHEET </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_START_BLOCK_POS"> </a><div class="element clickable constant  constant_START_BLOCK_POS" data-toggle="collapse" data-target=".constant_START_BLOCK_POS .collapse">
+<h2>START_BLOCK_POS</h2>
+<pre>START_BLOCK_POS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_TYPE_POS"> </a><div class="element clickable constant  constant_TYPE_POS" data-toggle="collapse" data-target=".constant_TYPE_POS .collapse">
+<h2>TYPE_POS</h2>
+<pre>TYPE_POS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-04-08T23:16:52+02:00.<br></footer></div>
+</div>
+</body>
+</html>

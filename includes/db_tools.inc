@@ -3,6 +3,15 @@
 // require_once('include/basics.php');
 require_once('basics.php');
 
+/**
+*
+* Funciones DB
+* Varias funciones para actuar con la base de datos.
+* Incluye las funciones para la generacion de la estructura de la DB
+* @author  Miguel Paniagua
+*
+*/
+
 if(isset($_SESSION['db_main'])) $db_main=$_SESSION['db_main'];
 
 
@@ -36,6 +45,26 @@ function db_delete($nombre=NULL){
 		}else false;
 	}else false;
 	return true; 
+}
+function db_list(){
+	$link=connect_to_db();
+	$db_list = mysql_list_dbs($link);
+
+//echo "<form action='asignatura_cambiar.php' method='post'>";
+	echo "<form name='select_form' action='#'>";
+		echo "<SELECT NAME='dbs' SIZE='1'>";
+		while ($row = mysql_fetch_object($db_list)){
+	//anulo el valor de phpmyadmin
+			$nombre=$row->Database;
+			$ok=str_begin($nombre,"asg_");
+//	echo $nombre;
+			if($row->Database =="asg_admin") continue;
+		  if($ok) echo "<OPTION VALUE='".parse_utf8($row->Database)."' name='db_nueva'>". asg_name($row->Database)."</OPTION>";
+		}
+		echo "</SELECT> ";
+//echo $row;
+	echo "</form>";
+
 }
 
 function show_tables($db=NULL){
@@ -313,30 +342,57 @@ function add_field($tabla=null,$campo=null,$tipo=null){
 }
 /**
 
+Objeto Alumnos
+
+***/
+
+
+
+/**
+
 Prueba
 
 ***/
-function db_clone($origen,$destino=null){
+function db_clone($origen,$destino=null,$opciones=null){
 
 	if($destino==null) $destino=$origen."_bak";
 //	$destino='asg_test';
+
+	if(strlen($opciones)>1)
+		$opciones = explode(',', $opciones);
+
 	$sql="CREATE DATABASE $destino";
 	$query = mysql_query($sql) or die(mysql_error());
 	$sql="ALTER DATABASE $destino DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci";
 	$query = mysql_query($sql) or die(mysql_error());
 
-	$result = mysql_list_tables($origen);
+	// $result = mysql_list_tables($origen);
+	$origen = utf8_decode($origen);
+	$sql = "SHOW TABLES FROM $origen";
+	$result = mysql_query($sql) or die(mysql_error());
+
 	$num_rows = mysql_num_rows($result);
 
 	for ($i = 0; $i < $num_rows; $i++) {
 		if(mysql_tablename($result, $i)){
 			$table_name=(string)mysql_tablename($result, $i);
+			// echo $table_name;
 			$tabla_origen=$origen.".".$table_name;
 			$tabla_destino=$destino.".".$table_name;  
-			echo $tabla_destino.'<br />';
-			$sql="INSERT INTO $tabla_destino SELECT * FROM $tabla_origen" ;
+			// echo ' > '.$tabla_destino.'<br />';
+			$sql="CREATE TABLE $tabla_destino LIKE $tabla_origen"; 
 			$query = mysql_query($sql) or die(mysql_error());
+
+			$sql="INSERT INTO $tabla_destino SELECT * FROM $tabla_origen" ;
+			if(in_array($table_name, $opciones))
+				$query = mysql_query($sql) or die(mysql_error());
 		}
+	}
+	if(in_array('Alumnos', $opciones)){
+		conectar($destino);
+		// connect_to_db($destino); //No guarda la SESSION de Database
+		regenerate();
+		conectar($origen);
 	}
 }
 /*
@@ -726,7 +782,13 @@ function Alumnos_ids(){
 	}
 	return $alumnos;
 	//	
-	
+}
+function whois($idA){
+	$sql="SELECT * FROM Alumnos WHERE Alumno_id='$idA' LIMIT 1";
+	$query=mysql_query($sql) or die (mysql_error());
+	$row=mysql_fetch_assoc($query);
+	return $row;
+
 }
 function init_expedientes(){
 	$sql="SELECT Alumno_id FROM Alumnos";
@@ -835,7 +897,20 @@ function db_options($db=null,$field=null,$table=null){
 		$query=mysql_query($sql) or die(mysql_error());
 		while($row=mysql_fetch_row($query)){
 			$new_pass=generatePassword();
+
 			$valid=check_alumno($row[1],$new_pass);
+			if($valid==0)
+				$sql_update="UPDATE Alumnos SET Psw='$new_pass' WHERE Alumno_id= '$row[0]'";
+				$qry=mysql_query($sql_update) or die(mysql_error());
+		}
+	}
+	function update_alias(){
+		$sql="SELECT Alumno_id,Alias FROM Alumnos";
+		$query=mysql_query($sql) or die(mysql_error());
+		while($row=mysql_fetch_row($query)){
+			$new_pass=generatePassword();
+			$new_alias = generatePassword();
+			$valid=check_alumno($new_alias,$new_pass);
 			if($valid==0)
 				$sql_update="UPDATE Alumnos SET Psw='$new_pass' WHERE Alumno_id= '$row[0]'";
 				$qry=mysql_query($sql_update) or die(mysql_error());
@@ -880,12 +955,55 @@ function concon(){
 	echo "Sin base."."<br />"; //Aqui habria que redirigir
 	}
 }
+/*
+
+Gestion de examenes
+
+*/
+
+// Obtiene los examenes del alumno
+function get_examen($alumno){
+	$examenes = array();
+
+	$sql="SELECT examenes FROM Alumnos WHERE Alumno_id = $alumno LIMIT 1";
+	$query=mysql_query($sql) or die(mysql_error());
+	while($row=mysql_fetch_row($query)){
+		if(strlen($row[0])<1){
+			return $examenes;
+		}else{
+			$examenes=explode(",",$row['0']);
+		}
+	}	
+	return $examenes;
+}
+
+//Actualiza los examenes del alumno
+function update_examen($alumno=null,$examenes_str=null){
+	$sql="UPDATE Alumnos SET examenes='$examenes_str' WHERE Alumno_id=$alumno LIMIT 1";
+	$query=mysql_query($sql) or die(mysql_error());	
+}
+
+// Obtiene los examenes que tiene asignado el grupo
+function list_ex_grupo($grupo = null){
+	//tipo es el tipo de examen
+	$sql="SELECT tipo FROM Grupos WHERE nombre = '$grupo' LIMIT 1";
+	$query=mysql_query($sql) or die(mysql_error());
+	$row=mysql_fetch_row($query);
+	if(count($row[0])>=1)
+	$id_examenes = explode(',', $row[0]);
+
+	return $id_examenes;
+}
 
 /***
 
 Gestion de grupos
 
 ***/
+function show_groups(){
+
+
+}
 function Groups_org(){
 	$grupo=null;
 
@@ -946,6 +1064,44 @@ function selectGroup(){
 		// print_r($grupos);
 		echo "</form>";		
 }
+function chooseGroup($examen = 1){
+	$grupos=getGroups();
+	echo '<div class="dcha">';
+		echo '<div class="selector">';
+		// echo "<form name='select_form' action='#'>";
+			echo "<SELECT class='grupo' id='selector".$examen."'' NAME='dbs' SIZE='1'>";
+				foreach($grupos	as $g){
+					echo "<OPTION VALUE='".$g."' name='send_to'>".$g."</OPTION>";
+				}
+			echo "</SELECT> ";
+		// echo "</form>";		
+		echo '</div>';
+	echo '</div>';
+}
+function selectGroups(){
+	$grupos=getGroups();
+	echo '<div class="dcha">';
+		echo "<form name='select_form' action='#'>";
+		echo "<div class='css_btt' name='mover' title='mover'>Mover a</div>";
+		echo "<div class='css_btt' name='copiar' title='copiar'>Copiar a</div>";
+			echo "<SELECT NAME='dbs' SIZE='1'>";
+				foreach($grupos	as $g){
+					echo "<OPTION VALUE='".$g."' name='send_to'>".$g."</OPTION>";
+				}
+			echo "</SELECT> ";
+		echo "</form>";		
+	echo '</div>';
+}
+function nombre_del_grupo($grupo_id){
+
+	$query="SELECT nombre FROM Grupos WHERE grupo_id='$grupo_id'";
+	$result = mysql_query($query) or die(mysql_error());
+	$row = mysql_fetch_row($result);
+//	echo $query;
+	return $row[0];
+}
+
+
 function Groups(){
 	$grupo=null;
 	
@@ -983,5 +1139,58 @@ function Groups(){
 //Selector de grupo
 	selectGroup();
 }
+function viewGroup(){
+	$sql = "SELECT * FROM Grupos";
+	$qry = mysql_query($sql);
+
+	while ($row=mysql_fetch_assoc($qry)){
+		echo '<div class="tag">'.$row['nombre'];
+		// echo "<div class='css_btt dcha' name='".$row['grupo_id']."'>Gestion</div>";
+		echo '</div><hr />';
+		echo "<div class='grupo'>";
+			if(strlen($row['asignados'])>0) listGroup($row['asignados'],$row['grupo_id']);
+		echo"</div>";
+	}
+	alumnos_sin_grupo();
+	selectGroups();
+}
+function listGroup($asignados,$origen){
+	$arr=explode(',', $asignados);
+	echo '<ul>';
+	foreach ($arr as $key => $value) {
+		$row=whois($value);
+		echo "<li class='row'>";
+			echo "<input type='checkbox' name='$origen' value='".$row['Alumno_id']."'/>  ";
+			echo $row['Nombre'].', '.$row['Apellidos'].'<br />';		
+		echo "</li>";
+	}
+	echo '</ul>';
+	echo '<br />';
+}
+
+function alumnos_sin_grupo(){
+	$sql="SELECT * FROM Alumnos WHERE grupos LIKE '0'";
+
+	$qry = mysql_query($sql) or die(mysql_error());
+	
+	// $row = mysql_fetch_row($qry);
+	// echo $sql;
+	// if(!$row) exit();
+	// var_dump($row);
+	if ($qry==true){ 
+		echo '<div class="tag">'.'Sin grupo'.'</div><hr />';	
+		echo '<ul>';
+		while($row = mysql_fetch_row($qry)){
+			echo "<li class='row'>";
+			echo "<input type='checkbox' name='empty' value='".$row[0]."'/>  ";
+			echo $row[1].', '.$row[2].'<br />';		
+			echo "</li>";	
+		}	
+	echo '</ul>';
+	echo '<hr />';
+	}
+}
+
+
 
 ?>

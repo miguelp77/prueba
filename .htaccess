@@ -15,3 +15,9 @@ deny from all
 </Files>
 
 ErrorDocument 403 /public/403.html  
+
+#Esto deberia quitar el php del final
+RewriteEngine on
+RewriteCond  %{DOCUMENT_ROOT}/$1         !-f
+RewriteCond  %{DOCUMENT_ROOT}/$1\.php    -f
+RewriteRule  ^(.*)$                      $1.php [L]

@@ -65,8 +65,8 @@ update_expediente($idA,$calificacion);
 	//  purge_alumnos();
 
 //Genero el nombre del archivo PDF
-
 $nombre_archivo=files_name();
+// Creo el PDF
 $result=to_pdf('final.php',$nombre_archivo);
 
 session_destroy();

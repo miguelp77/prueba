@@ -1,0 +1,1540 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Cpdf</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Cpdf.html"><i class="icon-folder-open"></i> Cpdf</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Spreadsheet.html"><i class="icon-folder-open"></i> Spreadsheet</a></li>
+<li><a href="../packages/classAlumno.html"><i class="icon-folder-open"></i> classAlumno</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">1101</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_ARC4" title="ARC4 :: ARC4 encrypt a text string"><span class="description">ARC4 encrypt a text string</span><pre>ARC4()</pre></a></li>
+<li class="method public "><a href="#method_ARC4_init" title="ARC4_init :: initialize the ARC4 encryption"><span class="description">initialize the ARC4 encryption</span><pre>ARC4_init()</pre></a></li>
+<li class="method public "><a href="#method_Cpdf" title="Cpdf :: class constructor
+this will start a new document"><span class="description">class constructor
+this will start a new document</span><pre>Cpdf()</pre></a></li>
+<li class="method public "><a href="#method_PRVT_getBytes" title="PRVT_getBytes :: extract an integer from a position in a byte stream"><span class="description">extract an integer from a position in a byte stream</span><pre>PRVT_getBytes()</pre></a></li>
+<li class="method public "><a href="#method_PRVTadjustWrapText" title="PRVTadjustWrapText :: do a part of the calculation for sorting out the justification of the text"><span class="description">do a part of the calculation for sorting out the justification of the text</span><pre>PRVTadjustWrapText()</pre></a></li>
+<li class="method public "><a href="#method_PRVTcheckTextDirective" title="PRVTcheckTextDirective :: wrapper function for PRVTcheckTextDirective1"><span class="description">wrapper function for PRVTcheckTextDirective1</span><pre>PRVTcheckTextDirective()</pre></a></li>
+<li class="method public "><a href="#method_PRVTcheckTextDirective1" title="PRVTcheckTextDirective1 :: checks if the text stream contains a control directive
+if so then makes some changes and returns the number of characters involved in the directive
+this has been re-worked to include everything neccesary to fins the current writing point, so that
+the location can be sent to the callback function if required
+if the directive does not require a font change, then $f should be set to 0"><span class="description">checks if the text stream contains a control directive
+if so then makes some changes and returns the number of characters involved in the directive
+this has been re-worked to include everything neccesary to fins the current writing point, so that
+the location can be sent to the callback function if required
+if the directive does not require a font change, then $f should be set to 0</span><pre>PRVTcheckTextDirective1()</pre></a></li>
+<li class="method public "><a href="#method_PRVTgetTextPosition" title="PRVTgetTextPosition :: given a start position and information about how text is to be laid out, calculate where
+on the page the text will end"><span class="description">given a start position and information about how text is to be laid out, calculate where
+on the page the text will end</span><pre>PRVTgetTextPosition()</pre></a></li>
+<li class="method public "><a href="#method_addContent" title="addContent :: add content to the currently active object"><span class="description">add content to the currently active object</span><pre>addContent()</pre></a></li>
+<li class="method public "><a href="#method_addDestination" title="addDestination :: create a labelled destination within the document"><span class="description">create a labelled destination within the document</span><pre>addDestination()</pre></a></li>
+<li class="method public "><a href="#method_addImage" title="addImage :: add an image into the document, from a GD object
+this function is not all that reliable, and I would probably encourage people to use
+the file based functions"><span class="description">add an image into the document, from a GD object
+this function is not all that reliable, and I would probably encourage people to use
+the file based functions</span><pre>addImage()</pre></a></li>
+<li class="method public "><a href="#method_addInfo" title="addInfo :: add content to the documents info object"><span class="description">add content to the documents info object</span><pre>addInfo()</pre></a></li>
+<li class="method public "><a href="#method_addInternalLink" title="addInternalLink :: add a link in the document to an internal destination (ie."><span class="description">add a link in the document to an internal destination (ie.</span><pre>addInternalLink()</pre></a></li>
+<li class="method public "><a href="#method_addJpegFromFile" title="addJpegFromFile :: add a JPEG image into the document, from a file"><span class="description">add a JPEG image into the document, from a file</span><pre>addJpegFromFile()</pre></a></li>
+<li class="method public "><a href="#method_addJpegImage_common" title="addJpegImage_common :: common code used by the two JPEG adding functions"><span class="description">common code used by the two JPEG adding functions</span><pre>addJpegImage_common()</pre></a></li>
+<li class="method public "><a href="#method_addLink" title="addLink :: add a link in the document to an external URL"><span class="description">add a link in the document to an external URL</span><pre>addLink()</pre></a></li>
+<li class="method public "><a href="#method_addMessage" title="addMessage :: used to add messages for use in debugging"><span class="description">used to add messages for use in debugging</span><pre>addMessage()</pre></a></li>
+<li class="method public "><a href="#method_addObject" title="addObject :: after an object has been created, it wil only show if it has been added, using this function."><span class="description">after an object has been created, it wil only show if it has been added, using this function.</span><pre>addObject()</pre></a></li>
+<li class="method public "><a href="#method_addPngFromFile" title="addPngFromFile :: add a PNG image into the document, from a file
+this should work with remote files"><span class="description">add a PNG image into the document, from a file
+this should work with remote files</span><pre>addPngFromFile()</pre></a></li>
+<li class="method public "><a href="#method_addText" title="addText :: add text to the document, at a specified location, size and angle on the page"><span class="description">add text to the document, at a specified location, size and angle on the page</span><pre>addText()</pre></a></li>
+<li class="method public "><a href="#method_addTextWrap" title="addTextWrap :: add text to the page, but ensure that it fits within a certain width
+if it does not fit then put in as much as possible, splitting at word boundaries
+and return the remainder."><span class="description">add text to the page, but ensure that it fits within a certain width
+if it does not fit then put in as much as possible, splitting at word boundaries
+and return the remainder.</span><pre>addTextWrap()</pre></a></li>
+<li class="method public "><a href="#method_checkAllHere" title="checkAllHere :: should be used for internal checks, not implemented as yet"><span class="description">should be used for internal checks, not implemented as yet</span><pre>checkAllHere()</pre></a></li>
+<li class="method public "><a href="#method_closeObject" title="closeObject :: close an object"><span class="description">close an object</span><pre>closeObject()</pre></a></li>
+<li class="method public "><a href="#method_curve" title="curve :: draw a bezier curve based on 4 control points"><span class="description">draw a bezier curve based on 4 control points</span><pre>curve()</pre></a></li>
+<li class="method public "><a href="#method_ellipse" title="ellipse :: draw an ellipse
+note that the part and filled ellipse are just special cases of this function"><span class="description">draw an ellipse
+note that the part and filled ellipse are just special cases of this function</span><pre>ellipse()</pre></a></li>
+<li class="method public "><a href="#method_encryptInit" title="encryptInit :: initialize the encryption for processing a particular object"><span class="description">initialize the encryption for processing a particular object</span><pre>encryptInit()</pre></a></li>
+<li class="method public "><a href="#method_filledEllipse" title="filledEllipse :: draw a filled ellipse"><span class="description">draw a filled ellipse</span><pre>filledEllipse()</pre></a></li>
+<li class="method public "><a href="#method_filledRectangle" title="filledRectangle :: a filled rectangle, note that it is the width and height of the rectangle which are the secondary paramaters, not
+the coordinates of the upper-right corner"><span class="description">a filled rectangle, note that it is the width and height of the rectangle which are the secondary paramaters, not
+the coordinates of the upper-right corner</span><pre>filledRectangle()</pre></a></li>
+<li class="method public "><a href="#method_filterText" title="filterText :: filter the text, this is applied to all text just before being inserted into the pdf document
+it escapes the various things that need to be escaped, and so on"><span class="description">filter the text, this is applied to all text just before being inserted into the pdf document
+it escapes the various things that need to be escaped, and so on</span><pre>filterText()</pre></a></li>
+<li class="method public "><a href="#method_getFirstPageId" title="getFirstPageId :: function for the user to find out what the ID is of the first page that was created during
+startup - useful if they wish to add something to it later."><span class="description">function for the user to find out what the ID is of the first page that was created during
+startup - useful if they wish to add something to it later.</span><pre>getFirstPageId()</pre></a></li>
+<li class="method public "><a href="#method_getFontDecender" title="getFontDecender :: return the font decender, this will normally return a negative number
+if you add this number to the baseline, you get the level of the bottom of the font
+it is in the pdf user units"><span class="description">return the font decender, this will normally return a negative number
+if you add this number to the baseline, you get the level of the bottom of the font
+it is in the pdf user units</span><pre>getFontDecender()</pre></a></li>
+<li class="method public "><a href="#method_getFontHeight" title="getFontHeight :: return the height in units of the current font in the given size"><span class="description">return the height in units of the current font in the given size</span><pre>getFontHeight()</pre></a></li>
+<li class="method public "><a href="#method_getTextWidth" title="getTextWidth :: calculate how wide a given text string will be on a page, at a given size."><span class="description">calculate how wide a given text string will be on a page, at a given size.</span><pre>getTextWidth()</pre></a></li>
+<li class="method public "><a href="#method_line" title="line :: draw a line from one set of coordinates to another"><span class="description">draw a line from one set of coordinates to another</span><pre>line()</pre></a></li>
+<li class="method public "><a href="#method_md5_16" title="md5_16 :: calculate the 16 byte version of the 128 bit md5 digest of the string"><span class="description">calculate the 16 byte version of the 128 bit md5 digest of the string</span><pre>md5_16()</pre></a></li>
+<li class="method public "><a href="#method_newDocument" title="newDocument :: intialize a new document
+if this is called on an existing document results may be unpredictable, but the existing document would be lost at minimum
+this function is called automatically by the constructor function"><span class="description">intialize a new document
+if this is called on an existing document results may be unpredictable, but the existing document would be lost at minimum
+this function is called automatically by the constructor function</span><pre>newDocument()</pre></a></li>
+<li class="method public "><a href="#method_newPage" title="newPage :: add a new page to the document
+this also makes the new page the current active object"><span class="description">add a new page to the document
+this also makes the new page the current active object</span><pre>newPage()</pre></a></li>
+<li class="method public "><a href="#method_o_action" title="o_action :: an action object, used to link to URLS initially"><span class="description">an action object, used to link to URLS initially</span><pre>o_action()</pre></a></li>
+<li class="method public "><a href="#method_o_annotation" title="o_annotation :: an annotation object, this will add an annotation to the current page."><span class="description">an annotation object, this will add an annotation to the current page.</span><pre>o_annotation()</pre></a></li>
+<li class="method public "><a href="#method_o_catalog" title="o_catalog :: define the document catalog, the overall controller for the document"><span class="description">define the document catalog, the overall controller for the document</span><pre>o_catalog()</pre></a></li>
+<li class="method public "><a href="#method_o_contents" title="o_contents :: the contents objects hold all of the content which appears on pages"><span class="description">the contents objects hold all of the content which appears on pages</span><pre>o_contents()</pre></a></li>
+<li class="method public "><a href="#method_o_destination" title="o_destination :: destination object, used to specify the location for the user to jump to, presently on opening"><span class="description">destination object, used to specify the location for the user to jump to, presently on opening</span><pre>o_destination()</pre></a></li>
+<li class="method public "><a href="#method_o_encryption" title="o_encryption :: encryption object."><span class="description">encryption object.</span><pre>o_encryption()</pre></a></li>
+<li class="method public "><a href="#method_o_font" title="o_font :: an object to hold the font description"><span class="description">an object to hold the font description</span><pre>o_font()</pre></a></li>
+<li class="method public "><a href="#method_o_fontDescriptor" title="o_fontDescriptor :: a font descriptor, needed for including additional fonts"><span class="description">a font descriptor, needed for including additional fonts</span><pre>o_fontDescriptor()</pre></a></li>
+<li class="method public "><a href="#method_o_fontEncoding" title="o_fontEncoding :: the font encoding"><span class="description">the font encoding</span><pre>o_fontEncoding()</pre></a></li>
+<li class="method public "><a href="#method_o_image" title="o_image :: an image object, will be an XObject in the document, includes description and data"><span class="description">an image object, will be an XObject in the document, includes description and data</span><pre>o_image()</pre></a></li>
+<li class="method public "><a href="#method_o_info" title="o_info :: define the document information"><span class="description">define the document information</span><pre>o_info()</pre></a></li>
+<li class="method public "><a href="#method_o_outlines" title="o_outlines :: define the outlines in the doc, empty for now"><span class="description">define the outlines in the doc, empty for now</span><pre>o_outlines()</pre></a></li>
+<li class="method public "><a href="#method_o_page" title="o_page :: a page object, it also creates a contents object to hold its contents"><span class="description">a page object, it also creates a contents object to hold its contents</span><pre>o_page()</pre></a></li>
+<li class="method public "><a href="#method_o_pages" title="o_pages :: object which is a parent to the pages in the document"><span class="description">object which is a parent to the pages in the document</span><pre>o_pages()</pre></a></li>
+<li class="method public "><a href="#method_o_procset" title="o_procset :: the document procset, solves some problems with printing to old PS printers"><span class="description">the document procset, solves some problems with printing to old PS printers</span><pre>o_procset()</pre></a></li>
+<li class="method public "><a href="#method_o_viewerPreferences" title="o_viewerPreferences :: set the viewer preferences"><span class="description">set the viewer preferences</span><pre>o_viewerPreferences()</pre></a></li>
+<li class="method public "><a href="#method_openFont" title="openFont :: open the font file and return a php structure containing it."><span class="description">open the font file and return a php structure containing it.</span><pre>openFont()</pre></a></li>
+<li class="method public "><a href="#method_openHere" title="openHere :: specify where the document should open when it first starts"><span class="description">specify where the document should open when it first starts</span><pre>openHere()</pre></a></li>
+<li class="method public "><a href="#method_openObject" title="openObject :: make a loose object, the output will go into this object, until it is closed, then will revert to
+the current one."><span class="description">make a loose object, the output will go into this object, until it is closed, then will revert to
+the current one.</span><pre>openObject()</pre></a></li>
+<li class="method public "><a href="#method_output" title="output :: return the pdf stream as a string returned from the function"><span class="description">return the pdf stream as a string returned from the function</span><pre>output()</pre></a></li>
+<li class="method public "><a href="#method_partEllipse" title="partEllipse :: draw a part of an ellipse"><span class="description">draw a part of an ellipse</span><pre>partEllipse()</pre></a></li>
+<li class="method public "><a href="#method_polygon" title="polygon :: draw a polygon, the syntax for this is similar to the GD polygon command"><span class="description">draw a polygon, the syntax for this is similar to the GD polygon command</span><pre>polygon()</pre></a></li>
+<li class="method public "><a href="#method_rectangle" title="rectangle :: draw a rectangle, note that it is the width and height of the rectangle which are the secondary paramaters, not
+the coordinates of the upper-right corner"><span class="description">draw a rectangle, note that it is the width and height of the rectangle which are the secondary paramaters, not
+the coordinates of the upper-right corner</span><pre>rectangle()</pre></a></li>
+<li class="method public "><a href="#method_reopenObject" title="reopenObject :: open an existing object for editing"><span class="description">open an existing object for editing</span><pre>reopenObject()</pre></a></li>
+<li class="method public "><a href="#method_restoreState" title="restoreState :: restore a previously saved state"><span class="description">restore a previously saved state</span><pre>restoreState()</pre></a></li>
+<li class="method public "><a href="#method_saveState" title="saveState :: this will be called at a new page to return the state to what it was on the
+end of the previous page, before the stack was closed down
+This is to get around not being able to have open 'q' across pages"><span class="description">this will be called at a new page to return the state to what it was on the
+end of the previous page, before the stack was closed down
+This is to get around not being able to have open 'q' across pages</span><pre>saveState()</pre></a></li>
+<li class="method public "><a href="#method_selectFont" title="selectFont :: if the font is not loaded then load it and make the required object
+else just make it the current font
+the encoding array can contain 'encoding'=&gt; 'none','WinAnsiEncoding','MacRomanEncoding' or 'MacExpertEncoding'
+note that encoding='none' will need to be used for symbolic fonts
+and 'differences' =&gt; an array of mappings between numbers 0-&gt;255 and character names."><span class="description">if the font is not loaded then load it and make the required object
+else just make it the current font
+the encoding array can contain 'encoding'=&gt; 'none','WinAnsiEncoding','MacRomanEncoding' or 'MacExpertEncoding'
+note that encoding='none' will need to be used for symbolic fonts
+and 'differences' =&gt; an array of mappings between numbers 0-&gt;255 and character names.</span><pre>selectFont()</pre></a></li>
+<li class="method public "><a href="#method_setColor" title="setColor :: sets the colour for fill operations"><span class="description">sets the colour for fill operations</span><pre>setColor()</pre></a></li>
+<li class="method public "><a href="#method_setCurrentFont" title="setCurrentFont :: sets up the current font, based on the font families, and the current text state
+note that this system is quite flexible, a &lt;b&gt;&lt;i&gt; font can be completely different to a
+&lt;i&gt;&lt;b&gt; font, and even &lt;b&gt;&lt;b&gt; will have to be defined within the family to have meaning
+This function is to be called whenever the currentTextState is changed, it will update
+the currentFont setting to whatever the appropriatte family one is."><span class="description">sets up the current font, based on the font families, and the current text state
+note that this system is quite flexible, a &lt;b&gt;&lt;i&gt; font can be completely different to a
+&lt;i&gt;&lt;b&gt; font, and even &lt;b&gt;&lt;b&gt; will have to be defined within the family to have meaning
+This function is to be called whenever the currentTextState is changed, it will update
+the currentFont setting to whatever the appropriatte family one is.</span><pre>setCurrentFont()</pre></a></li>
+<li class="method public "><a href="#method_setEncryption" title="setEncryption :: set the encryption of the document
+can be used to turn it on and/or set the passwords which it will have."><span class="description">set the encryption of the document
+can be used to turn it on and/or set the passwords which it will have.</span><pre>setEncryption()</pre></a></li>
+<li class="method public "><a href="#method_setFontFamily" title="setFontFamily :: define font families, this is used to initialize the font families for the default fonts
+and for the user to add new ones for their fonts."><span class="description">define font families, this is used to initialize the font families for the default fonts
+and for the user to add new ones for their fonts.</span><pre>setFontFamily()</pre></a></li>
+<li class="method public "><a href="#method_setLineStyle" title="setLineStyle :: this sets the line drawing style."><span class="description">this sets the line drawing style.</span><pre>setLineStyle()</pre></a></li>
+<li class="method public "><a href="#method_setPreferences" title="setPreferences :: set the viewer preferences of the document, it is up to the browser to obey these."><span class="description">set the viewer preferences of the document, it is up to the browser to obey these.</span><pre>setPreferences()</pre></a></li>
+<li class="method public "><a href="#method_setStrokeColor" title="setStrokeColor :: sets the colour for stroke operations"><span class="description">sets the colour for stroke operations</span><pre>setStrokeColor()</pre></a></li>
+<li class="method public "><a href="#method_stopObject" title="stopObject :: stop an object from appearing on pages from this point on"><span class="description">stop an object from appearing on pages from this point on</span><pre>stopObject()</pre></a></li>
+<li class="method public "><a href="#method_stream" title="stream :: output the pdf code, streaming it to the browser
+the relevant headers are set so that hopefully the browser will recognise it"><span class="description">output the pdf code, streaming it to the browser
+the relevant headers are set so that hopefully the browser will recognise it</span><pre>stream()</pre></a></li>
+<li class="method public "><a href="#method_transaction" title="transaction :: a few functions which should allow the document to be treated transactionally."><span class="description">a few functions which should allow the document to be treated transactionally.</span><pre>transaction()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public "><a href="#property_addLooseObjects" title="$addLooseObjects :: array contains infomation about how the loose objects are to be added to the document"><span class="description"></span><pre>$addLooseObjects</pre></a></li>
+<li class="property public "><a href="#property_arc4" title="$arc4 :: the ancryption array for the document encryption is stored here"><span class="description"></span><pre>$arc4</pre></a></li>
+<li class="property public "><a href="#property_arc4_objnum" title="$arc4_objnum :: the object Id of the encryption information"><span class="description"></span><pre>$arc4_objnum</pre></a></li>
+<li class="property public "><a href="#property_callback" title="$callback :: array which forms a stack to keep track of nested callback functions"><span class="description"></span><pre>$callback</pre></a></li>
+<li class="property public "><a href="#property_catalogId" title="$catalogId :: the objectId (number within the objects array) of the document catalog"><span class="description"></span><pre>$catalogId</pre></a></li>
+<li class="property public "><a href="#property_checkpoint" title="$checkpoint :: store the stack for the transaction commands, each item in here is a record of the values of all the
+variables within the class, so that the user can rollback at will (from each 'start' command)
+note that this includes the objects array, so these can be large."><span class="description"></span><pre>$checkpoint</pre></a></li>
+<li class="property public "><a href="#property_currentBaseFont" title="$currentBaseFont :: the current base font"><span class="description"></span><pre>$currentBaseFont</pre></a></li>
+<li class="property public "><a href="#property_currentColour" title="$currentColour :: current colour for fill operations, defaults to inactive value, all three components should be between 0 and 1 inclusive when active"><span class="description"></span><pre>$currentColour</pre></a></li>
+<li class="property public "><a href="#property_currentContents" title="$currentContents :: object number of the currently active contents block"><span class="description"></span><pre>$currentContents</pre></a></li>
+<li class="property public "><a href="#property_currentFont" title="$currentFont :: a record of the current font"><span class="description"></span><pre>$currentFont</pre></a></li>
+<li class="property public "><a href="#property_currentFontNum" title="$currentFontNum :: the number of the current font within the font array"><span class="description"></span><pre>$currentFontNum</pre></a></li>
+<li class="property public "><a href="#property_currentLineStyle" title="$currentLineStyle :: current style that lines are drawn in"><span class="description"></span><pre>$currentLineStyle</pre></a></li>
+<li class="property public "><a href="#property_currentNode" title="$currentNode :: "><span class="description"></span><pre>$currentNode</pre></a></li>
+<li class="property public "><a href="#property_currentPage" title="$currentPage :: object number of the current page"><span class="description"></span><pre>$currentPage</pre></a></li>
+<li class="property public "><a href="#property_currentStrokeColour" title="$currentStrokeColour :: current colour for stroke operations (lines etc.)"><span class="description"></span><pre>$currentStrokeColour</pre></a></li>
+<li class="property public "><a href="#property_currentTextState" title="$currentTextState :: track if the current font is bolded or italicised"><span class="description"></span><pre>$currentTextState</pre></a></li>
+<li class="property public "><a href="#property_destinations" title="$destinations :: store label-&gt;id pairs for named destinations, these will be used to replace internal links
+done this way so that destinations can be defined after the location that links to them"><span class="description"></span><pre>$destinations</pre></a></li>
+<li class="property public "><a href="#property_encrypted" title="$encrypted :: a flag to say if a document is to be encrypted or not"><span class="description"></span><pre>$encrypted</pre></a></li>
+<li class="property public "><a href="#property_encryptionKey" title="$encryptionKey :: the ancryption key for the encryption of all the document content (structure is not encrypted)"><span class="description"></span><pre>$encryptionKey</pre></a></li>
+<li class="property public "><a href="#property_fileIdentifier" title="$fileIdentifier :: the file identifier, used to uniquely identify a pdf document"><span class="description"></span><pre>$fileIdentifier</pre></a></li>
+<li class="property public "><a href="#property_firstPageId" title="$firstPageId :: the objectId of the first page of the document"><span class="description"></span><pre>$firstPageId</pre></a></li>
+<li class="property public "><a href="#property_fontFamilies" title="$fontFamilies :: store the information about the relationship between font families
+this used so that the code knows which font is the bold version of another font, etc."><span class="description"></span><pre>$fontFamilies</pre></a></li>
+<li class="property public "><a href="#property_fonts" title="$fonts :: array carrying information about the fonts that the system currently knows about
+used to ensure that a font is not loaded twice, among other things"><span class="description"></span><pre>$fonts</pre></a></li>
+<li class="property public "><a href="#property_infoObject" title="$infoObject :: the objectId of the information object for the document
+this contains authorship, title etc."><span class="description"></span><pre>$infoObject</pre></a></li>
+<li class="property public "><a href="#property_looseObjects" title="$looseObjects :: an array which contains information about the objects which are not firmly attached to pages
+these have been added with the addObject function"><span class="description"></span><pre>$looseObjects</pre></a></li>
+<li class="property public "><a href="#property_messages" title="$messages :: messages are stored here during processing, these can be selected afterwards to give some useful debug information"><span class="description"></span><pre>$messages</pre></a></li>
+<li class="property public "><a href="#property_nCallback" title="$nCallback :: the number of callback functions in the callback array"><span class="description"></span><pre>$nCallback</pre></a></li>
+<li class="property public "><a href="#property_nStack" title="$nStack :: number of elements within the object Id storage stack"><span class="description"></span><pre>$nStack</pre></a></li>
+<li class="property public "><a href="#property_nStateStack" title="$nStateStack :: number of elements within the state stack"><span class="description"></span><pre>$nStateStack</pre></a></li>
+<li class="property public "><a href="#property_numFonts" title="$numFonts :: number of fonts within the system"><span class="description"></span><pre>$numFonts</pre></a></li>
+<li class="property public "><a href="#property_numImages" title="$numImages :: number of images being tracked within the document"><span class="description"></span><pre>$numImages</pre></a></li>
+<li class="property public "><a href="#property_numObj" title="$numObj :: the current number of pdf objects in the document"><span class="description"></span><pre>$numObj</pre></a></li>
+<li class="property public "><a href="#property_numPages" title="$numPages :: number of page objects within the document"><span class="description"></span><pre>$numPages</pre></a></li>
+<li class="property public "><a href="#property_objects" title="$objects :: this array contains all of the pdf objects, ready for final assembly"><span class="description"></span><pre>$objects</pre></a></li>
+<li class="property public "><a href="#property_options" title="$options :: an array containing options about the document
+it defaults to turning on the compression of the objects"><span class="description"></span><pre>$options</pre></a></li>
+<li class="property public "><a href="#property_procsetObjectId" title="$procsetObjectId :: the object Id of the procset object"><span class="description"></span><pre>$procsetObjectId</pre></a></li>
+<li class="property public "><a href="#property_stack" title="$stack :: object Id storage stack"><span class="description"></span><pre>$stack</pre></a></li>
+<li class="property public "><a href="#property_stateStack" title="$stateStack :: an array which is used to save the state of the document, mainly the colours and styles
+it is used to temporarily change to another state, the change back to what it was before"><span class="description"></span><pre>$stateStack</pre></a></li>
+<li class="property public "><a href="#property_wordSpaceAdjust" title="$wordSpaceAdjust :: used to track the last used value of the inter-word spacing, this is so that it is known
+when the spacing is changed."><span class="description"></span><pre>$wordSpaceAdjust</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Cpdf"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Cpdf.html">Cpdf</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Cpdf</p>
+<div class="details">
+<div class="long_description"><p>http://www.ros.co.nz/pdf</p>
+
+<p>A PHP class to provide the basic functionality to create a pdf document without
+any requirement for additional modules.</p>
+
+<p>Note that they companion class CezPdf can be used to extend this class and dramatically
+simplify the creation of documents.</p>
+
+<p>IMPORTANT NOTE
+there is no warranty, implied or otherwise with this software.</p>
+
+<p>LICENCE
+This code has been placed in the Public Domain for all to enjoy.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:pdf@ros.co.nz">Wayne Munro</a></td>
+</tr>
+<tr>
+<th>version</th>
+<td>009</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Cpdf.html">Cpdf</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_ARC4"></a><div class="element clickable method public method_ARC4" data-toggle="collapse" data-target=".method_ARC4 .collapse">
+<h2>ARC4 encrypt a text string</h2>
+<pre>ARC4($text) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$text</h4></div>
+</div></div>
+</div>
+<a id="method_ARC4_init"></a><div class="element clickable method public method_ARC4_init" data-toggle="collapse" data-target=".method_ARC4_init .collapse">
+<h2>initialize the ARC4 encryption</h2>
+<pre>ARC4_init($key) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$key</h4></div>
+</div></div>
+</div>
+<a id="method_Cpdf"></a><div class="element clickable method public method_Cpdf" data-toggle="collapse" data-target=".method_Cpdf .collapse">
+<h2>class constructor
+this will start a new document</h2>
+<pre>Cpdf($pageSize) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>var</th>
+<td><p>array of 4 numbers, defining the bottom left and upper right corner of the page. first two are normally zero.</p></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$pageSize</h4></div>
+</div></div>
+</div>
+<a id="method_PRVT_getBytes"></a><div class="element clickable method public method_PRVT_getBytes" data-toggle="collapse" data-target=".method_PRVT_getBytes .collapse">
+<h2>extract an integer from a position in a byte stream</h2>
+<pre>PRVT_getBytes($data, $pos, $num) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+<div class="subelement argument"><h4>$pos</h4></div>
+<div class="subelement argument"><h4>$num</h4></div>
+</div></div>
+</div>
+<a id="method_PRVTadjustWrapText"></a><div class="element clickable method public method_PRVTadjustWrapText" data-toggle="collapse" data-target=".method_PRVTadjustWrapText .collapse">
+<h2>do a part of the calculation for sorting out the justification of the text</h2>
+<pre>PRVTadjustWrapText($text, $actual, $width, $x, $adjust, $justification) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$text</h4></div>
+<div class="subelement argument"><h4>$actual</h4></div>
+<div class="subelement argument"><h4>$width</h4></div>
+<div class="subelement argument"><h4>$x</h4></div>
+<div class="subelement argument"><h4>$adjust</h4></div>
+<div class="subelement argument"><h4>$justification</h4></div>
+</div></div>
+</div>
+<a id="method_PRVTcheckTextDirective"></a><div class="element clickable method public method_PRVTcheckTextDirective" data-toggle="collapse" data-target=".method_PRVTcheckTextDirective .collapse">
+<h2>wrapper function for PRVTcheckTextDirective1</h2>
+<pre>PRVTcheckTextDirective($text, $i, $f) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$text</h4></div>
+<div class="subelement argument"><h4>$i</h4></div>
+<div class="subelement argument"><h4>$f</h4></div>
+</div></div>
+</div>
+<a id="method_PRVTcheckTextDirective1"></a><div class="element clickable method public method_PRVTcheckTextDirective1" data-toggle="collapse" data-target=".method_PRVTcheckTextDirective1 .collapse">
+<h2>checks if the text stream contains a control directive
+if so then makes some changes and returns the number of characters involved in the directive
+this has been re-worked to include everything neccesary to fins the current writing point, so that
+the location can be sent to the callback function if required
+if the directive does not require a font change, then $f should be set to 0</h2>
+<pre>PRVTcheckTextDirective1($text, $i, $f, $final, $x, $y, $size, $angle, $wordSpaceAdjust) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$text</h4></div>
+<div class="subelement argument"><h4>$i</h4></div>
+<div class="subelement argument"><h4>$f</h4></div>
+<div class="subelement argument"><h4>$final</h4></div>
+<div class="subelement argument"><h4>$x</h4></div>
+<div class="subelement argument"><h4>$y</h4></div>
+<div class="subelement argument"><h4>$size</h4></div>
+<div class="subelement argument"><h4>$angle</h4></div>
+<div class="subelement argument"><h4>$wordSpaceAdjust</h4></div>
+</div></div>
+</div>
+<a id="method_PRVTgetTextPosition"></a><div class="element clickable method public method_PRVTgetTextPosition" data-toggle="collapse" data-target=".method_PRVTgetTextPosition .collapse">
+<h2>given a start position and information about how text is to be laid out, calculate where
+on the page the text will end</h2>
+<pre>PRVTgetTextPosition($x, $y, $angle, $size, $wa, $text) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$x</h4></div>
+<div class="subelement argument"><h4>$y</h4></div>
+<div class="subelement argument"><h4>$angle</h4></div>
+<div class="subelement argument"><h4>$size</h4></div>
+<div class="subelement argument"><h4>$wa</h4></div>
+<div class="subelement argument"><h4>$text</h4></div>
+</div></div>
+</div>
+<a id="method_addContent"></a><div class="element clickable method public method_addContent" data-toggle="collapse" data-target=".method_addContent .collapse">
+<h2>add content to the currently active object</h2>
+<pre>addContent($content) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$content</h4></div>
+</div></div>
+</div>
+<a id="method_addDestination"></a><div class="element clickable method public method_addDestination" data-toggle="collapse" data-target=".method_addDestination .collapse">
+<h2>create a labelled destination within the document</h2>
+<pre>addDestination($label, $style, $a, $b, $c) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$label</h4></div>
+<div class="subelement argument"><h4>$style</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+<div class="subelement argument"><h4>$b</h4></div>
+<div class="subelement argument"><h4>$c</h4></div>
+</div></div>
+</div>
+<a id="method_addImage"></a><div class="element clickable method public method_addImage" data-toggle="collapse" data-target=".method_addImage .collapse">
+<h2>add an image into the document, from a GD object
+this function is not all that reliable, and I would probably encourage people to use
+the file based functions</h2>
+<pre>addImage($img, $x, $y, $w, $h, $quality) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$img</h4></div>
+<div class="subelement argument"><h4>$x</h4></div>
+<div class="subelement argument"><h4>$y</h4></div>
+<div class="subelement argument"><h4>$w</h4></div>
+<div class="subelement argument"><h4>$h</h4></div>
+<div class="subelement argument"><h4>$quality</h4></div>
+</div></div>
+</div>
+<a id="method_addInfo"></a><div class="element clickable method public method_addInfo" data-toggle="collapse" data-target=".method_addInfo .collapse">
+<h2>add content to the documents info object</h2>
+<pre>addInfo($label, $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$label</h4></div>
+<div class="subelement argument"><h4>$value</h4></div>
+</div></div>
+</div>
+<a id="method_addInternalLink"></a><div class="element clickable method public method_addInternalLink" data-toggle="collapse" data-target=".method_addInternalLink .collapse">
+<h2>add a link in the document to an internal destination (ie.</h2>
+<pre>addInternalLink($label, $x0, $y0, $x1, $y1) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>within the document)</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$label</h4></div>
+<div class="subelement argument"><h4>$x0</h4></div>
+<div class="subelement argument"><h4>$y0</h4></div>
+<div class="subelement argument"><h4>$x1</h4></div>
+<div class="subelement argument"><h4>$y1</h4></div>
+</div></div>
+</div>
+<a id="method_addJpegFromFile"></a><div class="element clickable method public method_addJpegFromFile" data-toggle="collapse" data-target=".method_addJpegFromFile .collapse">
+<h2>add a JPEG image into the document, from a file</h2>
+<pre>addJpegFromFile($img, $x, $y, $w, $h) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$img</h4></div>
+<div class="subelement argument"><h4>$x</h4></div>
+<div class="subelement argument"><h4>$y</h4></div>
+<div class="subelement argument"><h4>$w</h4></div>
+<div class="subelement argument"><h4>$h</h4></div>
+</div></div>
+</div>
+<a id="method_addJpegImage_common"></a><div class="element clickable method public method_addJpegImage_common" data-toggle="collapse" data-target=".method_addJpegImage_common .collapse">
+<h2>common code used by the two JPEG adding functions</h2>
+<pre>addJpegImage_common($data, $x, $y, $w, $h, $imageWidth, $imageHeight, $channels) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+<div class="subelement argument"><h4>$x</h4></div>
+<div class="subelement argument"><h4>$y</h4></div>
+<div class="subelement argument"><h4>$w</h4></div>
+<div class="subelement argument"><h4>$h</h4></div>
+<div class="subelement argument"><h4>$imageWidth</h4></div>
+<div class="subelement argument"><h4>$imageHeight</h4></div>
+<div class="subelement argument"><h4>$channels</h4></div>
+</div></div>
+</div>
+<a id="method_addLink"></a><div class="element clickable method public method_addLink" data-toggle="collapse" data-target=".method_addLink .collapse">
+<h2>add a link in the document to an external URL</h2>
+<pre>addLink($url, $x0, $y0, $x1, $y1) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$url</h4></div>
+<div class="subelement argument"><h4>$x0</h4></div>
+<div class="subelement argument"><h4>$y0</h4></div>
+<div class="subelement argument"><h4>$x1</h4></div>
+<div class="subelement argument"><h4>$y1</h4></div>
+</div></div>
+</div>
+<a id="method_addMessage"></a><div class="element clickable method public method_addMessage" data-toggle="collapse" data-target=".method_addMessage .collapse">
+<h2>used to add messages for use in debugging</h2>
+<pre>addMessage($message) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$message</h4></div>
+</div></div>
+</div>
+<a id="method_addObject"></a><div class="element clickable method public method_addObject" data-toggle="collapse" data-target=".method_addObject .collapse">
+<h2>after an object has been created, it wil only show if it has been added, using this function.</h2>
+<pre>addObject($id, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_addPngFromFile"></a><div class="element clickable method public method_addPngFromFile" data-toggle="collapse" data-target=".method_addPngFromFile .collapse">
+<h2>add a PNG image into the document, from a file
+this should work with remote files</h2>
+<pre>addPngFromFile($file, $x, $y, $w, $h) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+<div class="subelement argument"><h4>$x</h4></div>
+<div class="subelement argument"><h4>$y</h4></div>
+<div class="subelement argument"><h4>$w</h4></div>
+<div class="subelement argument"><h4>$h</h4></div>
+</div></div>
+</div>
+<a id="method_addText"></a><div class="element clickable method public method_addText" data-toggle="collapse" data-target=".method_addText .collapse">
+<h2>add text to the document, at a specified location, size and angle on the page</h2>
+<pre>addText($x, $y, $size, $text, $angle, $wordSpaceAdjust) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$x</h4></div>
+<div class="subelement argument"><h4>$y</h4></div>
+<div class="subelement argument"><h4>$size</h4></div>
+<div class="subelement argument"><h4>$text</h4></div>
+<div class="subelement argument"><h4>$angle</h4></div>
+<div class="subelement argument"><h4>$wordSpaceAdjust</h4></div>
+</div></div>
+</div>
+<a id="method_addTextWrap"></a><div class="element clickable method public method_addTextWrap" data-toggle="collapse" data-target=".method_addTextWrap .collapse">
+<h2>add text to the page, but ensure that it fits within a certain width
+if it does not fit then put in as much as possible, splitting at word boundaries
+and return the remainder.</h2>
+<pre>addTextWrap($x, $y, $width, $size, $text, $justification, $angle, $test) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>justification and angle can also be specified for the text</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$x</h4></div>
+<div class="subelement argument"><h4>$y</h4></div>
+<div class="subelement argument"><h4>$width</h4></div>
+<div class="subelement argument"><h4>$size</h4></div>
+<div class="subelement argument"><h4>$text</h4></div>
+<div class="subelement argument"><h4>$justification</h4></div>
+<div class="subelement argument"><h4>$angle</h4></div>
+<div class="subelement argument"><h4>$test</h4></div>
+</div></div>
+</div>
+<a id="method_checkAllHere"></a><div class="element clickable method public method_checkAllHere" data-toggle="collapse" data-target=".method_checkAllHere .collapse">
+<h2>should be used for internal checks, not implemented as yet</h2>
+<pre>checkAllHere() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_closeObject"></a><div class="element clickable method public method_closeObject" data-toggle="collapse" data-target=".method_closeObject .collapse">
+<h2>close an object</h2>
+<pre>closeObject() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_curve"></a><div class="element clickable method public method_curve" data-toggle="collapse" data-target=".method_curve .collapse">
+<h2>draw a bezier curve based on 4 control points</h2>
+<pre>curve($x0, $y0, $x1, $y1, $x2, $y2, $x3, $y3) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$x0</h4></div>
+<div class="subelement argument"><h4>$y0</h4></div>
+<div class="subelement argument"><h4>$x1</h4></div>
+<div class="subelement argument"><h4>$y1</h4></div>
+<div class="subelement argument"><h4>$x2</h4></div>
+<div class="subelement argument"><h4>$y2</h4></div>
+<div class="subelement argument"><h4>$x3</h4></div>
+<div class="subelement argument"><h4>$y3</h4></div>
+</div></div>
+</div>
+<a id="method_ellipse"></a><div class="element clickable method public method_ellipse" data-toggle="collapse" data-target=".method_ellipse .collapse">
+<h2>draw an ellipse
+note that the part and filled ellipse are just special cases of this function</h2>
+<pre>ellipse($x0, $y0, $r1, $r2, $angle, $nSeg, $astart, $afinish, $close, $fill) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>draws an ellipse in the current line style
+centered at $x0,$y0, radii $r1,$r2
+if $r2 is not set, then a circle is drawn
+nSeg is not allowed to be less than 2, as this will simply draw a line (and will even draw a
+pretty crappy shape at 2, as we are approximating with bezier curves.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$x0</h4></div>
+<div class="subelement argument"><h4>$y0</h4></div>
+<div class="subelement argument"><h4>$r1</h4></div>
+<div class="subelement argument"><h4>$r2</h4></div>
+<div class="subelement argument"><h4>$angle</h4></div>
+<div class="subelement argument"><h4>$nSeg</h4></div>
+<div class="subelement argument"><h4>$astart</h4></div>
+<div class="subelement argument"><h4>$afinish</h4></div>
+<div class="subelement argument"><h4>$close</h4></div>
+<div class="subelement argument"><h4>$fill</h4></div>
+</div></div>
+</div>
+<a id="method_encryptInit"></a><div class="element clickable method public method_encryptInit" data-toggle="collapse" data-target=".method_encryptInit .collapse">
+<h2>initialize the encryption for processing a particular object</h2>
+<pre>encryptInit($id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+</div></div>
+</div>
+<a id="method_filledEllipse"></a><div class="element clickable method public method_filledEllipse" data-toggle="collapse" data-target=".method_filledEllipse .collapse">
+<h2>draw a filled ellipse</h2>
+<pre>filledEllipse($x0, $y0, $r1, $r2, $angle, $nSeg, $astart, $afinish) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$x0</h4></div>
+<div class="subelement argument"><h4>$y0</h4></div>
+<div class="subelement argument"><h4>$r1</h4></div>
+<div class="subelement argument"><h4>$r2</h4></div>
+<div class="subelement argument"><h4>$angle</h4></div>
+<div class="subelement argument"><h4>$nSeg</h4></div>
+<div class="subelement argument"><h4>$astart</h4></div>
+<div class="subelement argument"><h4>$afinish</h4></div>
+</div></div>
+</div>
+<a id="method_filledRectangle"></a><div class="element clickable method public method_filledRectangle" data-toggle="collapse" data-target=".method_filledRectangle .collapse">
+<h2>a filled rectangle, note that it is the width and height of the rectangle which are the secondary paramaters, not
+the coordinates of the upper-right corner</h2>
+<pre>filledRectangle($x1, $y1, $width, $height) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$x1</h4></div>
+<div class="subelement argument"><h4>$y1</h4></div>
+<div class="subelement argument"><h4>$width</h4></div>
+<div class="subelement argument"><h4>$height</h4></div>
+</div></div>
+</div>
+<a id="method_filterText"></a><div class="element clickable method public method_filterText" data-toggle="collapse" data-target=".method_filterText .collapse">
+<h2>filter the text, this is applied to all text just before being inserted into the pdf document
+it escapes the various things that need to be escaped, and so on</h2>
+<pre>filterText($text) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$text</h4></div>
+</div></div>
+</div>
+<a id="method_getFirstPageId"></a><div class="element clickable method public method_getFirstPageId" data-toggle="collapse" data-target=".method_getFirstPageId .collapse">
+<h2>function for the user to find out what the ID is of the first page that was created during
+startup - useful if they wish to add something to it later.</h2>
+<pre>getFirstPageId() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getFontDecender"></a><div class="element clickable method public method_getFontDecender" data-toggle="collapse" data-target=".method_getFontDecender .collapse">
+<h2>return the font decender, this will normally return a negative number
+if you add this number to the baseline, you get the level of the bottom of the font
+it is in the pdf user units</h2>
+<pre>getFontDecender($size) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$size</h4></div>
+</div></div>
+</div>
+<a id="method_getFontHeight"></a><div class="element clickable method public method_getFontHeight" data-toggle="collapse" data-target=".method_getFontHeight .collapse">
+<h2>return the height in units of the current font in the given size</h2>
+<pre>getFontHeight($size) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$size</h4></div>
+</div></div>
+</div>
+<a id="method_getTextWidth"></a><div class="element clickable method public method_getTextWidth" data-toggle="collapse" data-target=".method_getTextWidth .collapse">
+<h2>calculate how wide a given text string will be on a page, at a given size.</h2>
+<pre>getTextWidth($size, $text) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>this can be called externally, but is alse used by the other class functions</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$size</h4></div>
+<div class="subelement argument"><h4>$text</h4></div>
+</div></div>
+</div>
+<a id="method_line"></a><div class="element clickable method public method_line" data-toggle="collapse" data-target=".method_line .collapse">
+<h2>draw a line from one set of coordinates to another</h2>
+<pre>line($x1, $y1, $x2, $y2) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$x1</h4></div>
+<div class="subelement argument"><h4>$y1</h4></div>
+<div class="subelement argument"><h4>$x2</h4></div>
+<div class="subelement argument"><h4>$y2</h4></div>
+</div></div>
+</div>
+<a id="method_md5_16"></a><div class="element clickable method public method_md5_16" data-toggle="collapse" data-target=".method_md5_16 .collapse">
+<h2>calculate the 16 byte version of the 128 bit md5 digest of the string</h2>
+<pre>md5_16($string) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$string</h4></div>
+</div></div>
+</div>
+<a id="method_newDocument"></a><div class="element clickable method public method_newDocument" data-toggle="collapse" data-target=".method_newDocument .collapse">
+<h2>intialize a new document
+if this is called on an existing document results may be unpredictable, but the existing document would be lost at minimum
+this function is called automatically by the constructor function</h2>
+<pre>newDocument($pageSize) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$pageSize</h4></div>
+</div></div>
+</div>
+<a id="method_newPage"></a><div class="element clickable method public method_newPage" data-toggle="collapse" data-target=".method_newPage .collapse">
+<h2>add a new page to the document
+this also makes the new page the current active object</h2>
+<pre>newPage($insert, $id, $pos) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$insert</h4></div>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$pos</h4></div>
+</div></div>
+</div>
+<a id="method_o_action"></a><div class="element clickable method public method_o_action" data-toggle="collapse" data-target=".method_o_action .collapse">
+<h2>an action object, used to link to URLS initially</h2>
+<pre>o_action($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_annotation"></a><div class="element clickable method public method_o_annotation" data-toggle="collapse" data-target=".method_o_annotation .collapse">
+<h2>an annotation object, this will add an annotation to the current page.</h2>
+<pre>o_annotation($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>initially will support just link annotations</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_catalog"></a><div class="element clickable method public method_o_catalog" data-toggle="collapse" data-target=".method_o_catalog .collapse">
+<h2>define the document catalog, the overall controller for the document</h2>
+<pre>o_catalog($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_contents"></a><div class="element clickable method public method_o_contents" data-toggle="collapse" data-target=".method_o_contents .collapse">
+<h2>the contents objects hold all of the content which appears on pages</h2>
+<pre>o_contents($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_destination"></a><div class="element clickable method public method_o_destination" data-toggle="collapse" data-target=".method_o_destination .collapse">
+<h2>destination object, used to specify the location for the user to jump to, presently on opening</h2>
+<pre>o_destination($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_encryption"></a><div class="element clickable method public method_o_encryption" data-toggle="collapse" data-target=".method_o_encryption .collapse">
+<h2>encryption object.</h2>
+<pre>o_encryption($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_font"></a><div class="element clickable method public method_o_font" data-toggle="collapse" data-target=".method_o_font .collapse">
+<h2>an object to hold the font description</h2>
+<pre>o_font($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_fontDescriptor"></a><div class="element clickable method public method_o_fontDescriptor" data-toggle="collapse" data-target=".method_o_fontDescriptor .collapse">
+<h2>a font descriptor, needed for including additional fonts</h2>
+<pre>o_fontDescriptor($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_fontEncoding"></a><div class="element clickable method public method_o_fontEncoding" data-toggle="collapse" data-target=".method_o_fontEncoding .collapse">
+<h2>the font encoding</h2>
+<pre>o_fontEncoding($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_image"></a><div class="element clickable method public method_o_image" data-toggle="collapse" data-target=".method_o_image .collapse">
+<h2>an image object, will be an XObject in the document, includes description and data</h2>
+<pre>o_image($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_info"></a><div class="element clickable method public method_o_info" data-toggle="collapse" data-target=".method_o_info .collapse">
+<h2>define the document information</h2>
+<pre>o_info($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_outlines"></a><div class="element clickable method public method_o_outlines" data-toggle="collapse" data-target=".method_o_outlines .collapse">
+<h2>define the outlines in the doc, empty for now</h2>
+<pre>o_outlines($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_page"></a><div class="element clickable method public method_o_page" data-toggle="collapse" data-target=".method_o_page .collapse">
+<h2>a page object, it also creates a contents object to hold its contents</h2>
+<pre>o_page($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_pages"></a><div class="element clickable method public method_o_pages" data-toggle="collapse" data-target=".method_o_pages .collapse">
+<h2>object which is a parent to the pages in the document</h2>
+<pre>o_pages($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_procset"></a><div class="element clickable method public method_o_procset" data-toggle="collapse" data-target=".method_o_procset .collapse">
+<h2>the document procset, solves some problems with printing to old PS printers</h2>
+<pre>o_procset($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_o_viewerPreferences"></a><div class="element clickable method public method_o_viewerPreferences" data-toggle="collapse" data-target=".method_o_viewerPreferences .collapse">
+<h2>set the viewer preferences</h2>
+<pre>o_viewerPreferences($id, $action, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$action</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_openFont"></a><div class="element clickable method public method_openFont" data-toggle="collapse" data-target=".method_openFont .collapse">
+<h2>open the font file and return a php structure containing it.</h2>
+<pre>openFont($font) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>first check if this one has been done before and saved in a form more suited to php
+note that if a php serialized version does not exist it will try and make one, but will
+require write access to the directory to do it... it is MUCH faster to have these serialized
+files.</p></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$font</h4></div>
+</div></div>
+</div>
+<a id="method_openHere"></a><div class="element clickable method public method_openHere" data-toggle="collapse" data-target=".method_openHere .collapse">
+<h2>specify where the document should open when it first starts</h2>
+<pre>openHere($style, $a, $b, $c) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$style</h4></div>
+<div class="subelement argument"><h4>$a</h4></div>
+<div class="subelement argument"><h4>$b</h4></div>
+<div class="subelement argument"><h4>$c</h4></div>
+</div></div>
+</div>
+<a id="method_openObject"></a><div class="element clickable method public method_openObject" data-toggle="collapse" data-target=".method_openObject .collapse">
+<h2>make a loose object, the output will go into this object, until it is closed, then will revert to
+the current one.</h2>
+<pre>openObject() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>this object will not appear until it is included within a page.
+the function will return the object number</p></div></div></div>
+</div>
+<a id="method_output"></a><div class="element clickable method public method_output" data-toggle="collapse" data-target=".method_output .collapse">
+<h2>return the pdf stream as a string returned from the function</h2>
+<pre>output($debug) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$debug</h4></div>
+</div></div>
+</div>
+<a id="method_partEllipse"></a><div class="element clickable method public method_partEllipse" data-toggle="collapse" data-target=".method_partEllipse .collapse">
+<h2>draw a part of an ellipse</h2>
+<pre>partEllipse($x0, $y0, $astart, $afinish, $r1, $r2, $angle, $nSeg) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$x0</h4></div>
+<div class="subelement argument"><h4>$y0</h4></div>
+<div class="subelement argument"><h4>$astart</h4></div>
+<div class="subelement argument"><h4>$afinish</h4></div>
+<div class="subelement argument"><h4>$r1</h4></div>
+<div class="subelement argument"><h4>$r2</h4></div>
+<div class="subelement argument"><h4>$angle</h4></div>
+<div class="subelement argument"><h4>$nSeg</h4></div>
+</div></div>
+</div>
+<a id="method_polygon"></a><div class="element clickable method public method_polygon" data-toggle="collapse" data-target=".method_polygon .collapse">
+<h2>draw a polygon, the syntax for this is similar to the GD polygon command</h2>
+<pre>polygon($p, $np, $f) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$p</h4></div>
+<div class="subelement argument"><h4>$np</h4></div>
+<div class="subelement argument"><h4>$f</h4></div>
+</div></div>
+</div>
+<a id="method_rectangle"></a><div class="element clickable method public method_rectangle" data-toggle="collapse" data-target=".method_rectangle .collapse">
+<h2>draw a rectangle, note that it is the width and height of the rectangle which are the secondary paramaters, not
+the coordinates of the upper-right corner</h2>
+<pre>rectangle($x1, $y1, $width, $height) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$x1</h4></div>
+<div class="subelement argument"><h4>$y1</h4></div>
+<div class="subelement argument"><h4>$width</h4></div>
+<div class="subelement argument"><h4>$height</h4></div>
+</div></div>
+</div>
+<a id="method_reopenObject"></a><div class="element clickable method public method_reopenObject" data-toggle="collapse" data-target=".method_reopenObject .collapse">
+<h2>open an existing object for editing</h2>
+<pre>reopenObject($id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+</div></div>
+</div>
+<a id="method_restoreState"></a><div class="element clickable method public method_restoreState" data-toggle="collapse" data-target=".method_restoreState .collapse">
+<h2>restore a previously saved state</h2>
+<pre>restoreState($pageEnd) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$pageEnd</h4></div>
+</div></div>
+</div>
+<a id="method_saveState"></a><div class="element clickable method public method_saveState" data-toggle="collapse" data-target=".method_saveState .collapse">
+<h2>this will be called at a new page to return the state to what it was on the
+end of the previous page, before the stack was closed down
+This is to get around not being able to have open 'q' across pages</h2>
+<pre>saveState($pageEnd) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$pageEnd</h4></div>
+</div></div>
+</div>
+<a id="method_selectFont"></a><div class="element clickable method public method_selectFont" data-toggle="collapse" data-target=".method_selectFont .collapse">
+<h2>if the font is not loaded then load it and make the required object
+else just make it the current font
+the encoding array can contain 'encoding'=&gt; 'none','WinAnsiEncoding','MacRomanEncoding' or 'MacExpertEncoding'
+note that encoding='none' will need to be used for symbolic fonts
+and 'differences' =&gt; an array of mappings between numbers 0-&gt;255 and character names.</h2>
+<pre>selectFont($fontName, $encoding, $set) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$fontName</h4></div>
+<div class="subelement argument"><h4>$encoding</h4></div>
+<div class="subelement argument"><h4>$set</h4></div>
+</div></div>
+</div>
+<a id="method_setColor"></a><div class="element clickable method public method_setColor" data-toggle="collapse" data-target=".method_setColor .collapse">
+<h2>sets the colour for fill operations</h2>
+<pre>setColor($r, $g, $b, $force) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$r</h4></div>
+<div class="subelement argument"><h4>$g</h4></div>
+<div class="subelement argument"><h4>$b</h4></div>
+<div class="subelement argument"><h4>$force</h4></div>
+</div></div>
+</div>
+<a id="method_setCurrentFont"></a><div class="element clickable method public method_setCurrentFont" data-toggle="collapse" data-target=".method_setCurrentFont .collapse">
+<h2>sets up the current font, based on the font families, and the current text state
+note that this system is quite flexible, a &lt;b&gt;&lt;i&gt; font can be completely different to a
+&lt;i&gt;&lt;b&gt; font, and even &lt;b&gt;&lt;b&gt; will have to be defined within the family to have meaning
+This function is to be called whenever the currentTextState is changed, it will update
+the currentFont setting to whatever the appropriatte family one is.</h2>
+<pre>setCurrentFont() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the user calls selectFont themselves then that will reset the currentBaseFont, and the currentFont
+This function will change the currentFont to whatever it should be, but will not change the
+currentBaseFont.</p></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_setEncryption"></a><div class="element clickable method public method_setEncryption" data-toggle="collapse" data-target=".method_setEncryption .collapse">
+<h2>set the encryption of the document
+can be used to turn it on and/or set the passwords which it will have.</h2>
+<pre>setEncryption($userPass, $ownerPass, $pc) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>also the functions that the user will have are set here, such as print, modify, add</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$userPass</h4></div>
+<div class="subelement argument"><h4>$ownerPass</h4></div>
+<div class="subelement argument"><h4>$pc</h4></div>
+</div></div>
+</div>
+<a id="method_setFontFamily"></a><div class="element clickable method public method_setFontFamily" data-toggle="collapse" data-target=".method_setFontFamily .collapse">
+<h2>define font families, this is used to initialize the font families for the default fonts
+and for the user to add new ones for their fonts.</h2>
+<pre>setFontFamily($family, $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The default bahavious can be overridden should
+that be desired.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$family</h4></div>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_setLineStyle"></a><div class="element clickable method public method_setLineStyle" data-toggle="collapse" data-target=".method_setLineStyle .collapse">
+<h2>this sets the line drawing style.</h2>
+<pre>setLineStyle($width, $cap, $join, $dash, $phase) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>width, is the thickness of the line in user units
+cap is the type of cap to put on the line, values can be 'butt','round','square'
+   where the diffference between 'square' and 'butt' is that 'square' projects a flat end past the
+   end of the line.
+join can be 'miter', 'round', 'bevel'
+dash is an array which sets the dash pattern, is a series of length values, which are the lengths of the
+  on and off dashes.
+  (2) represents 2 on, 2 off, 2 on , 2 off ...
+  (2,1) is 2 on, 1 off, 2 on, 1 off.. etc
+phase is a modifier on the dash pattern which is used to shift the point at which the pattern starts.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$width</h4></div>
+<div class="subelement argument"><h4>$cap</h4></div>
+<div class="subelement argument"><h4>$join</h4></div>
+<div class="subelement argument"><h4>$dash</h4></div>
+<div class="subelement argument"><h4>$phase</h4></div>
+</div></div>
+</div>
+<a id="method_setPreferences"></a><div class="element clickable method public method_setPreferences" data-toggle="collapse" data-target=".method_setPreferences .collapse">
+<h2>set the viewer preferences of the document, it is up to the browser to obey these.</h2>
+<pre>setPreferences($label, $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$label</h4></div>
+<div class="subelement argument"><h4>$value</h4></div>
+</div></div>
+</div>
+<a id="method_setStrokeColor"></a><div class="element clickable method public method_setStrokeColor" data-toggle="collapse" data-target=".method_setStrokeColor .collapse">
+<h2>sets the colour for stroke operations</h2>
+<pre>setStrokeColor($r, $g, $b, $force) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$r</h4></div>
+<div class="subelement argument"><h4>$g</h4></div>
+<div class="subelement argument"><h4>$b</h4></div>
+<div class="subelement argument"><h4>$force</h4></div>
+</div></div>
+</div>
+<a id="method_stopObject"></a><div class="element clickable method public method_stopObject" data-toggle="collapse" data-target=".method_stopObject .collapse">
+<h2>stop an object from appearing on pages from this point on</h2>
+<pre>stopObject($id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+</div></div>
+</div>
+<a id="method_stream"></a><div class="element clickable method public method_stream" data-toggle="collapse" data-target=".method_stream .collapse">
+<h2>output the pdf code, streaming it to the browser
+the relevant headers are set so that hopefully the browser will recognise it</h2>
+<pre>stream($options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_transaction"></a><div class="element clickable method public method_transaction" data-toggle="collapse" data-target=".method_transaction .collapse">
+<h2>a few functions which should allow the document to be treated transactionally.</h2>
+<pre>transaction($action) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$action</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_addLooseObjects"> </a><div class="element clickable property public property_addLooseObjects" data-toggle="collapse" data-target=".property_addLooseObjects .collapse">
+<h2></h2>
+<pre>$addLooseObjects </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_arc4"> </a><div class="element clickable property public property_arc4" data-toggle="collapse" data-target=".property_arc4 .collapse">
+<h2></h2>
+<pre>$arc4 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_arc4_objnum"> </a><div class="element clickable property public property_arc4_objnum" data-toggle="collapse" data-target=".property_arc4_objnum .collapse">
+<h2></h2>
+<pre>$arc4_objnum </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_callback"> </a><div class="element clickable property public property_callback" data-toggle="collapse" data-target=".property_callback .collapse">
+<h2></h2>
+<pre>$callback </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_catalogId"> </a><div class="element clickable property public property_catalogId" data-toggle="collapse" data-target=".property_catalogId .collapse">
+<h2></h2>
+<pre>$catalogId </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_checkpoint"> </a><div class="element clickable property public property_checkpoint" data-toggle="collapse" data-target=".property_checkpoint .collapse">
+<h2></h2>
+<pre>$checkpoint </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentBaseFont"> </a><div class="element clickable property public property_currentBaseFont" data-toggle="collapse" data-target=".property_currentBaseFont .collapse">
+<h2></h2>
+<pre>$currentBaseFont </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentColour"> </a><div class="element clickable property public property_currentColour" data-toggle="collapse" data-target=".property_currentColour .collapse">
+<h2></h2>
+<pre>$currentColour </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentContents"> </a><div class="element clickable property public property_currentContents" data-toggle="collapse" data-target=".property_currentContents .collapse">
+<h2></h2>
+<pre>$currentContents </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentFont"> </a><div class="element clickable property public property_currentFont" data-toggle="collapse" data-target=".property_currentFont .collapse">
+<h2></h2>
+<pre>$currentFont </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentFontNum"> </a><div class="element clickable property public property_currentFontNum" data-toggle="collapse" data-target=".property_currentFontNum .collapse">
+<h2></h2>
+<pre>$currentFontNum </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentLineStyle"> </a><div class="element clickable property public property_currentLineStyle" data-toggle="collapse" data-target=".property_currentLineStyle .collapse">
+<h2></h2>
+<pre>$currentLineStyle </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentNode"> </a><div class="element clickable property public property_currentNode" data-toggle="collapse" data-target=".property_currentNode .collapse">
+<h2></h2>
+<pre>$currentNode </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentPage"> </a><div class="element clickable property public property_currentPage" data-toggle="collapse" data-target=".property_currentPage .collapse">
+<h2></h2>
+<pre>$currentPage </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentStrokeColour"> </a><div class="element clickable property public property_currentStrokeColour" data-toggle="collapse" data-target=".property_currentStrokeColour .collapse">
+<h2></h2>
+<pre>$currentStrokeColour </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentTextState"> </a><div class="element clickable property public property_currentTextState" data-toggle="collapse" data-target=".property_currentTextState .collapse">
+<h2></h2>
+<pre>$currentTextState </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_destinations"> </a><div class="element clickable property public property_destinations" data-toggle="collapse" data-target=".property_destinations .collapse">
+<h2></h2>
+<pre>$destinations </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_encrypted"> </a><div class="element clickable property public property_encrypted" data-toggle="collapse" data-target=".property_encrypted .collapse">
+<h2></h2>
+<pre>$encrypted </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_encryptionKey"> </a><div class="element clickable property public property_encryptionKey" data-toggle="collapse" data-target=".property_encryptionKey .collapse">
+<h2></h2>
+<pre>$encryptionKey </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_fileIdentifier"> </a><div class="element clickable property public property_fileIdentifier" data-toggle="collapse" data-target=".property_fileIdentifier .collapse">
+<h2></h2>
+<pre>$fileIdentifier </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_firstPageId"> </a><div class="element clickable property public property_firstPageId" data-toggle="collapse" data-target=".property_firstPageId .collapse">
+<h2></h2>
+<pre>$firstPageId </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_fontFamilies"> </a><div class="element clickable property public property_fontFamilies" data-toggle="collapse" data-target=".property_fontFamilies .collapse">
+<h2></h2>
+<pre>$fontFamilies </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>the value of this array is initialised in the constuctor function.</p></div></div></div>
+</div>
+<a id="property_fonts"> </a><div class="element clickable property public property_fonts" data-toggle="collapse" data-target=".property_fonts .collapse">
+<h2></h2>
+<pre>$fonts </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_infoObject"> </a><div class="element clickable property public property_infoObject" data-toggle="collapse" data-target=".property_infoObject .collapse">
+<h2></h2>
+<pre>$infoObject </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_looseObjects"> </a><div class="element clickable property public property_looseObjects" data-toggle="collapse" data-target=".property_looseObjects .collapse">
+<h2></h2>
+<pre>$looseObjects </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_messages"> </a><div class="element clickable property public property_messages" data-toggle="collapse" data-target=".property_messages .collapse">
+<h2></h2>
+<pre>$messages </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_nCallback"> </a><div class="element clickable property public property_nCallback" data-toggle="collapse" data-target=".property_nCallback .collapse">
+<h2></h2>
+<pre>$nCallback </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_nStack"> </a><div class="element clickable property public property_nStack" data-toggle="collapse" data-target=".property_nStack .collapse">
+<h2></h2>
+<pre>$nStack </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_nStateStack"> </a><div class="element clickable property public property_nStateStack" data-toggle="collapse" data-target=".property_nStateStack .collapse">
+<h2></h2>
+<pre>$nStateStack </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_numFonts"> </a><div class="element clickable property public property_numFonts" data-toggle="collapse" data-target=".property_numFonts .collapse">
+<h2></h2>
+<pre>$numFonts </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_numImages"> </a><div class="element clickable property public property_numImages" data-toggle="collapse" data-target=".property_numImages .collapse">
+<h2></h2>
+<pre>$numImages </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_numObj"> </a><div class="element clickable property public property_numObj" data-toggle="collapse" data-target=".property_numObj .collapse">
+<h2></h2>
+<pre>$numObj </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_numPages"> </a><div class="element clickable property public property_numPages" data-toggle="collapse" data-target=".property_numPages .collapse">
+<h2></h2>
+<pre>$numPages </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_objects"> </a><div class="element clickable property public property_objects" data-toggle="collapse" data-target=".property_objects .collapse">
+<h2></h2>
+<pre>$objects </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_options"> </a><div class="element clickable property public property_options" data-toggle="collapse" data-target=".property_options .collapse">
+<h2></h2>
+<pre>$options </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_procsetObjectId"> </a><div class="element clickable property public property_procsetObjectId" data-toggle="collapse" data-target=".property_procsetObjectId .collapse">
+<h2></h2>
+<pre>$procsetObjectId </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_stack"> </a><div class="element clickable property public property_stack" data-toggle="collapse" data-target=".property_stack .collapse">
+<h2></h2>
+<pre>$stack </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_stateStack"> </a><div class="element clickable property public property_stateStack" data-toggle="collapse" data-target=".property_stateStack .collapse">
+<h2></h2>
+<pre>$stateStack </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_wordSpaceAdjust"> </a><div class="element clickable property public property_wordSpaceAdjust" data-toggle="collapse" data-target=".property_wordSpaceAdjust .collapse">
+<h2></h2>
+<pre>$wordSpaceAdjust </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-04-08T23:16:52+02:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -116,7 +116,7 @@ $('.css_btt[name=a_lista]').click(function(){
 	$.ajax({
 		url: "print_alumno.php",
 		success: function (){
-					$('#contenido').html(ajax_load).load('ajax/alumnos_pdf.php');
+					$('#contenido').html(ajax_load).load('../ajax/alumnos_pdf.php');
 				}
 	});
 });
@@ -160,8 +160,9 @@ $('.black[name=reverse]').click(function(){
 		}
 	});
 });
-$('.css_boton[name=regenerate]').click(function(){
+$('.css_btt[name=regenerate]').click(function(){
 	var renovar= confirm('Renovar contraseñas?');
+	console.log('ccccc');
 	if(renovar){
 		$.ajax({
 			url: "regenerate.php",

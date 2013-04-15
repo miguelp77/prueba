@@ -165,4 +165,19 @@ function str_examenes($idA){
 	$row=mysql_fetch_row($query);
 	return $row[0];
 }
+
+function examenesAsignados(){
+	$sql="SELECT examenes FROM Alumnos";
+	$query=mysql_query($sql);
+	$row=mysql_fetch_assoc($query);
+	$examenes=get_examenes($row['examenes']);
+	if(strlen($examenes[0])>=1){
+		echo '<u>Proximos examenes</u><br />';
+		foreach($examenes as $val){
+			$source_name=source_name($val);
+			echo '<span class="marco2" title="'.$source_name.'">'.$val.'</span>';
+			}	
+	}
+}
+
 ?>

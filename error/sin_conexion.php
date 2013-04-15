@@ -1,3 +1,15 @@
+<?php
+/**
+*
+* Sin conexión
+* Pagina que se muestra cuando no hay conexion
+* 
+* 
+* @author  Miguel Paniagua
+*
+*/
+	namespace ns;
+?>
 <!DOCTYPE HTML>
 <html lang="es-ES">
 <head>

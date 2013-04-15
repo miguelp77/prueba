@@ -19,7 +19,9 @@ pre{
 	 font-size:12pt;
 }
 /* input	  { -moz-border-radius:10px; -webkit-border-radius:10px; } */
-input[type='text'] { margin-right: 4px;}
+input[type='text'] { margin-right: 4px; 	height: 20px; padding: 2px;}
+input.datepicker1[type='text'] { margin-bottom: 8px; margin-right: 4px; 	height: 12px; padding: 2px; width: 80px;}
+input.datepicker2[type='text'] { margin-bottom: 8px; margin-right: 4px; 	height: 12px; padding: 2px; width: 80px;}
 #cabecera{
 	border-top: 2px solid #fff;
 	border-bottom: 2px solid #fff;
@@ -275,7 +277,7 @@ margin: 0;
 }
 .fuente_resaltada{
 	/*border: solid 1px;*/
-	margin: 1em;
+	margin: 1em 0 0 0;
 	padding: 4px;
 	-webkit-border-bottom: 10px;	
 	background-color: #fff;
@@ -429,6 +431,14 @@ A:hover { COLOR: blue;}
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
 }
+.tag_box{
+	/*Verde #336600*/
+	background-color: #336600;
+	border: 1px solid #fff; 
+	color: #eee;
+	margin: 4px 0;
+	padding: 3px 10px;
+}
 .whitie{
 	display: inline-block;
 	border:1px solid #444;
@@ -494,7 +504,7 @@ li { list-style: none; display: table-row;}
 li:nth-child(odd) { background-color:#eee;  }
 li:nth-child(even) { background-color: #fff; }
 #botonera .css_btt_l {color: red;}
-#botonera ul li {background: #eee;}
+#botonera ul li {background: #eee; display: inline;}
 .caja_20{
 	width: 225px;
 	min-width: 160px;
@@ -540,10 +550,28 @@ tr:nth-child(odd){
  color:#eeeeee;
 }
 .tag{
+	/*Naranja #FFD987*/
 	color:#444;
-	background-color:#FFD987;
-	padding: 2px 4px 0 6px;
+	background-color:#FFEEAA;
+	padding: 0px 4px 0 6px;
 	margin-left:6px;
+	margin-top: 4px;
+}
+.cajarow{
+	margin-right: 4px;
+	/*border:1px solid #fff;*/
+	border-bottom: 1px solid #fff;
+	min-width: 150px;
+	display: inline-block;
+}
+.littlecajarow{
+	margin-right: 4px;
+	margin-left: 4px;
+
+	/*border:1px solid #fff;*/
+	border-bottom: 1px solid #fff;
+	min-width: 20px;
+	display: inline-block;
 }
 .css_button a{
 		color:#EEEEEE;
@@ -558,4 +586,62 @@ tr:nth-child(odd){
 	margin: 2px;
 	background: #ffc;
 	padding:1px 2px;
+}
+#newGroup{
+	display: none;
+}
+.row{
+	max-height: 16px;
+	vertical-align: top;
+}
+li input{
+	float: left;	
+}
+li .rowbox{
+	display: inline-block;	
+	max-width: 810px;
+  border-top: 1px dashed #ddd;
+  overflow: auto;
+}
+li h3{
+	display: inline;
+}
+li p{
+	display: block;
+	margin-top: 6px;
+}
+.box{
+	/*border: 1px solid #000;*/
+	display: inline-block;
+  min-width: 400px;
+  max-width: 400px;
+  vertical-align: top;
+}
+li img .mainimage{
+  float: left;
+  margin: 0 15px 0 0;
+  min-width: 400px;
+  max-width: 420px;
+}
+.mainimage {
+  max-width: 400px;
+  max-height: 160px;
+  width: expression(this.width > 400 ? "400px" : true);
+  height: expression(this.height > 160 ? "160px" : true);
+  border-left: 1px solid #ddd;
+  margin: 4px 0 26px 10px;
+	vertical-align: text-top;
+	padding: 0 4px;
+}
+.checkbox{
+	margin: 0 -6px 0 0;
+}
+.tabula{
+	margin-left: 26px;
+}
+div.ui-datepicker{
+ font-size:10px;
+}
+.unlocked{
+	cursor: pointer;
 }
