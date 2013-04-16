@@ -19,6 +19,12 @@
 	if(isset($_POST['end_date'])){
 		$end_date=$_POST['end_date'];
 	}	
+	if(isset($_POST['evaluable'])){
+		$evaluable=$_POST['evaluable'];
+	}
+	if(isset($_POST['show_nota'])){
+		$show_nota=$_POST['show_nota'];
+	}
 	if(isset($_POST['examen'])){
 		$examen=$_POST['examen'];
 	}else{
@@ -33,11 +39,11 @@
 
 	$query = 	"UPDATE Fuentes ";
 	// $query .= "SET start_date=FROM_UNIXTIME($start_date),end_date=FROM_UNIXTIME($end_date) ";
-	$query .= "SET start_date='$start_date',end_date='$end_date' ";
+	$query .= "SET start_date='$start_date',end_date='$end_date',evaluable='$evaluable',show_nota='$show_nota' ";
 	$query .= "WHERE idFuente='$examen'";
 	// echo $query;
 	$result = mysql_query($query) or die(mysql_error());
-	echo $result;
+	// echo $result;
 
 
 ?>

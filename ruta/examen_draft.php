@@ -120,16 +120,26 @@ Número de intentos <input type="number" name="intentos" id="intentos" maxlength
 			var ID = getID.split("unlock")[1];
 			var startID='#start'+ID;    	
 			var endID='#end'+ID;    	
+    	
     	var start_date=$(startID).val();
     	var end_date=$(endID).val();
+
+    	var show_nota='input[name=show_nota'+ID+']';
+    	var show_nota_val = $(show_nota+':checked').val();
+    	
+    	var evaluable='input[name=evaluable'+ID+']';
+    	var evaluable_val = $(evaluable+':checked').val();
+
     	if(esto=="../img/lock-unlock.png"){
     		$(this).data('prev_src', $(this).attr('src')).attr("src","../img/lock.png");
         $(startID).attr('disabled','disabled');
         $(endID).attr('disabled','disabled');
+        $(show_nota).attr('disabled','disabled');
+        $(evaluable).attr('disabled','disabled');
   			$.ajax({
 					type: "POST",
 					url: "set_fuentes_date.php",
-					data: "examen="+ ID + "&start_date=" + start_date+ "&end_date=" + end_date
+					data: "examen="+ ID + "&start_date=" + start_date+ "&end_date=" + end_date+ "&evaluable=" + evaluable_val+ "&show_nota=" + show_nota_val
 					// success: function(data){
 						// alert("La asignatura "+ origen + " ha sido clonada como " + destino);
 				});
@@ -137,6 +147,8 @@ Número de intentos <input type="number" name="intentos" id="intentos" maxlength
  	   		$(this).data('prev_src', $(this).attr('src')).attr("src","../img/lock-unlock.png");
     		$(startID).removeAttr('disabled');
     		$(endID).removeAttr('disabled');
+    		$(show_nota).removeAttr('disabled');
+    		$(evaluable).removeAttr('disabled');
     	}
     	// if($(this).hasClass('unlocked')){
      //  	if($(this).attr('src')=="../img/lock.png")

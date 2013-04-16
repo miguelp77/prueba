@@ -645,3 +645,10 @@ div.ui-datepicker{
 .unlocked{
 	cursor: pointer;
 }
+.radio_box{
+	border: 1px solid #bbbbbb;
+	border-radius: 6px;
+	padding: 4px;
+	margin-top: 4px;
+
+}

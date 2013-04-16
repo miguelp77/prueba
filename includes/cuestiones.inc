@@ -434,7 +434,9 @@ function examen_listar(){
 function calendarios($examen){
 	$startDate="start".$examen;
 	$endDate="end".$examen;
-	echo '<span class="tabula">Inicio <input type="text" class="datepicker1" id="'.$startDate.'" value="'.get_start_date($examen).'" disabled /> Fin <input type="text" class="datepicker2" id="'.$endDate.'" value="'.get_end_date($examen).'"disabled/></span><img class="unlocked" id="unlock'.$examen.'" src="../img/lock.png" />';
+	echo '<span class="tabula">Inicio <input type="text" class="datepicker1" id="'.$startDate.'" value="'.get_start_date($examen).'" disabled /> Fin <input type="text" class="datepicker2" id="'.$endDate.'" value="'.get_end_date($examen).'"disabled/></span>';
+	evaluable($examen);
+	muestra_nota($examen);
 	echo '<br />';
 }
 function get_start_date($examen){
@@ -453,6 +455,80 @@ function get_end_date($examen){
 	$mysqldate = date( 'd-m-Y', $phpdate );
 	return $mysqldate;
 }
+/**
+*
+* Prueba Evaluable
+* Si el radiobox esta seleccionado la prueba sera calificada
+*
+*
+*/
+function evaluable($examen){
+	$checks=get_evaluable($examen);
+	echo '  Evaluable <span class="radio_box"><input type="radio" name="evaluable'.$examen.'" value="si" disabled '.$checks[0].'> Sí <input type="radio" name="evaluable'.$examen.'" value="no" disabled '.$checks[1].'> No';
+	echo '</span>';
+	// echo '<br />';
+	unset($checks);
+}
+/**
+*
+* Getter Evaluable
+* Indica cual de los valores esta guardado
+*
+*
+*/
+function get_evaluable($examen){
+	$sql="SELECT evaluable FROM Fuentes WHERE idFuente='$examen'";
+	$query=mysql_query($sql) or die(mysql_error());
+	$row=mysql_fetch_row($query);
+	if($row[0]=='si') {
+		$row[0]='checked';
+		$row[1]='unchecked';
+	}	else {
+		$row[0] = 'unchecked';
+		$row[1] = 'checked';
+
+	}
+	return $row;
+}
+/**
+*
+* Prueba Muestra la nota
+* Si el radioboox esta seleccionado la prueba Mostrara la nota
+*
+*
+*/
+function muestra_nota($examen){
+	$checks=get_show_nota($examen);
+	echo '  Muestra la nota <span class="radio_box"><input type="radio" name="show_nota'.$examen.'" value="si" disabled '.$checks[0].'> Sí <input type="radio" name="show_nota'.$examen.'" value="no" disabled '.$checks[1].'> No';
+	echo '</span>';
+	echo '<span class="tabula"><img class="unlocked" id="unlock'.$examen.'" src="../img/lock.png" />';
+	echo '</span>';
+	echo '<br />';
+	unset($checks);
+}
+/**
+*
+* Getter show_nota
+* Indica cual de los valores esta guardado
+*
+*
+*/
+function get_show_nota($examen){
+	$sql="SELECT show_nota FROM Fuentes WHERE idFuente='$examen'";
+	$query=mysql_query($sql) or die(mysql_error());
+	$row=mysql_fetch_row($query);
+	if($row[0]=='si') {
+		$row[0]='checked';
+		$row[1]='unchecked';
+	}	else {
+		$row[0] = 'unchecked';
+		$row[1] = 'checked';
+
+	}
+	return $row;
+}
+
+
 // Listar los grupos a los que se han asignado el examen
 function examenes_grupo($id_grupo){
 	$examenes=array();
