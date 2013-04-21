@@ -1,5 +1,12 @@
 <?php
 session_start();		
+/**
+*
+* Imprimir lista de alumnos
+* Imprime la lista de los alumnos apuntados en la asignatura
+*
+*/
+
 //Librerias
 	require_once('../includes/cuestiones.inc');	
 	require_once('../includes/basics.php');

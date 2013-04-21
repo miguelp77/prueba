@@ -121,7 +121,7 @@ $result='';
 			else{																		// Si no, lo registro
 				$sql2="INSERT INTO asg_admin.Alumnos (idA,Nombre,Apellidos,DNI,asignatura,status) VALUES ('$idA','$nombre','$apellidos','$DNI','$asignatura','login')";
 				$query2=mysql_query($sql2) or die(mysql_error());
-// La variable de SESION  idAs es el identificador dentro de la monitorizacion
+// La variable de SESION  idAs es el identificador para la monitorizacion
 				$_SESSION['idAs']=mysql_insert_id(); 
 			}	// Fin del else
 		$result=true; 

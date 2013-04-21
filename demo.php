@@ -86,6 +86,87 @@ conectar('asg_dummy');//	require_once('checkuser.php');
 		<li><input type="checkbox" name="3" id="2">2-3</li>
 	</ul>		
 	<hr />
+<?php
+		// $qq="SHOW TABLES asg_dummy";
+		// $sql=mysql_query($qq);
+		// $row = mysql_fetch_row($sql);
+//		var_dump($row);
+	// $link=connect_to_db();
+	// $db_list = mysql_list_dbs($link);
+
+// 	while ($row = mysql_fetch_object($db_list)){
+// 	//anulo el valor de phpmyadmin
+// 		$nombre=$row->Database;
+// 		$ok=str_begin($nombre,"asg_");
+// //	echo $nombre;
+// 			if($row->Database =="asg_admin") continue;
+// 		  if($ok) {
+// 		  	echo parse_utf8($row->Database)." > " .'<br />';
+// 				}
+// 		  }
+	function todas_las_tablas($db){
+		$qq="SHOW TABLES FROM ".$db;
+		$sql=mysql_query($qq);
+	// while($row = mysql_fetch_row($sql)){
+		// var_dump($row[0]);
+		// }
+
+		while ( $row = mysql_fetch_row($sql)) {
+		 	$rows[]=$row[0];
+		 	// echo $row[0];
+		# code...
+			}
+		return $rows;
+		}
+
+		$rows=array();
+		$rows=todas_las_tablas('asg_dummy');
+		foreach ($rows as $key => $value) {
+		# code...
+			$qq="SHOW CREATE TABLE ".$value;
+			$sql=mysql_query($qq);
+			$row = mysql_fetch_row($sql);
+
+			# code...
+			echo '<hr />';
+			echo $row[0];
+			echo '<hr />';
+			$campos=explode(',', $row[1]);
+			foreach ($campos as $key => $value) {
+				echo $value;
+				echo '<br />';
+			}
+		}
+		
+?>
+	<hr />
+	Compruebo fechas
+	<hr />
+	<?php
+		$date1=time();
+		$date2 = strtotime('2013-04-20');
+		$date3 = strtotime('2013-04-19');
+		$date4 = strtotime('2013-04-21');
+		echo 'ahora === '.$date1;
+		echo '<br />';
+		echo 'hoy ===== '.$date2;
+		echo '<br />';
+		echo 'ayer ==== '.$date3;		
+		echo '<br />';
+		echo 'mana ==== '.$date4;
+		echo '<br />';
+		echo $date2-$date3;
+		echo '<br />';
+		if($date1 < $date4) echo 'Ahora es menor que '.date('d-m-Y',$date4+86400);
+		echo '<br />';
+		if($date1 > $date4) echo 'Ahora es mayor que '.date('d-m-Y',$date4)+86400;
+		echo '<br />';
+		if($date1 > $date3) echo 'Ahora es mayor que '.date('d-m-Y',$date3);
+		echo '<br />';
+	
+	?>
+
+	<hr />
 	<?php
 		$examenes = "1,2,3,4";
 		$arr=explode(',', $examenes);

@@ -38,6 +38,10 @@
 
 //	rutina_examinar();
 	$quest=rutina_examinar();
+	// foreach ($_SESSION as $key => $value) {
+	// 	echo $key.' -- '.$value;
+	// 	echo '<br />';
+	// }
 ?>
 
 <!DOCTYPE HTML>
@@ -78,7 +82,7 @@
 <body>
 <div id="cortina" class="curtain">
 	<div id="central" class="waiting curtain">
-		<img src='img/ajax-loader(2).gif' alt='loading...' />
+		<img src='../img/ajax-loader(2).gif' alt='loading...' />
 		<span class="centrado" style="color:#eee">Cargando examen...</span>
 	</div>
 </div>

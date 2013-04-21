@@ -9,7 +9,11 @@
 	if(isset($_COOKIE['examen']))
 		$cookie_examen=get_cookie("examen");
 	else return false;//$cookie_respuesta="";
+	if(isset($_COOKIE['show_nota']))
+	$show_nota=get_cookie("show_nota");
+	else $show_nota='no';
 //Pillo array
+if($show_nota=='si'){
 	$preguntas=explode(",",$cookie_examen);
 	$correctas=array();
 //Hallo las respuestas correctas de las preguntas
@@ -24,4 +28,5 @@
 //Destruyo los arrays
 	unset($correctas);
 	unset($preguntas);
+}
 ?>

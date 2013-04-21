@@ -768,11 +768,23 @@ if($examenes[0]!=null){
 //				echo $value."<br />";
 //			}
 	$pop=array_pop($examenes);
+/**
+*
+* Almacena Examenes
+* Almacena los examenes extrayendo uno
+*
+*/
 //		$stack= join(",",$examenes);
 //		$sql2="UPDATE Alumnos SET examenes='$stack' WHERE Alumno_id=$idAlumno LIMIT 1";
 //		$query2=mysql_query($sql2) or die(mysql_error());		
-		return $pop;
-//	echo "<hr />";
+/**
+*
+* Devuelve Examen
+*	Devuelve el examen que hay en la pila
+*
+*/
+	return $pop;
+
 	}else return false;
 }
 
@@ -798,6 +810,101 @@ function npreguntas_get($id=null,$bbdd){
 		return (int)$row[0];	
 	}
 }
+/**
+*
+* Se corrige 
+* Comprueba si muestra las correctas o no
+*
+*/
+function show_notas($id=null,$bbdd){
+	if($id!=null){
+		$sql="SELECT show_nota FROM $bbdd.Fuentes WHERE idFuente=\"$id\" LIMIT 1";
+		$query=mysql_query($sql) or die(mysql_error());
+		$row=mysql_fetch_row($query);	
+		if($row[0]==null)$row[0]='no';
+		$_SESSION['show_nota']=$row[0];
+		set_cookie('show_nota',$row[0]);
+		return $row[0];	
+	}
+}
+/**
+*
+* Es evaluable 
+* Comprueba si es evaluable o no
+*
+*/
+function es_evaluable($id=null,$bbdd){
+	if($id!=null){
+		$sql="SELECT evaluable FROM $bbdd.Fuentes WHERE idFuente=\"$id\" LIMIT 1";
+		$query=mysql_query($sql) or die(mysql_error());
+		$row=mysql_fetch_row($query);	
+		if($row[0]==null)$row[0]='no';
+		$_SESSION['evaluable']=$row[0];
+		return $row[0];	
+	}
+}
+/**
+*
+* Dentro de fecha 
+* Comprueba si el examen esta dentro de fechas
+*
+*/
+function check_dates($id=null,$bbdd){
+	$dentro_de_fecha=false;
+	if($id!=null){
+
+		$sql="SELECT start_date,end_date FROM $bbdd.Fuentes WHERE idFuente=\"$id\" LIMIT 1";
+		$query=mysql_query($sql) or die(mysql_error());
+		$row=mysql_fetch_row($query);	
+		$ahora = time();
+		if($row[0]==null)$row[0] = $ahora - 86400;
+		if($row[1]==null)$row[1] = $ahora + 86400;
+
+		$start = strtotime($row[0]);
+		$end = strtotime($row[1]);
+
+		if($ahora > $start AND $ahora < $end) {
+			$dentro_de_fecha = true;
+
+		}
+		if($ahora > $end) { // La fecha actual es mayor a la expiracion del examen
+			$dentro_de_fecha = false;
+			$_SESSION['msg'] = 'El examen #'.$id.' al que intento acceder estaba obsoleto.';
+			pop_examen($_SESSION['idAlumno'],$bbdd); //Retiro la fuente caducada		
+
+		}
+		if($ahora < $start) { // La fecha actual es menor a la de comienzo del examen
+			$dentro_de_fecha = false;
+			$_SESSION['msg'] = 'El examen #'.$id.' al que intento acceder no esta disponible.';
+		}
+	}
+	$_SESSION['msg']='Examen #'.$id;
+	if(isset($row[0])) $_SESSION['fecha_start'] 	=	$row[0];
+	if(isset($row[1])) $_SESSION['fecha_end']		=	$row[1];
+	else $_SESSION['msg']='Sin examenes';
+	return $dentro_de_fecha;	
+}
+/**
+*
+* Extrae examen
+* Hace pop de la pila de examenes
+*
+*/
+
+function pop_examen($idA,$bbdd){
+	$idAlumno=$idA;
+	$sql="SELECT examenes FROM $bbdd.Alumnos WHERE Alumno_id=$idAlumno LIMIT 1";
+	$query=mysql_query($sql) or die(mysql_error());
+	$row=mysql_fetch_row($query);
+
+	$examenes=explode(",",$row[0]);
+	$pop=array_pop($examenes);
+	$stack= join(",",$examenes);
+
+	$sql2="UPDATE $bbdd.Alumnos SET examenes='$stack' WHERE Alumno_id=$idAlumno";
+	$query2=mysql_query($sql2) or die(mysql_error());	
+}
+
 function examenes_show($id){
 	$sql="SELECT * FROM Examenes";// WHERE idExamen=$id";
 	$query=mysql_query($sql) or die(mysql_error());

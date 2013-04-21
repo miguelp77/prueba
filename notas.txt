@@ -1,0 +1,2 @@
+NOTAS
+Un nuevo alumno tiene que dejar el grupo 0 cuando tiene un grupo

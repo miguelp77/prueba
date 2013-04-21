@@ -341,12 +341,56 @@ function marca(){
 	$mysqldate = date( 'Y-m-d - G:i:s' , time() );
 	return $mysqldate;	
 }
-
+/**
+*
+*	lista alumnos
+* Lista los alumnos sin ordenarlos por grupo
+*
+*/
 function listado_alumnos($db=null){
+	if($db!=null){
+		$link	= conectar($db);
+		$sql ='SELECT * FROM Grupos';
+		$query = mysql_query($sql);
+		while($grupos = mysql_fetch_assoc($query)){
+			echo '<br />';
+			echo '<span class="big">Grupo: <b>'.$grupos['nombre'].'</b></span>';
+			echo '<br /><hr />';
+			echo '<span class="c15">Apellidos,Nombre</span>';
+			echo '<span class="campo">DNI</span>';
+			echo '<span class="campo">Alias</span>';
+			echo '<span class="campo">Contraseña</span>';		
+			echo '<br /><hr />';
+			$sql ='SELECT * FROM Alumnos ORDER BY Apellidos ASC' ;
+			$datos = mysql_query($sql);
+	
+			while ($result = mysql_fetch_assoc($datos)) {
+				$al_grupos = explode(',', $result['grupos']);
+				if(in_array($grupos['nombre'], $al_grupos)){
+					echo "<div class=\"clear colorme\">";
+					echo '<span class="c15">'.$result['Apellidos'].', '.$result['Nombre'].'</span>';
+					echo '<span class="campo">'.$result['DNI'].'</span>';
+					echo '<span class="campo">'.$result['Alias'].'</span>';
+					echo '<span class="campo">'.$result['Psw'].'</span>';					
+					echo '</div>';	
+				}
+			echo '<br />';
+			}
+		}		
+	}
+}
+/**
+*
+* Listado Alumnos
+* listado de alumnos antiguo sin grupos 
+*
+*/
+function bak_listado_alumnos($db=null){
 	if($db!=null){
 		$link=conectar($db);	
 		$sql="SELECT * FROM Alumnos ORDER BY Apellidos ASC";
 		$query=mysql_query($sql);
+			echo '<span class="campo">Grupos</span>';
 			echo '<span class="c15">Apellidos,Nombre</span>';
 			echo '<span class="campo">DNI</span>';
 			echo '<span class="campo">Alias</span>';
@@ -361,6 +405,7 @@ function listado_alumnos($db=null){
 			else{
 				echo "<div class=\"clear colorme odd\">";
 			}			
+			// echo '<span class="campo">'.$result['grupos'].'</span>';
 			echo '<span class="c15">'.$result['Apellidos'].', '.$result['Nombre'].'</span>';
 			echo '<span class="campo">'.$result['DNI'].'</span>';
 			echo '<span class="campo">'.$result['Alias'].'</span>';
@@ -371,8 +416,8 @@ function listado_alumnos($db=null){
 	mysql_close($link);	
 	}else return false;
 }
-//LISTA DE NOTAS DESDE pront_notas.php
 
+//LISTA DE NOTAS DESDE print_notas.php
 function listado_notas($db=null,$fecha=null,$rmks=null){
 	$p_num=0; //numero de alumnos presentados	
 

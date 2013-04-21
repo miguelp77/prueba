@@ -68,7 +68,12 @@ connect_to_db();
    	unset($_SESSION['user']);
    	$msg ='Combinacion Usuario/Contraseña incorrecta';
   }
-
+/**
+*
+* Usuario Alumno
+* Comprueba si las credenciales son de un alumno
+*
+*/
 $result='';
 //Miro si es un ALUMNO  
 	$link=connect_to_db();
@@ -102,7 +107,7 @@ $result='';
 			$pass_number=array_search($psw,$array_pass);
 //			$ret="prueba";
 //			$ret="instrucciones.php?as=".$pass_number;
-			$ret="instrucciones";
+			$ret="instrucciones2";
 
 			unset($_SESSION['idAlumno']);
 			unset($_SESSION['user']);			
@@ -117,6 +122,14 @@ $result='';
 			$fuente=examen_get_id($result['Alumno_id'],$bbdd);
 			$duracion=duracion_get($fuente,$bbdd);
 			$npreguntas=npreguntas_get($fuente,$bbdd);
+// Datos del tipo de prueba
+			$evaluable = es_evaluable($fuente,$bbdd);
+			$dentro_fecha = check_dates($fuente,$bbdd);
+
+			$show_nota = show_notas($fuente,$bbdd);
+			// var_dump($dentro_fecha);
+			if($dentro_fecha) $ret='instrucciones';
+			if($_SESSION['msg']=='Sin examenes') $ret='../index';
 //Relleno datos para la MONITORIZACION
 			$nombre = $result['Nombre'];
 			$apellidos = $result['Apellidos'];
