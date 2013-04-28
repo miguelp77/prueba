@@ -56,6 +56,7 @@ connect_to_db();
 	 
 //Si existe el ALIAS en Admin y el password es correcto
   if($result_adm['Psw']==$psw && strlen($psw)){
+  	date_default_timezone_set("Europe/Madrid");
   	$_SESSION['hora']=date('d/m/Y - H:i');
    	$_SESSION['user'] = $result_adm['Nombre'].' '.$result_adm['Apellidos'] ;
    	$_SESSION['msg']='';

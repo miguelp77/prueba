@@ -1,0 +1,2277 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"titu",
+				"tituloArray"
+			],
+			[
+				"ti",
+				"tituloArray"
+			],
+			[
+				"vide",
+				"videoToPlay"
+			],
+			[
+				"vi",
+				"videoToPlay"
+			],
+			[
+				"is",
+				"isset"
+			],
+			[
+				"SE",
+				"_SESSION"
+			],
+			[
+				"sta",
+				"stack"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"den",
+				"dentro_de_fecha"
+			],
+			[
+				"detr",
+				"dentro_fecha"
+			],
+			[
+				"end",
+				"end_date"
+			],
+			[
+				"date",
+				"date3"
+			],
+			[
+				"getda",
+				"getdate"
+			],
+			[
+				"dat",
+				"date1"
+			],
+			[
+				"alumn",
+				"alumno"
+			],
+			[
+				"mysql_fe",
+				"mysql_fetch_assoc"
+			],
+			[
+				"str",
+				"strtr"
+			],
+			[
+				"A",
+				"Apellidos"
+			],
+			[
+				"strre",
+				"str_replace"
+			],
+			[
+				"row",
+				"rows"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"eva",
+				"evaluable"
+			],
+			[
+				"chec",
+				"checks"
+			],
+			[
+				"show",
+				"show_nota"
+			],
+			[
+				"che",
+				"checks"
+			],
+			[
+				"sh",
+				"show_nota_val"
+			],
+			[
+				"dis",
+				"disabled"
+			],
+			[
+				"exame",
+				"examen"
+			],
+			[
+				"start",
+				"start_date"
+			],
+			[
+				"strto",
+				"strtotime"
+			],
+			[
+				"star",
+				"startID"
+			],
+			[
+				"ID",
+				"id"
+			],
+			[
+				"exa",
+				"examen"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"get",
+				"getDate"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"ex",
+				"examen_name"
+			],
+			[
+				"exam",
+				"examen_name"
+			],
+			[
+				"pr",
+				"progress"
+			],
+			[
+				"array_ke",
+				"array_key_exists"
+			],
+			[
+				"prog",
+				"progress"
+			],
+			[
+				"p",
+				"progress"
+			],
+			[
+				"jso",
+				"json"
+			],
+			[
+				"is_int",
+				"is_integer"
+			],
+			[
+				"ar",
+				"arrProgreso"
+			],
+			[
+				"examen",
+				"examen"
+			],
+			[
+				"Al",
+				"Alumnos"
+			],
+			[
+				"json",
+				"json_decode"
+			],
+			[
+				"id",
+				"id_examen"
+			],
+			[
+				"exp",
+				"explode"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"get_",
+				"get_alumno"
+			],
+			[
+				"alum",
+				"alumno_id"
+			],
+			[
+				"fue",
+				"fueInicializado"
+			],
+			[
+				"set",
+				"set_alumno"
+			],
+			[
+				"al",
+				"alumno"
+			],
+			[
+				"js",
+				"json_decode"
+			],
+			[
+				"arra",
+				"array_combine"
+			],
+			[
+				"intetos",
+				"intentos"
+			],
+			[
+				"ultimo",
+				"ultimo_gr"
+			],
+			[
+				"ulti",
+				"ultimo_gr"
+			],
+			[
+				"ultim",
+				"ultimo_gr"
+			],
+			[
+				"grupo",
+				"grupo1"
+			],
+			[
+				"gr",
+				"grupoAnterior"
+			],
+			[
+				"a",
+				"attr"
+			],
+			[
+				"gru",
+				"grupos_del_alumno"
+			],
+			[
+				"grup",
+				"grupos_del_alumno"
+			],
+			[
+				"ac",
+				"actualiza"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"inl",
+				"inline"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"nombre",
+				"nombre_archivo"
+			],
+			[
+				"new",
+				"new_alias"
+			],
+			[
+				"dir",
+				"directory"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"t",
+				"text-top"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"main",
+				"mainimage"
+			],
+			[
+				"e",
+				"ext"
+			],
+			[
+				"it",
+				"item"
+			],
+			[
+				"key",
+				"keys"
+			],
+			[
+				"is_a",
+				"is_array"
+			],
+			[
+				"table",
+				"table_name"
+			],
+			[
+				"tab",
+				"tabla_origen"
+			],
+			[
+				"or",
+				"origen"
+			],
+			[
+				"ut",
+				"utf8"
+			],
+			[
+				"Asi",
+				"AsigName"
+			],
+			[
+				"al_",
+				"al_ntas"
+			],
+			[
+				"unse",
+				"unset"
+			],
+			[
+				"presen",
+				"presentados_ids"
+			],
+			[
+				"pres",
+				"presentados_ids"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"isa",
+				"is_array"
+			],
+			[
+				"b",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"mysql_f",
+				"mysql_fetch_row"
+			],
+			[
+				"g",
+				"g"
+			],
+			[
+				"selc",
+				"seleccionada"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"id_",
+				"id_grupo"
+			],
+			[
+				"q",
+				"qry"
+			],
+			[
+				"mysq",
+				"mysql_fetch_row"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"Gr",
+				"Grupos"
+			],
+			[
+				"actualiza",
+				"actualizar_alumno"
+			],
+			[
+				"grupos",
+				"grupos_del_alumno"
+			],
+			[
+				"alumno",
+				"alumno"
+			],
+			[
+				"ope",
+				"operacion"
+			],
+			[
+				"gu",
+				"grupo_id"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"fe",
+				"fechas"
+			],
+			[
+				"fecha",
+				"fecha_evento"
+			],
+			[
+				"array_u",
+				"array_unique"
+			],
+			[
+				"fec",
+				"fechas"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"uniq",
+				"array_unique"
+			],
+			[
+				"mys",
+				"mysql_error"
+			],
+			[
+				"mysql",
+				"mysql_query"
+			],
+			[
+				"asi",
+				"asignados"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "NOTAS\n	Un nuevo alumno tiene que dejar el grupo 0 cuando tiene un grupo\n	\n",
+			"file": "notas.txt",
+			"file_size": 71,
+			"file_write_time": 1366477097000000,
+			"settings":
+			{
+				"buffer_size": 74,
+				"line_ending": "Unix",
+				"name": "NOTAS"
+			}
+		},
+		{
+			"file": "ruta/bak_checkuser.php",
+			"settings":
+			{
+				"buffer_size": 6082,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/test.css",
+			"settings":
+			{
+				"buffer_size": 6041,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "includes/cuestiones.inc",
+			"settings":
+			{
+				"buffer_size": 34187,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ruta/instrucciones.php",
+			"settings":
+			{
+				"buffer_size": 2292,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ruta/prueba.php",
+			"settings":
+			{
+				"buffer_size": 2744,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "asg_generator.php",
+			"settings":
+			{
+				"buffer_size": 2344,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/miguel/webs/cinturon/css/screen.css",
+			"settings":
+			{
+				"buffer_size": 1954,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/miguel/webs/cinturon/index (copia).html",
+			"settings":
+			{
+				"buffer_size": 5085,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ruta/examen_corregir.php",
+			"settings":
+			{
+				"buffer_size": 2445,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/test.js",
+			"settings":
+			{
+				"buffer_size": 6157,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ruta/examen_correctas.php",
+			"settings":
+			{
+				"buffer_size": 925,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "demo.php",
+			"settings":
+			{
+				"buffer_size": 14275,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ruta/examen_draft.php",
+			"settings":
+			{
+				"buffer_size": 5559,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ruta/set_fuentes_date.php",
+			"settings":
+			{
+				"buffer_size": 1173,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "includes/db_tools.inc",
+			"settings":
+			{
+				"buffer_size": 35754,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "includes/basics.php",
+			"settings":
+			{
+				"buffer_size": 26739,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 285.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: commdoc"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/miguel/webs/myapp/myapp.sublime-project",
+		"/home/miguel/webs/cinturon/js/index.js",
+		"/home/miguel/webs/cinturon/index.html",
+		"/home/miguel/webs/cinturon/js/jquery.tubular.1.0.js",
+		"/home/miguel/webs/cinturon/index (copia).html",
+		"/home/miguel/webs/cinturon/css/screen.css",
+		"/home/miguel/webs/cinturon/css/reset.css",
+		"/home/miguel/.config/sublime-text-2/Packages/Emmet/Default (Linux).sublime-keymap",
+		"/home/miguel/.config/sublime-text-2/Packages/Emmet/Emmet.sublime-settings",
+		"/home/miguel/.config/sublime-text-2/Packages/User/Emmet.sublime-settings",
+		"/home/miguel/webs/myapp/ruta/.htaccess",
+		"/home/miguel/webs/myapp/.htaccess",
+		"/home/miguel/webs/myapp/js/DefAsig.js",
+		"/home/miguel/webs/myapp/ruta/print_alumno.php",
+		"/home/miguel/webs/myapp/js/alumno.js",
+		"/home/miguel/webs/myapp/ruta/pdfprinter.php",
+		"/home/miguel/webs/myapp/ruta/instrucciones2.php",
+		"/home/miguel/webs/myapp/index.php",
+		"/home/miguel/webs/myapp/db_explora.php",
+		"/home/miguel/webs/myapp/ruta/checkuser.php",
+		"/home/miguel/.config/sublime-text-2/Packages/User/commdoc.sublime-snippet",
+		"/home/miguel/webs/myapp/ajax/alumnos_pdf.php",
+		"/home/miguel/webs/myapp/css/main.css",
+		"/home/miguel/webs/myapp/asg_generator.php",
+		"/home/miguel/webs/myapp/explora.php",
+		"/home/miguel/webs/myapp/explora.sql",
+		"/home/miguel/.gvfs/SFTP en msc.tsc.uah.es/etc/apache2/sites-available/default",
+		"/home/miguel/webs/myapp/ruta/set_fuentes_date.php",
+		"/home/miguel/webs/myapp/ruta/db_clon.php",
+		"/home/miguel/webs/myapp/ruta/regenerate.php",
+		"/home/miguel/webs/myapp/ruta/seleccion.php",
+		"/home/miguel/webs/myapp/error/404.php",
+		"/home/miguel/webs/myapp/error/sin_conexion.php",
+		"/home/miguel/webs/myapp/error/403.php",
+		"/home/miguel/webs/myapp/includes/db_tools_bak.inc",
+		"/home/miguel/webs/myapp/ruta/checkuser_bakmarch.php",
+		"/home/miguel/webs/myapp/ruta/newAsig.php",
+		"/home/miguel/webs/myapp/ruta/newAsig_th.php",
+		"/home/miguel/webs/myapp/ruta/preguntas_match.php",
+		"/home/miguel/webs/myapp/js/draft.js",
+		"/home/miguel/webs/myapp/includes/examenes.inc",
+		"/home/miguel/webs/myapp/ruta/examen_draft.php",
+		"/home/miguel/webs/myapp/includes/extras.php",
+		"/home/miguel/webs/myapp/ruta/examen_corregir.php",
+		"/home/miguel/webs/myapp/ruta/materia.php",
+		"/home/miguel/webs/myapp/includes/db_tools.inc",
+		"/home/miguel/webs/myapp/includes/cuestiones.inc",
+		"/home/miguel/webs/myapp/js/final.js",
+		"/home/miguel/webs/myapp/includes/basics.php",
+		"/home/miguel/webs/myapp/ruta/cuestion_create.php",
+		"/home/miguel/webs/myapp/js/cuestion.js",
+		"/home/miguel/webs/myapp/ruta/set_grupo.php",
+		"/home/miguel/webs/myapp/ruta/mgmt_groups.php",
+		"/home/miguel/webs/myapp/js/grupo.js",
+		"/home/miguel/webs/myapp/demojs.html",
+		"/home/miguel/webs/myapp/js/db_tool.js",
+		"/home/miguel/.config/sublime-text-2/Packages/CTags/Default.sublime-keymap",
+		"/home/miguel/.config/sublime-text-2/Packages/User/CTags.sublime-settings",
+		"/home/miguel/.config/sublime-text-2/Packages/CTags/CTags.sublime-settings",
+		"/home/miguel/webs/myapp/js/test.js",
+		"/home/miguel/webs/myapp/ruta/examen_push.php",
+		"/home/miguel/webs/myapp/ruta/instrucciones.php",
+		"/home/miguel/webs/myapp/ruta/alumnos_crud.php",
+		"/home/miguel/webs/myapp/ruta/prueba.php",
+		"/home/miguel/webs/myapp/info.txt",
+		"/home/miguel/webs/myapp/ruta/gallery.php",
+		"/home/miguel/webs/myapp/ruta/asignatura_listar.php",
+		"/home/miguel/webs/myapp/js/asignatura.js",
+		"/home/miguel/webs/myapp/js/db_lista.js",
+		"/home/miguel/webs/myapp/ruta/asignatura_cambiar.php",
+		"/home/miguel/webs/myapp/js/jquery.tools.min.js",
+		"/home/miguel/webs/myapp/ruta/Qset_Concepts.php",
+		"/home/miguel/webs/myapp/ruta/examen_mostrar.php",
+		"/home/miguel/webs/myapp/ruta/duracion_get.php",
+		"/home/miguel/webs/myapp/ruta/convocatoria_listar.php",
+		"/home/miguel/webs/myapp/ruta/examen_delete.php",
+		"/home/miguel/webs/myapp/ruta/examen_delete.bak",
+		"/home/miguel/demo.py",
+		"/home/miguel/webs/myapp/ruta/newGroup.php",
+		"/home/miguel/webs/laravel/application/config/application.php",
+		"/home/miguel/webs/laravel/application/config/database.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/plugins/the-events-calendar/views/table-mini.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/sidebar-espacio.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/events/ecp-single-template.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/events/single.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/events/borradores.txt",
+		"/home/miguel/webs/myapp/indexme",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/events/events.css",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/css/estilos.css",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/events/ecp-page-template.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-includes/functions.php",
+		"/home/miguel/webs/myapp/ruta/alumno_create.php",
+		"/home/miguel/webs/myapp/ruta/inicializar_bbdd.php",
+		"/home/miguel/webs/myapp/ruta/export.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/functions.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-settings.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-includes/locale.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/plugins/the-events-calendar/lang/tribe-events-calendar-es_ES.po",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/plugins/the-events-calendar/resources/events.css",
+		"/tmp/2.rar",
+		"/home/miguel/webs/myapp/ruta/alumno_update.php",
+		"/home/miguel/webs/myapp/index.html",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/page-sidebardcha.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/page-full.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/header.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/plugins/the-events-calendar/views/ecp-single-template.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/single-espacio.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/events/223ecp-single-template.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/events/gridview.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/single.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/style.css",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/sidebar.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/plugins/the-events-calendar/views/gridview.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/page.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/events/table.php",
+		"/home/miguel/Documentos/agendamagenta/w/wp-content/plugins/the-events-calendar/views/gridview.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/page-sidebarizq.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/plugins/the-events-calendar/views/single (copia).php",
+		"/home/miguel/webs/wp/wp-content/themes/twentyeleven/single.php",
+		"/home/miguel/webs/wp/wp-content/themes/twentyeleven/functions.php",
+		"/home/miguel/Documentos/agendamagenta/Modificaciones",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/plugins/the-events-calendar/views/single.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/themes/agendamagenta/changelog.xml",
+		"/home/miguel/webs/wp/wp-content/plugins/the-events-calendar/views/single.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/plugins/the-events-calendar/lib/tribe-settings-tab.class.php",
+		"/home/miguel/.gvfs/SFTP en agendamagenta.com/w/wp-content/plugins/the-events-calendar/admin-views/tickets-meta-box.php",
+		"/home/miguel/webs/myapp/ruta/newfunc.php",
+		"/home/miguel/webs/wp/wp-content/plugins/the-events-calendar/public/advanced-functions/venue.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"player",
+			"vol",
+			"repeat",
+			"coo",
+			"loader",
+			"check_dates",
+			"create_struct",
+			"create_expediente_table",
+			"conso",
+			"input[type='text'] { margin-right: 4px; 	height: 20px; padding: 2px;}\n",
+			"input",
+			"examen_",
+			"duracion_get",
+			"conectar",
+			"db_clone",
+			"mysqli_",
+			"mysqli_*",
+			"mysqli",
+			"set_al",
+			"\n*",
+			"\\bmysql_",
+			"mysql_*",
+			"check_monitor",
+			"examen_get_id",
+			"var_dum",
+			"class",
+			"minutos",
+			"examen_listar",
+			"var_dump",
+			"echo",
+			"conso",
+			"actualizar_alumno",
+			"box",
+			"read_db_img()",
+			"1",
+			"chooseGroup",
+			"examen_listar",
+			"check_alumno",
+			"/>';\n",
+			"'>\".$",
+			"give_files",
+			"get_examen",
+			"get_notas",
+			"walk_idA_alumnos",
+			"get_grupos",
+			"chooseGroup",
+			"examen_li",
+			"white",
+			"yellow",
+			"selectGroups()",
+			"listar",
+			"mysql_fetch_row",
+			"grupo_id",
+			"$fechas",
+			"$salida",
+			"$old_date",
+			"posts_per",
+			"view",
+			"Category",
+			"contenid",
+			"date_i",
+			"mont",
+			"tribe",
+			"febrero",
+			"month",
+			"Janua",
+			"Jan",
+			"lan",
+			"$month",
+			"img",
+			"contenido h1",
+			"packet",
+			"get_gr",
+			"input",
+			"alumno",
+			"column",
+			"<dt class=\"event-label event-label-address\">",
+			"hover",
+			".contenido_entrada",
+			"h5",
+			"titulo",
+			"quote",
+			"block",
+			"			$",
+			"socio",
+			"magenta",
+			"anuncio",
+			"publi",
+			"the_title",
+			"event",
+			">",
+			"tit",
+			"button",
+			"respuesta",
+			"concep",
+			"get_the_a",
+			"place",
+			"Detalles",
+			"cf_teléfono",
+			"cf_web",
+			"direc",
+			"event-label",
+			"\n		",
+			"	// Nombre\n	public function setNombre($nombre){\n		if(trim($nombre) != \"\"){\n			$this->nombre =$nombre;\n			return true;\n		}\n		else{\n			return false;\n		}\n	}\n",
+			"span",
+			"RewriteBase",
+			"\n	",
+			"FIN",
+			"answers",
+			"checkme",
+			"boton",
+			"Finaliza",
+			"aja",
+			"ruta",
+			"conceptos_op",
+			"conceptos_",
+			"rot",
+			"css_btt_l",
+			"ruta",
+			"ula",
+			"tema",
+			"\n</",
+			"css_btt",
+			"css_bt",
+			"image",
+			"del_im1",
+			"enun",
+			"img1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"mysql_",
+			"mysql_*",
+			"mysqli_",
+			"mysqli_*",
+			"#contenido",
+			"VALUES",
+			"/>\n",
+			"();\n",
+			"];\n",
+			"\")\n",
+			"(){\n",
+			"regenerate",
+			";\n",
+			"530px",
+			"	$('",
+			"(){",
+			"[];\n",
+			" 	$('",
+			"this",
+			"').",
+			"(){\n",
+			"/>\";\n",
+			"alt",
+			"6389"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "notas.txt",
+					"settings":
+					{
+						"buffer_size": 74,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								73,
+								73
+							]
+						],
+						"settings":
+						{
+							"auto_name": "NOTAS",
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ruta/bak_checkuser.php",
+					"settings":
+					{
+						"buffer_size": 6082,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4054,
+								4054
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1547.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/test.css",
+					"settings":
+					{
+						"buffer_size": 6041,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6039,
+								6039
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4278.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "includes/cuestiones.inc",
+					"settings":
+					{
+						"buffer_size": 34187,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25468,
+								25468
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 10478.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "ruta/instrucciones.php",
+					"settings":
+					{
+						"buffer_size": 2292,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2120,
+								2120
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 377.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "ruta/prueba.php",
+					"settings":
+					{
+						"buffer_size": 2744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1076,
+								1175
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 130.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "asg_generator.php",
+					"settings":
+					{
+						"buffer_size": 2344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								309,
+								542
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/miguel/webs/cinturon/css/screen.css",
+					"settings":
+					{
+						"buffer_size": 1954,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								786,
+								786
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 273.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/miguel/webs/cinturon/index (copia).html",
+					"settings":
+					{
+						"buffer_size": 5085,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3549,
+								3549
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 351.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "ruta/examen_corregir.php",
+					"settings":
+					{
+						"buffer_size": 2445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2418,
+								2418
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 348.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "js/test.js",
+					"settings":
+					{
+						"buffer_size": 6157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3288,
+								3288
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1175.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "ruta/examen_correctas.php",
+					"settings":
+					{
+						"buffer_size": 925,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								925,
+								925
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 117.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "demo.php",
+					"settings":
+					{
+						"buffer_size": 14275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4736,
+								4736
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1460.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "ruta/examen_draft.php",
+					"settings":
+					{
+						"buffer_size": 5559,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4333,
+								4333
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1521.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "ruta/set_fuentes_date.php",
+					"settings":
+					{
+						"buffer_size": 1173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1150,
+								1150
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "includes/db_tools.inc",
+					"settings":
+					{
+						"buffer_size": 35754,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1155,
+								1155
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 91.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "includes/basics.php",
+					"settings":
+					{
+						"buffer_size": 26739,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4539,
+								4539
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2241.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 88.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 302.0,
+	"status_bar_visible": true
+}
